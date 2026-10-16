@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "source_revision": 42,
+  "source_revision": 43,
   "entries": [
     {
       "id": "L001",
@@ -540,6 +540,20 @@
       "eligible_for_candidate_search": true,
       "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L040-458c84e5027523e1.png",
       "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L040.md",
+      "entry_version": "1"
+    },
+    {
+      "id": "L041",
+      "name": "同步验收测试_20261016_修改B",
+      "family": "F01",
+      "kind": "reference",
+      "task": "同步验收测试",
+      "feature_summary": "验收测试副本：左上主字组与右下回应字组构成对角关系；本条完成同步验收后归档。",
+      "fits": "仅用于本次网页新增、待收录编辑、查重、GitHub自动同步和归档验收。",
+      "input_conditions": "使用现有公开L001的预览副本；不包含个人信息和新来源素材。",
+      "eligible_for_candidate_search": true,
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L041-cfeffc7b3ecd2e7b.jpg",
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L041.md",
       "entry_version": "1"
     }
   ]

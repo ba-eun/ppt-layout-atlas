@@ -3,10 +3,10 @@
   "library_name": "PPT版式库",
   "publication": "public-read-only",
   "source_of_truth": "https://ppt-layout-atlas.woollywave.chatgpt.site",
-  "source_revision": 42,
+  "source_revision": 43,
   "scoring_version": "structure-v0.2",
   "scoring_status": "启发式初始规则，80分为提醒阈值；未完成用户样本校准，不是概率或客观雷同百分比。",
-  "reference_count": 36,
+  "reference_count": 37,
   "counterexample_count": 3,
   "entries": [
     {
@@ -3878,6 +3878,96 @@
       "preview_bytes": 181711,
       "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L040.md",
       "source_file": "https://q4.itc.cn/q_70/images03/20240910/6631ddc98995433a882c981a20c10270.png",
+      "editable_source_public": false
+    },
+    {
+      "id": "L041",
+      "name": "同步验收测试_20261016_修改B",
+      "family": "F01",
+      "kind": "reference",
+      "task": "同步验收测试",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "验收测试副本：左上主字组与右下回应字组构成对角关系；本条完成同步验收后归档。",
+      "composition": "白色主字组位于左上，浅青回应字组位于右下；辅助说明靠近主字组，中央大片留黑。复用L001，不是独立新构图。",
+      "fits": "仅用于本次网页新增、待收录编辑、查重、GitHub自动同步和归档验收。",
+      "input_conditions": "使用现有公开L001的预览副本；不包含个人信息和新来源素材。",
+      "avoid": "不得作为新增独立构图或生产课件的候选。",
+      "adaptation": "测试结束后归档；不更改L001及其他正式资料。",
+      "sequence_note": "本条仅供集成验收，不安排实际授课邻页。",
+      "pairing": {
+        "before": "仅测试，不用于授课。",
+        "after": "验证完成后归档。",
+        "avoid": "不要与正式条目重复选用。"
+      },
+      "selection_prompt": "本条是用户授权的同步验收副本，不作为制作PPT的候选，验收结束归档。",
+      "production_prompt": "本条仅验证网页保存及GitHub同步，不用于生成课件。实际设计请读取正式L001并使用当前内容重新适配。",
+      "profile": {
+        "skeleton": "diagonal-type",
+        "alignment": [
+          "top-left",
+          "bottom-right"
+        ],
+        "reading": [
+          "diagonal",
+          "primary-to-response"
+        ],
+        "whitespace": [
+          "central-gap",
+          "open-black"
+        ],
+        "relations": [
+          "two-type-groups",
+          "scale-contrast"
+        ],
+        "regions": [
+          {
+            "kind": "text",
+            "rect": [
+              0.05878,
+              0.1059,
+              0.45387,
+              0.35069
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.0625,
+              0.50868,
+              0.45387,
+              0.07812
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.49182,
+              0.57812,
+              0.46131,
+              0.31597
+            ]
+          }
+        ],
+        "basis": "实际查看本次上传的L001副本，沿用其结构字段以验证高相似提醒；不宣称新增独立构图。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "用户在2026-10-16明确要求实际测试新增或修改。本条复用公开L001预览作临时副本；名称由新增A改为修改B，验证待收录JSON编辑后再入库。完成后归档，不修改原有版式。",
+      "related_id": "L001",
+      "created_at": "2026-10-16T10:30:13.926Z",
+      "updated_at": "2026-10-16T10:30:13.926Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L041-cfeffc7b3ecd2e7b.jpg",
+      "preview_path": "images/L041-cfeffc7b3ecd2e7b.jpg",
+      "preview_sha256": "cfeffc7b3ecd2e7b754019924899d04748f8dc2ab8b52b6478176bb8c47dfebc",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 44193,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L041.md",
       "editable_source_public": false
     }
   ]
