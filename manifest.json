@@ -1,25 +1,25 @@
 {
   "schema_version": "1.0",
-  "source_revision": 43,
-  "published_at": "2026-10-16T10:30:20.639Z",
+  "source_revision": 44,
+  "published_at": "2026-10-16T10:33:30.786Z",
   "source_of_truth": "https://ppt-layout-atlas.woollywave.chatgpt.site",
   "repository": "ba-eun/ppt-layout-atlas",
   "branch": "main",
   "index": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/index.json",
   "catalog": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/catalog.json",
-  "entry_count": 40,
+  "entry_count": 39,
   "files": [
     {
       "path": "README.md",
-      "sha256": "09bd71ca4251af523402606a28bf34a14efddad8ee8e9c37a7cf694d800b326a"
+      "sha256": "e944f19159cc3bd48c28f7d5cc1216b46b8bcc247e7bfa1ab8036641ed9c78f0"
     },
     {
       "path": "index.json",
-      "sha256": "a60d90fb5c59d5f63797c371a0f86d73f12fa38b2ed65b44dd45ef4e824c5c6a"
+      "sha256": "745a4c8cd4dd3e6935ecfce08d3dea4c612409bce1d477f055daa3491696a6f8"
     },
     {
       "path": "catalog.json",
-      "sha256": "1de90f7798a117774c133cd786df898e93068238e941973f0e602387df3fd5e8"
+      "sha256": "e98861401e3b206f83cd8134dfdf41f944d76d225321afb3b606dbb3320ab6ac"
     },
     {
       "path": "cards/L001.md",
@@ -176,10 +176,6 @@
     {
       "path": "cards/L040.md",
       "sha256": "c9676727c756c7234ad206e65190eeff92709ee04641d3f2222c7c4e8fe1d45a"
-    },
-    {
-      "path": "cards/L041.md",
-      "sha256": "1873166f28b0b2f5abf9378ed1ebeb68e2411699fae3f1a74497374e4f207fb5"
     }
   ],
   "images": [
@@ -455,13 +451,6 @@
       "sha256": "458c84e5027523e110784f150526cd2d84fa8af0962e6f8ce4c2727d539f8b5e",
       "mime": "image/png",
       "bytes": 181711
-    },
-    {
-      "id": "L041",
-      "path": "images/L041-cfeffc7b3ecd2e7b.jpg",
-      "sha256": "cfeffc7b3ecd2e7b754019924899d04748f8dc2ab8b52b6478176bb8c47dfebc",
-      "mime": "image/jpeg",
-      "bytes": 44193
     }
   ]
 }
