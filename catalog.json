@@ -1,0 +1,3884 @@
+{
+  "schema_version": "1.0",
+  "library_name": "PPT版式库",
+  "publication": "public-read-only",
+  "source_of_truth": "https://ppt-layout-atlas.woollywave.chatgpt.site",
+  "source_revision": 42,
+  "scoring_version": "structure-v0.2",
+  "scoring_status": "启发式初始规则，80分为提醒阈值；未完成用户样本校准，不是概率或客观雷同百分比。",
+  "reference_count": 36,
+  "counterexample_count": 3,
+  "entries": [
+    {
+      "id": "L001",
+      "name": "错位字组与集中留白",
+      "family": "F01",
+      "kind": "reference",
+      "task": "文字主视觉",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "0.2",
+      "feature_summary": "偏置双字组，左上起、右下落；中央负空间连接两组语义。",
+      "visual_observation": "主字组在左上和右下，白与浅青建立先后；大面积黑色保留距离",
+      "composition": "左上主字组与右下回应字组形成对角读序，辅助靠近前一组；中央距离承担关系",
+      "fits": "两个语义相关的短字组；引入或核心判断",
+      "input_conditions": "无图片；两个字组加一段短辅助说明",
+      "avoid": "长定义、多段解释或必须同级比较的多组概念",
+      "adaptation": "保持词组完整，按语义调整两组体量与距离；长句不逐字拆散",
+      "sequence_note": "不要把对角错位作为每页默认；与L010比较读序和重心",
+      "pairing": {
+        "before": "L002｜以真实场景展开刚提出的判断；L005｜补充解释。",
+        "after": "L010｜由偏置重心转为中轴收束；避免连续多页对角错位。",
+        "avoid": "不要把对角错位作为每页默认；与L010比较读序和重心"
+      },
+      "selection_prompt": "仅当本页任务适合「两个语义相关的短字组；引入或核心判断」，且满足「无图片；两个字组加一段短辅助说明」时，将L001列为候选。查看原图及来源第1页后判断。长定义、多段解释或必须同级比较的多组概念时排除。",
+      "production_prompt": "参考L001「错位字组与集中留白」，用下面的当前输入制作页面：\n页面目的：{页面目的}\n标题与正文：{当前文案}\n图片／数据：{当前素材及其来源}\n前后页：{邻页说明}\n\n保留关系：偏置双字组，左上起、右下落；中央负空间连接两组语义。\n适配指令：先确定两组完整语义，再调整相对体量与对角距离；不把长句拆成单字散落。\n输入条件：无图片；两个字组加一段短辅助说明\n邻页检查：不要把对角错位作为每页默认；与L010比较读序和重心\n\n按当前任务制作21:9黑色或近黑PPT。保留原生可编辑文字；图片等比，不覆盖必要证据。使用当前真实文案和素材，参考页照片、模拟数据与备注不自动成为新任务内容。完成后渲染审核本页与邻页，检查字形、主体、对比度、比例、路径和原生备注。缺乏适配条件时改选版式或重新设计。",
+      "profile": {
+        "skeleton": "diagonal-type",
+        "alignment": [
+          "top-left",
+          "bottom-right"
+        ],
+        "reading": [
+          "diagonal",
+          "primary-to-response"
+        ],
+        "whitespace": [
+          "central-gap",
+          "open-black"
+        ],
+        "relations": [
+          "two-type-groups",
+          "scale-contrast"
+        ],
+        "regions": [
+          {
+            "kind": "text",
+            "rect": [
+              0.05878,
+              0.1059,
+              0.45387,
+              0.35069
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.0625,
+              0.50868,
+              0.45387,
+              0.07812
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.49182,
+              0.57812,
+              0.46131,
+              0.31597
+            ]
+          }
+        ],
+        "basis": "原样预览分析＋源PPT对象框；对象框不等于字形实测"
+      },
+      "prompt_version": "0.2",
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "S01",
+      "source_slide": 1,
+      "adaptation_trial_status": "unverified",
+      "target_software_test_status": "unverified",
+      "device_test_status": "unverified",
+      "glyph_measurement_status": "unverified",
+      "text_capacity_status": "只记录当前源文案，不给出未经试排的容量上下限",
+      "updated_at": "2026-10-16",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L001-cfeffc7b3ecd2e7b.jpg",
+      "preview_path": "images/L001-cfeffc7b3ecd2e7b.jpg",
+      "preview_sha256": "cfeffc7b3ecd2e7b754019924899d04748f8dc2ab8b52b6478176bb8c47dfebc",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 44193,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L001.md",
+      "editable_source_public": false
+    },
+    {
+      "id": "L002",
+      "name": "全幅场景与自然阅读区",
+      "family": "F02",
+      "kind": "reference",
+      "task": "真实场景",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "0.2",
+      "feature_summary": "宽幅真实场景占全画面；上方短标题与底部来源利用照片中的安全区域。",
+      "visual_observation": "场景透视清楚；标题位于上部，来源位于下部。正式任务仍须检查当地最差对比度",
+      "composition": "真实透视占据全幅，标题利用非证据区域，阅读路径与场景方向联系",
+      "fits": "观察空间、环境与真实观看路径",
+      "input_conditions": "一张适用的宽幅场景；短标题与稳定来源区",
+      "avoid": "没有安全文字区且必要证据密集；窄图无法保全观察范围",
+      "adaptation": "先列入口、标识等必见局部，再根据真实图片选文字区；可改独立阅读带",
+      "sequence_note": "L002与L006共用全幅图像骨架；不能按照片题材分成两类结构",
+      "pairing": {
+        "before": "L001｜先提问再进入现场；L010｜短句之后用场景展开。",
+        "after": "L003｜从环境切向具体对象；避免连续两张同透视照片。",
+        "avoid": "L002与L006共用全幅图像骨架；不能按照片题材分成两类结构"
+      },
+      "selection_prompt": "仅当本页任务适合「观察空间、环境与真实观看路径」，且满足「一张适用的宽幅场景；短标题与稳定来源区」时，将L002列为候选。查看原图及来源第2页后判断。没有安全文字区且必要证据密集；窄图无法保全观察范围时排除。",
+      "production_prompt": "参考L002「全幅场景与自然阅读区」，用下面的当前输入制作页面：\n页面目的：{页面目的}\n标题与正文：{当前文案}\n图片／数据：{当前素材及其来源}\n前后页：{邻页说明}\n\n保留关系：宽幅真实场景占全画面；上方短标题与底部来源利用照片中的安全区域。\n适配指令：按当前照片标出入口、标识、人物等必要证据；安全文字区不足则另设阅读带或换图，不能照搬标题位置。\n输入条件：一张适用的宽幅场景；短标题与稳定来源区\n邻页检查：L002与L006共用全幅图像骨架；不能按照片题材分成两类结构\n\n按当前任务制作21:9黑色或近黑PPT。保留原生可编辑文字；图片等比，不覆盖必要证据。使用当前真实文案和素材，参考页照片、模拟数据与备注不自动成为新任务内容。完成后渲染审核本页与邻页，检查字形、主体、对比度、比例、路径和原生备注。缺乏适配条件时改选版式或重新设计。",
+      "profile": {
+        "skeleton": "fullbleed",
+        "alignment": [
+          "top-left",
+          "bottom-left"
+        ],
+        "reading": [
+          "scene-depth",
+          "title-to-image"
+        ],
+        "whitespace": [
+          "photo-negative-space"
+        ],
+        "relations": [
+          "text-in-photo",
+          "evidence-protected"
+        ],
+        "regions": [
+          {
+            "kind": "image",
+            "rect": [
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.05878,
+              0.0625,
+              0.88542,
+              0.21875
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.05952,
+              0.88368,
+              0.84077,
+              0.07292
+            ]
+          }
+        ],
+        "basis": "原样预览分析＋源PPT对象框；对象框不等于字形实测"
+      },
+      "prompt_version": "0.2",
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "S01",
+      "source_slide": 2,
+      "adaptation_trial_status": "unverified",
+      "target_software_test_status": "unverified",
+      "device_test_status": "unverified",
+      "glyph_measurement_status": "unverified",
+      "text_capacity_status": "只记录当前源文案，不给出未经试排的容量上下限",
+      "updated_at": "2026-10-16",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L002-3cf60b7e9c3ce68a.jpg",
+      "preview_path": "images/L002-3cf60b7e9c3ce68a.jpg",
+      "preview_sha256": "3cf60b7e9c3ce68a7fa23e218aa5d635ce697356a6f6888c18d1734204373a57",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 160354,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L002.md",
+      "editable_source_public": false
+    },
+    {
+      "id": "L003",
+      "name": "竖幅主体与两侧邻接文字",
+      "family": "F03",
+      "kind": "reference",
+      "task": "对象观察",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "0.2",
+      "feature_summary": "中央竖幅图片贯穿纵向；左侧大字组与右侧短问题以不同体量邻接。",
+      "visual_observation": "主体竖向轮廓与两侧文字分开；地图微小文字不作为远距离精读任务",
+      "composition": "竖图居中形成主轴，左侧字组与右侧问题以不同体量建立两侧关系",
+      "fits": "竖向作品、标识或人物及少量观察问题",
+      "input_conditions": "一张竖图；左侧主题，右侧若干短问题",
+      "avoid": "要求展示标识全貌或底座而当前原图已缺失；长段落或多图对照",
+      "adaptation": "依据原图比例调整图幅和文字列宽，不拉宽图片；必要证据完整保留",
+      "sequence_note": "与其他邻接结构比较实际占幅，镜像只作为变体；本源图不展示完整底座",
+      "pairing": {
+        "before": "L002｜由全景进入对象；L001｜从概念转向观察。",
+        "after": "L004｜把观察转为步骤；L008｜引出同尺度对照。",
+        "avoid": "与其他邻接结构比较实际占幅，镜像只作为变体；本源图不展示完整底座"
+      },
+      "selection_prompt": "仅当本页任务适合「竖向作品、标识或人物及少量观察问题」，且满足「一张竖图；左侧主题，右侧若干短问题」时，将L003列为候选。查看原图及来源第3页后判断。要求展示标识全貌或底座而当前原图已缺失；长段落或多图对照时排除。",
+      "production_prompt": "参考L003「竖幅主体与两侧邻接文字」，用下面的当前输入制作页面：\n页面目的：{页面目的}\n标题与正文：{当前文案}\n图片／数据：{当前素材及其来源}\n前后页：{邻页说明}\n\n保留关系：中央竖幅图片贯穿纵向；左侧大字组与右侧短问题以不同体量邻接。\n适配指令：保持竖图原比例；依主体宽度调整两侧列宽；照片原本缺失的底座和边缘不得虚构补齐为证据。\n输入条件：一张竖图；左侧主题，右侧若干短问题\n邻页检查：与其他邻接结构比较实际占幅，镜像只作为变体；本源图不展示完整底座\n\n按当前任务制作21:9黑色或近黑PPT。保留原生可编辑文字；图片等比，不覆盖必要证据。使用当前真实文案和素材，参考页照片、模拟数据与备注不自动成为新任务内容。完成后渲染审核本页与邻页，检查字形、主体、对比度、比例、路径和原生备注。缺乏适配条件时改选版式或重新设计。",
+      "profile": {
+        "skeleton": "triptych-portrait",
+        "alignment": [
+          "left",
+          "center",
+          "right"
+        ],
+        "reading": [
+          "left-to-center-to-right"
+        ],
+        "whitespace": [
+          "side-negative-space"
+        ],
+        "relations": [
+          "portrait-between-text",
+          "adjacency"
+        ],
+        "regions": [
+          {
+            "kind": "image",
+            "rect": [
+              0.39807,
+              0,
+              0.31473,
+              1
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.05952,
+              0.19097,
+              0.32738,
+              0.23264
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.0625,
+              0.44444,
+              0.33036,
+              0.16493
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.74405,
+              0.28819,
+              0.20312,
+              0.10069
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.74405,
+              0.46181,
+              0.20312,
+              0.10069
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.74405,
+              0.63542,
+              0.20312,
+              0.10069
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.06101,
+              0.87153,
+              0.32589,
+              0.07812
+            ]
+          }
+        ],
+        "basis": "原样预览分析＋源PPT对象框；对象框不等于字形实测"
+      },
+      "prompt_version": "0.2",
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "S01",
+      "source_slide": 3,
+      "adaptation_trial_status": "unverified",
+      "target_software_test_status": "unverified",
+      "device_test_status": "unverified",
+      "glyph_measurement_status": "unverified",
+      "text_capacity_status": "只记录当前源文案，不给出未经试排的容量上下限",
+      "updated_at": "2026-10-16",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L003-e136bd095e7d0239.jpg",
+      "preview_path": "images/L003-e136bd095e7d0239.jpg",
+      "preview_sha256": "e136bd095e7d02397468ac81020fd9261d14811f525f2fcf73080382fba3a18e",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 112132,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L003.md",
+      "editable_source_public": false
+    },
+    {
+      "id": "L004",
+      "name": "主路径与独立反馈通道",
+      "family": "F04",
+      "kind": "reference",
+      "task": "流程关系",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "0.2",
+      "feature_summary": "横向主路径逐步推进；反馈从末端沿下方独立通道返回对应步骤。",
+      "visual_observation": "主路径与反馈可区分；后续必须按实际起点、终点逐条核对箭头",
+      "composition": "主路径横向推进，末端节点前显；反馈在独立下方通道返回对应节点",
+      "fits": "顺序步骤及真实存在的返工或反馈关系",
+      "input_conditions": "原生步骤、文字与连线；不需要装饰照片",
+      "avoid": "没有真实反馈关系却为了视觉张力增加回路；复杂网络强塞四步",
+      "adaptation": "步骤名称、数量、方向与反馈依据先确定，再调节点间距和文字位置",
+      "sequence_note": "可与水平路径或偏置递进比较；必要连续揭示可保骨架并说明推进",
+      "pairing": {
+        "before": "L003｜由观察问题转为操作；L005｜解释后给出路径。",
+        "after": "L008｜展示步骤应用前后差异；L010｜以结论结束。",
+        "avoid": "可与水平路径或偏置递进比较；必要连续揭示可保骨架并说明推进"
+      },
+      "selection_prompt": "仅当本页任务适合「顺序步骤及真实存在的返工或反馈关系」，且满足「原生步骤、文字与连线；不需要装饰照片」时，将L004列为候选。查看原图及来源第4页后判断。没有真实反馈关系却为了视觉张力增加回路；复杂网络强塞四步时排除。",
+      "production_prompt": "参考L004「主路径与独立反馈通道」，用下面的当前输入制作页面：\n页面目的：{页面目的}\n标题与正文：{当前文案}\n图片／数据：{当前素材及其来源}\n前后页：{邻页说明}\n\n保留关系：横向主路径逐步推进；反馈从末端沿下方独立通道返回对应步骤。\n适配指令：先核实步骤、方向与真实反馈，再排节点和连线；不为构图凭空增加回路；使用原生可编辑连接线。\n输入条件：原生步骤、文字与连线；不需要装饰照片\n邻页检查：可与水平路径或偏置递进比较；必要连续揭示可保骨架并说明推进\n\n按当前任务制作21:9黑色或近黑PPT。保留原生可编辑文字；图片等比，不覆盖必要证据。使用当前真实文案和素材，参考页照片、模拟数据与备注不自动成为新任务内容。完成后渲染审核本页与邻页，检查字形、主体、对比度、比例、路径和原生备注。缺乏适配条件时改选版式或重新设计。",
+      "profile": {
+        "skeleton": "process-feedback",
+        "alignment": [
+          "left",
+          "horizontal",
+          "bottom"
+        ],
+        "reading": [
+          "left-to-right",
+          "return-loop"
+        ],
+        "whitespace": [
+          "lower-feedback-lane"
+        ],
+        "relations": [
+          "sequential-nodes",
+          "feedback-edge"
+        ],
+        "regions": [
+          {
+            "kind": "connector",
+            "rect": [
+              0.60826,
+              0.59201,
+              0.00037,
+              0.1684
+            ]
+          },
+          {
+            "kind": "connector",
+            "rect": [
+              0.60863,
+              0.76128,
+              0.23438,
+              0
+            ]
+          },
+          {
+            "kind": "connector",
+            "rect": [
+              0.84338,
+              0.51215,
+              0.00818,
+              0.24826
+            ]
+          },
+          {
+            "kind": "connector",
+            "rect": [
+              0.70238,
+              0.41493,
+              0.0372,
+              0.09896
+            ]
+          },
+          {
+            "kind": "connector",
+            "rect": [
+              0.47024,
+              0.51389,
+              0.04464,
+              0
+            ]
+          },
+          {
+            "kind": "connector",
+            "rect": [
+              0.2381,
+              0.51389,
+              0.04464,
+              0
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.05878,
+              0.09722,
+              0.81845,
+              0.17188
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.06101,
+              0.44965,
+              0.16667,
+              0.12847
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.0506,
+              0.43576,
+              0.1875,
+              0.15625
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.29315,
+              0.44965,
+              0.16667,
+              0.12847
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.28274,
+              0.43576,
+              0.1875,
+              0.15625
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.5253,
+              0.44965,
+              0.16667,
+              0.12847
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.51488,
+              0.43576,
+              0.1875,
+              0.15625
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.75,
+              0.3316,
+              0.20312,
+              0.16667
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.73958,
+              0.31771,
+              0.22396,
+              0.19444
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.84301,
+              0.76042,
+              0.00074,
+              0.00174
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.60789,
+              0.76042,
+              0.00074,
+              0.00174
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.60342,
+              0.82812,
+              0.3497,
+              0.07639
+            ]
+          }
+        ],
+        "basis": "原样预览分析＋源PPT对象框；对象框不等于字形实测"
+      },
+      "prompt_version": "0.2",
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "S01",
+      "source_slide": 4,
+      "adaptation_trial_status": "unverified",
+      "target_software_test_status": "unverified",
+      "device_test_status": "unverified",
+      "glyph_measurement_status": "unverified",
+      "text_capacity_status": "只记录当前源文案，不给出未经试排的容量上下限",
+      "updated_at": "2026-10-16",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L004-9a847d05c2597398.jpg",
+      "preview_path": "images/L004-9a847d05c2597398.jpg",
+      "preview_sha256": "9a847d05c2597398db32407b173d3ad98f4664c4b72f8827bb43d37d5795fe43",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 60776,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L004.md",
+      "editable_source_public": false
+    },
+    {
+      "id": "L005",
+      "name": "大主题与开放阅读带",
+      "family": "F05",
+      "kind": "reference",
+      "task": "长文解释",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "0.2",
+      "feature_summary": "左上大主题作为入口；下方开放的阅读行逐级解释，依靠字号和行距组织。",
+      "visual_observation": "主题与解释字级清楚，当前源文案可见；新文案长度未做试排验证",
+      "composition": "主题字组占上部，完整解释在下方开放排列，以体量和间距组织阅读",
+      "fits": "完整判断及若干解释或限定",
+      "input_conditions": "无图片；一个主题与有层级的阅读行",
+      "avoid": "全文超出可读容量；需要观察真实作品但用文字替代图片",
+      "adaptation": "保留全文和限定；按实际字体、行长及显示距离重排，不按固定字符数硬套",
+      "sequence_note": "与L001和L010分别承担解释、引入和收束，避免连续同位置大标题",
+      "pairing": {
+        "before": "L001｜先提出短判断；L002｜观察案例后进入解释。",
+        "after": "L004｜解释转操作；L007｜以数据支撑解释；避免同位置连续大标题。",
+        "avoid": "与L001和L010分别承担解释、引入和收束，避免连续同位置大标题"
+      },
+      "selection_prompt": "仅当本页任务适合「完整判断及若干解释或限定」，且满足「无图片；一个主题与有层级的阅读行」时，将L005列为候选。查看原图及来源第5页后判断。全文超出可读容量；需要观察真实作品但用文字替代图片时排除。",
+      "production_prompt": "参考L005「大主题与开放阅读带」，用下面的当前输入制作页面：\n页面目的：{页面目的}\n标题与正文：{当前文案}\n图片／数据：{当前素材及其来源}\n前后页：{邻页说明}\n\n保留关系：左上大主题作为入口；下方开放的阅读行逐级解释，依靠字号和行距组织。\n适配指令：保留全文及条件，用语义分段、行长、字号和间距适配；文本过载时分成内容有推进的页面，不删除限定条件。\n输入条件：无图片；一个主题与有层级的阅读行\n邻页检查：与L001和L010分别承担解释、引入和收束，避免连续同位置大标题\n\n按当前任务制作21:9黑色或近黑PPT。保留原生可编辑文字；图片等比，不覆盖必要证据。使用当前真实文案和素材，参考页照片、模拟数据与备注不自动成为新任务内容。完成后渲染审核本页与邻页，检查字形、主体、对比度、比例、路径和原生备注。缺乏适配条件时改选版式或重新设计。",
+      "profile": {
+        "skeleton": "headline-reading-band",
+        "alignment": [
+          "top-left",
+          "left"
+        ],
+        "reading": [
+          "top-to-bottom"
+        ],
+        "whitespace": [
+          "right-open",
+          "lower-open"
+        ],
+        "relations": [
+          "headline-over-lines",
+          "type-hierarchy"
+        ],
+        "regions": [
+          {
+            "kind": "text",
+            "rect": [
+              0.05952,
+              0.08333,
+              0.87798,
+              0.33854
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.0625,
+              0.5,
+              0.88542,
+              0.08333
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.0625,
+              0.60069,
+              0.88542,
+              0.08333
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.0625,
+              0.70139,
+              0.88542,
+              0.08333
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.0625,
+              0.80208,
+              0.88542,
+              0.08333
+            ]
+          }
+        ],
+        "basis": "原样预览分析＋源PPT对象框；对象框不等于字形实测"
+      },
+      "prompt_version": "0.2",
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "S01",
+      "source_slide": 5,
+      "adaptation_trial_status": "unverified",
+      "target_software_test_status": "unverified",
+      "device_test_status": "unverified",
+      "glyph_measurement_status": "unverified",
+      "text_capacity_status": "只记录当前源文案，不给出未经试排的容量上下限",
+      "updated_at": "2026-10-16",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L005-9fe816ebd821198f.jpg",
+      "preview_path": "images/L005-9fe816ebd821198f.jpg",
+      "preview_sha256": "9fe816ebd821198fb2ed03f1d39194c5b0074539f16dd0386797a60e9b0e4a64",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 91885,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L005.md",
+      "editable_source_public": false
+    },
+    {
+      "id": "L006",
+      "name": "黑色对象与轮廓空间",
+      "family": "F02",
+      "kind": "reference",
+      "task": "对象与体积",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "0.2",
+      "feature_summary": "对象位于右侧，左侧暗部承载字组；器口、曲面与接地关系形成空间层次。",
+      "visual_observation": "源图明确标“生成示意”；可见器口、曲面及接触区域，不作真实器物证据",
+      "composition": "对象在右侧承担主角，文字在左侧暗部；曲面与接触关系建立空间",
+      "fits": "展示轮廓、材料明暗或接地关系",
+      "input_conditions": "一张有足够轮廓与空间的对象图；少量邻接文字",
+      "avoid": "用生成图冒充真实作品；必要轮廓缺失或光影不可信",
+      "adaptation": "保原比例与任务所需边缘，黑主体融底时调整取景或换图，不能只加辉光",
+      "sequence_note": "与L002归同一全幅图像家族，只是主角与文字承载条件不同",
+      "pairing": {
+        "before": "L001｜先给概念；L005｜先解释观察维度。",
+        "after": "L008｜进行同尺度对照；L010｜收束视觉判断；不与L002按不同家族计数。",
+        "avoid": "与L002归同一全幅图像家族，只是主角与文字承载条件不同"
+      },
+      "selection_prompt": "仅当本页任务适合「展示轮廓、材料明暗或接地关系」，且满足「一张有足够轮廓与空间的对象图；少量邻接文字」时，将L006列为候选。查看原图及来源第6页后判断。用生成图冒充真实作品；必要轮廓缺失或光影不可信时排除。",
+      "production_prompt": "参考L006「黑色对象与轮廓空间」，用下面的当前输入制作页面：\n页面目的：{页面目的}\n标题与正文：{当前文案}\n图片／数据：{当前素材及其来源}\n前后页：{邻页说明}\n\n保留关系：对象位于右侧，左侧暗部承载字组；器口、曲面与接地关系形成空间层次。\n适配指令：优先选择具备清晰轮廓和可信接地关系的图片；图片等比、必要边缘完整；黑主体融底时换图或调整取景，生成示意必须标注。\n输入条件：一张有足够轮廓与空间的对象图；少量邻接文字\n邻页检查：与L002归同一全幅图像家族，只是主角与文字承载条件不同\n\n按当前任务制作21:9黑色或近黑PPT。保留原生可编辑文字；图片等比，不覆盖必要证据。使用当前真实文案和素材，参考页照片、模拟数据与备注不自动成为新任务内容。完成后渲染审核本页与邻页，检查字形、主体、对比度、比例、路径和原生备注。缺乏适配条件时改选版式或重新设计。",
+      "profile": {
+        "skeleton": "fullbleed",
+        "alignment": [
+          "top-left",
+          "bottom-left"
+        ],
+        "reading": [
+          "title-to-image",
+          "left-to-right"
+        ],
+        "whitespace": [
+          "photo-negative-space"
+        ],
+        "relations": [
+          "text-in-photo",
+          "contour-space"
+        ],
+        "regions": [
+          {
+            "kind": "image",
+            "rect": [
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.05952,
+              0.14062,
+              0.44271,
+              0.30035
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.0625,
+              0.50347,
+              0.39807,
+              0.09201
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.0625,
+              0.6684,
+              0.42411,
+              0.09201
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.0625,
+              0.81944,
+              0.43155,
+              0.07465
+            ]
+          }
+        ],
+        "basis": "原样预览分析＋源PPT对象框；对象框不等于字形实测"
+      },
+      "prompt_version": "0.2",
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "S01",
+      "source_slide": 6,
+      "adaptation_trial_status": "unverified",
+      "target_software_test_status": "unverified",
+      "device_test_status": "unverified",
+      "glyph_measurement_status": "unverified",
+      "text_capacity_status": "只记录当前源文案，不给出未经试排的容量上下限",
+      "updated_at": "2026-10-16",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L006-63e2367c5200ab2a.jpg",
+      "preview_path": "images/L006-63e2367c5200ab2a.jpg",
+      "preview_sha256": "63e2367c5200ab2a4a00dc772f7c82983c2d20dfa7c8d215e2704893ac553a1b",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 88711,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L006.md",
+      "editable_source_public": false
+    },
+    {
+      "id": "L007",
+      "name": "比例图形与两侧数字字组",
+      "family": "F06",
+      "kind": "reference",
+      "task": "数据",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "0.2",
+      "feature_summary": "中央比例图形与两侧数字形成三方关系；数字、类别和分母邻接。",
+      "visual_observation": "原生chart对象已读回；示例数字明确为模拟，不能当作新项目调查结果",
+      "composition": "比例图形占中部，数字与对应类别在两侧形成关系，分母和声明邻接",
+      "fits": "少量类别的真实比例及分母说明",
+      "input_conditions": "原生图表与可编辑标签；示例为45/55模拟比例",
+      "avoid": "类别太多、标签过长或图形不能支持当前比较任务",
+      "adaptation": "换数据同步更新图形、标签、单位与分母；环形与比例条可同输入比较",
+      "sequence_note": "不因换成其他图表颜色就计新版式；连续同口径比较可保持结构",
+      "pairing": {
+        "before": "L005｜解释后呈现证据；L001｜先提出数量问题。",
+        "after": "L008｜进入比较；L010｜提炼结论；同口径连续比较可保留骨架。",
+        "avoid": "不因换成其他图表颜色就计新版式；连续同口径比较可保持结构"
+      },
+      "selection_prompt": "仅当本页任务适合「少量类别的真实比例及分母说明」，且满足「原生图表与可编辑标签；示例为45/55模拟比例」时，将L007列为候选。查看原图及来源第7页后判断。类别太多、标签过长或图形不能支持当前比较任务时排除。",
+      "production_prompt": "参考L007「比例图形与两侧数字字组」，用下面的当前输入制作页面：\n页面目的：{页面目的}\n标题与正文：{当前文案}\n图片／数据：{当前素材及其来源}\n前后页：{邻页说明}\n\n保留关系：中央比例图形与两侧数字形成三方关系；数字、类别和分母邻接。\n适配指令：仅用当前有依据的数据；同步更新图形、数值、类别、单位和分母；原生可编辑图表，不继承示例45/55为真实结论。\n输入条件：原生图表与可编辑标签；示例为45/55模拟比例\n邻页检查：不因换成其他图表颜色就计新版式；连续同口径比较可保持结构\n\n按当前任务制作21:9黑色或近黑PPT。保留原生可编辑文字；图片等比，不覆盖必要证据。使用当前真实文案和素材，参考页照片、模拟数据与备注不自动成为新任务内容。完成后渲染审核本页与邻页，检查字形、主体、对比度、比例、路径和原生备注。缺乏适配条件时改选版式或重新设计。",
+      "profile": {
+        "skeleton": "chart-flanked",
+        "alignment": [
+          "left",
+          "center",
+          "right"
+        ],
+        "reading": [
+          "left-to-center-to-right"
+        ],
+        "whitespace": [
+          "chart-surround"
+        ],
+        "relations": [
+          "proportional-chart",
+          "flanking-numbers"
+        ],
+        "regions": [
+          {
+            "kind": "text",
+            "rect": [
+              0.05878,
+              0.10764,
+              0.3125,
+              0.26562
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.0625,
+              0.39236,
+              0.30134,
+              0.08507
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.7567,
+              0.63889,
+              0.2128,
+              0.19271
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.75893,
+              0.85243,
+              0.19345,
+              0.07465
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.0625,
+              0.71875,
+              0.31324,
+              0.07465
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.0625,
+              0.8316,
+              0.31324,
+              0.07465
+            ]
+          },
+          {
+            "kind": "chart",
+            "rect": [
+              0.36458,
+              0.11285,
+              0.43824,
+              0.76562
+            ]
+          }
+        ],
+        "basis": "原样预览分析＋源PPT对象框；对象框不等于字形实测"
+      },
+      "prompt_version": "0.2",
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "S01",
+      "source_slide": 7,
+      "adaptation_trial_status": "unverified",
+      "target_software_test_status": "unverified",
+      "device_test_status": "unverified",
+      "glyph_measurement_status": "unverified",
+      "text_capacity_status": "只记录当前源文案，不给出未经试排的容量上下限",
+      "updated_at": "2026-10-16",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L007-02368ea7a4614018.jpg",
+      "preview_path": "images/L007-02368ea7a4614018.jpg",
+      "preview_sha256": "02368ea7a461401847d9b77ce85f976abc6dc499bb144ed024e1d46d2d393ca9",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 47276,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L007.md",
+      "editable_source_public": false
+    },
+    {
+      "id": "L008",
+      "name": "同尺度对象的层级对照",
+      "family": "F07",
+      "kind": "reference",
+      "task": "视觉对照",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "0.2",
+      "feature_summary": "两个同尺度对象在同一基线上并置；差异由内部信息层级呈现。",
+      "visual_observation": "两个标识对象保留同样目的地、楼层与方向；差异来自信息层级",
+      "composition": "同基线并置对象，使字级、位置与读序差异可以直接观察",
+      "fits": "比较同一信息在不同层级组织下的阅读差异",
+      "input_conditions": "两个同尺度对象；比较标签与必要说明",
+      "avoid": "任意放大其中一侧制造差异；比较条件不一致",
+      "adaptation": "保持比较对象尺度、口径和必需信息；对象外框为比较证据，不是全套内容卡片",
+      "sequence_note": "必要连续比较保持基线并记录推进，不能将两个矩形套到所有内容页",
+      "pairing": {
+        "before": "L003｜由单对象观察进入比较；L004｜流程后展示效果。",
+        "after": "L005｜解释造成差异的机制；L010｜提炼判断。",
+        "avoid": "必要连续比较保持基线并记录推进，不能将两个矩形套到所有内容页"
+      },
+      "selection_prompt": "仅当本页任务适合「比较同一信息在不同层级组织下的阅读差异」，且满足「两个同尺度对象；比较标签与必要说明」时，将L008列为候选。查看原图及来源第8页后判断。任意放大其中一侧制造差异；比较条件不一致时排除。",
+      "production_prompt": "参考L008「同尺度对象的层级对照」，用下面的当前输入制作页面：\n页面目的：{页面目的}\n标题与正文：{当前文案}\n图片／数据：{当前素材及其来源}\n前后页：{邻页说明}\n\n保留关系：两个同尺度对象在同一基线上并置；差异由内部信息层级呈现。\n适配指令：保持尺度、信息口径和比较条件一致；外框属于被比较对象，不将全套内容都改成两张卡片；不任意放大一侧制造优势。\n输入条件：两个同尺度对象；比较标签与必要说明\n邻页检查：必要连续比较保持基线并记录推进，不能将两个矩形套到所有内容页\n\n按当前任务制作21:9黑色或近黑PPT。保留原生可编辑文字；图片等比，不覆盖必要证据。使用当前真实文案和素材，参考页照片、模拟数据与备注不自动成为新任务内容。完成后渲染审核本页与邻页，检查字形、主体、对比度、比例、路径和原生备注。缺乏适配条件时改选版式或重新设计。",
+      "profile": {
+        "skeleton": "equal-comparison",
+        "alignment": [
+          "top-left",
+          "horizontal",
+          "baseline"
+        ],
+        "reading": [
+          "left-to-right",
+          "parallel"
+        ],
+        "whitespace": [
+          "between-equal-objects"
+        ],
+        "relations": [
+          "equal-scale-pair",
+          "controlled-comparison"
+        ],
+        "regions": [
+          {
+            "kind": "text",
+            "rect": [
+              0.05952,
+              0.0816,
+              0.49851,
+              0.19618
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.06101,
+              0.32465,
+              0.41518,
+              0.08681
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.54315,
+              0.32465,
+              0.41667,
+              0.08681
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.05952,
+              0.43576,
+              0.41071,
+              0.33507
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.53051,
+              0.43576,
+              0.41071,
+              0.33507
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.08259,
+              0.5191,
+              0.14881,
+              0.11111
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.24777,
+              0.5191,
+              0.07589,
+              0.11111
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.34673,
+              0.5191,
+              0.11161,
+              0.11111
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.55357,
+              0.45486,
+              0.32515,
+              0.17882
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.55729,
+              0.65104,
+              0.14509,
+              0.09549
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.80952,
+              0.65104,
+              0.10863,
+              0.09549
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.0625,
+              0.84375,
+              0.88542,
+              0.0816
+            ]
+          }
+        ],
+        "basis": "原样预览分析＋源PPT对象框；对象框不等于字形实测"
+      },
+      "prompt_version": "0.2",
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "S01",
+      "source_slide": 8,
+      "adaptation_trial_status": "unverified",
+      "target_software_test_status": "unverified",
+      "device_test_status": "unverified",
+      "glyph_measurement_status": "unverified",
+      "text_capacity_status": "只记录当前源文案，不给出未经试排的容量上下限",
+      "updated_at": "2026-10-16",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L008-90b7dcfae2adcc75.jpg",
+      "preview_path": "images/L008-90b7dcfae2adcc75.jpg",
+      "preview_sha256": "90b7dcfae2adcc75411639d87912a7618a8aa0b1a9413a9ddee0d608ef95548e",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 59553,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L008.md",
+      "editable_source_public": false
+    },
+    {
+      "id": "L009",
+      "name": "主题字组与开放表格",
+      "family": "F08",
+      "kind": "reference",
+      "task": "表格查阅",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "0.2",
+      "feature_summary": "左侧主题字组与右侧开放表格并置；表头和行列支撑稳定查阅。",
+      "visual_observation": "原生table对象已读回；行列开放、标签可见；没有把表格截图化",
+      "composition": "主题靠左形成前层，表头与开放行列在右侧组织查阅路径",
+      "fits": "若干同口径项目与属性的稳定查阅",
+      "input_conditions": "原生表格；一个主题字组与完整行列",
+      "avoid": "行列过密、精读任务超出显示条件，或关系本应画成流程",
+      "adaptation": "随实际行列和最长单元格调整列宽行高，不删条件，不把小表孤立在大画布",
+      "sequence_note": "稳定表头可保留，实际比较任务相同的连续页不强迫跳换结构",
+      "pairing": {
+        "before": "L005｜概念解释后整理属性；L004｜步骤说明后提供核对表。",
+        "after": "L003｜选取一项展开观察；L010｜结束查阅；连续同表头可保持结构。",
+        "avoid": "稳定表头可保留，实际比较任务相同的连续页不强迫跳换结构"
+      },
+      "selection_prompt": "仅当本页任务适合「若干同口径项目与属性的稳定查阅」，且满足「原生表格；一个主题字组与完整行列」时，将L009列为候选。查看原图及来源第9页后判断。行列过密、精读任务超出显示条件，或关系本应画成流程时排除。",
+      "production_prompt": "参考L009「主题字组与开放表格」，用下面的当前输入制作页面：\n页面目的：{页面目的}\n标题与正文：{当前文案}\n图片／数据：{当前素材及其来源}\n前后页：{邻页说明}\n\n保留关系：左侧主题字组与右侧开放表格并置；表头和行列支撑稳定查阅。\n适配指令：用原生表格保留完整行列；按最长单元格调整宽高；任务不适合表格则换结构，不把密表缩成画布中央小图。\n输入条件：原生表格；一个主题字组与完整行列\n邻页检查：稳定表头可保留，实际比较任务相同的连续页不强迫跳换结构\n\n按当前任务制作21:9黑色或近黑PPT。保留原生可编辑文字；图片等比，不覆盖必要证据。使用当前真实文案和素材，参考页照片、模拟数据与备注不自动成为新任务内容。完成后渲染审核本页与邻页，检查字形、主体、对比度、比例、路径和原生备注。缺乏适配条件时改选版式或重新设计。",
+      "profile": {
+        "skeleton": "headline-table",
+        "alignment": [
+          "left",
+          "right",
+          "baseline"
+        ],
+        "reading": [
+          "left-to-right",
+          "row-column-scan"
+        ],
+        "whitespace": [
+          "open-cell-space"
+        ],
+        "relations": [
+          "title-beside-table",
+          "stable-headers"
+        ],
+        "regions": [
+          {
+            "kind": "text",
+            "rect": [
+              0.05952,
+              0.28646,
+              0.24628,
+              0.2309
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.0625,
+              0.53819,
+              0.2433,
+              0.19965
+            ]
+          },
+          {
+            "kind": "table",
+            "rect": [
+              0.31622,
+              0.21875,
+              0.6131,
+              0.59722
+            ]
+          }
+        ],
+        "basis": "原样预览分析＋源PPT对象框；对象框不等于字形实测"
+      },
+      "prompt_version": "0.2",
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "S01",
+      "source_slide": 9,
+      "adaptation_trial_status": "unverified",
+      "target_software_test_status": "unverified",
+      "device_test_status": "unverified",
+      "glyph_measurement_status": "unverified",
+      "text_capacity_status": "只记录当前源文案，不给出未经试排的容量上下限",
+      "updated_at": "2026-10-16",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L009-80e8eca3d57c30a8.jpg",
+      "preview_path": "images/L009-80e8eca3d57c30a8.jpg",
+      "preview_sha256": "80e8eca3d57c30a80ae141acb883bde4bbe4a7a1c8ab648a7295f580c11d1dae",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 57941,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L009.md",
+      "editable_source_public": false
+    },
+    {
+      "id": "L010",
+      "name": "中轴短句与集中留白",
+      "family": "F09",
+      "kind": "reference",
+      "task": "文字收束",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "0.2",
+      "feature_summary": "两行完整字组围绕中轴集中；四周留白将注意力收束到语义重音。",
+      "visual_observation": "中心字组完整，主辅体量可辨；不把源句直接复制成新项目结论",
+      "composition": "两行字组沿中轴集中，体量与间距形成先后；四周留白收束注意",
+      "fits": "简短结论、过渡或收束",
+      "input_conditions": "无图片；两个完整语义单元",
+      "avoid": "需要复杂解释、真实形态观察或大量并列信息",
+      "adaptation": "根据当前语义重音重新断行与定字级，避免孤立标点或裁关键笔画",
+      "sequence_note": "与L001的偏置关系形成节奏变化，不能所有转场都固定居中两行",
+      "pairing": {
+        "before": "L002｜从现场回到判断；L008｜比较后提炼结论。",
+        "after": "L001｜下一章节以偏置重心开启；L002｜新场景承接；不将所有转场固定为居中两行。",
+        "avoid": "与L001的偏置关系形成节奏变化，不能所有转场都固定居中两行"
+      },
+      "selection_prompt": "仅当本页任务适合「简短结论、过渡或收束」，且满足「无图片；两个完整语义单元」时，将L010列为候选。查看原图及来源第10页后判断。需要复杂解释、真实形态观察或大量并列信息时排除。",
+      "production_prompt": "参考L010「中轴短句与集中留白」，用下面的当前输入制作页面：\n页面目的：{页面目的}\n标题与正文：{当前文案}\n图片／数据：{当前素材及其来源}\n前后页：{邻页说明}\n\n保留关系：两行完整字组围绕中轴集中；四周留白将注意力收束到语义重音。\n适配指令：根据当前语义重音重新断行与定字级；保留完整词组，避免孤立标点和关键笔画裁切；不沿用原句作为新结论。\n输入条件：无图片；两个完整语义单元\n邻页检查：与L001的偏置关系形成节奏变化，不能所有转场都固定居中两行\n\n按当前任务制作21:9黑色或近黑PPT。保留原生可编辑文字；图片等比，不覆盖必要证据。使用当前真实文案和素材，参考页照片、模拟数据与备注不自动成为新任务内容。完成后渲染审核本页与邻页，检查字形、主体、对比度、比例、路径和原生备注。缺乏适配条件时改选版式或重新设计。",
+      "profile": {
+        "skeleton": "centered-type",
+        "alignment": [
+          "center"
+        ],
+        "reading": [
+          "top-to-bottom",
+          "center-focus"
+        ],
+        "whitespace": [
+          "peripheral-open"
+        ],
+        "relations": [
+          "two-type-groups",
+          "centered-stack"
+        ],
+        "regions": [
+          {
+            "kind": "text",
+            "rect": [
+              0.20833,
+              0.16319,
+              0.58333,
+              0.31424
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.14658,
+              0.51042,
+              0.70685,
+              0.31597
+            ]
+          }
+        ],
+        "basis": "原样预览分析＋源PPT对象框；对象框不等于字形实测"
+      },
+      "prompt_version": "0.2",
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "S01",
+      "source_slide": 10,
+      "adaptation_trial_status": "unverified",
+      "target_software_test_status": "unverified",
+      "device_test_status": "unverified",
+      "glyph_measurement_status": "unverified",
+      "text_capacity_status": "只记录当前源文案，不给出未经试排的容量上下限",
+      "updated_at": "2026-10-16",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L010-7633825760bd326e.jpg",
+      "preview_path": "images/L010-7633825760bd326e.jpg",
+      "preview_sha256": "7633825760bd326e446f32a038bf995e790b5c2b91206cc592e0d08030666d16",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 36839,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L010.md",
+      "editable_source_public": false
+    },
+    {
+      "id": "X001",
+      "name": "文字与说明叠压",
+      "family": "F01",
+      "kind": "counterexample",
+      "task": "反例",
+      "status_label": "反例 · 不参与选版",
+      "entry_version": "0.2",
+      "feature_summary": "必读字形与说明相互覆盖，造成失读。",
+      "eligible_for_candidate_search": false,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "S02",
+      "source_slide": 3,
+      "failure": "必读字形与说明相互覆盖，造成失读。",
+      "fix": "分离真实字形范围，调整语义断行、体量和间距。",
+      "updated_at": "2026-10-16",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/X001-f624b21160ca1cb1.jpg",
+      "preview_path": "images/X001-f624b21160ca1cb1.jpg",
+      "preview_sha256": "f624b21160ca1cb1ee46b29a9f495557199edc8e58e96b847bc75eda14960836",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 42419,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/X001.md",
+      "editable_source_public": false
+    },
+    {
+      "id": "X002",
+      "name": "白字落亮墙并遮标识",
+      "family": "F02",
+      "kind": "counterexample",
+      "task": "反例",
+      "status_label": "反例 · 不参与选版",
+      "entry_version": "0.2",
+      "feature_summary": "标题落入亮墙并跨过真实标识，字与证据均受损。",
+      "eligible_for_candidate_search": false,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "S02",
+      "source_slide": 6,
+      "failure": "标题落入亮墙并跨过真实标识，字与证据均受损。",
+      "fix": "按真实照片选择安全文字区，必要时另设阅读带。",
+      "updated_at": "2026-10-16",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/X002-7e96c62288fd1f1a.jpg",
+      "preview_path": "images/X002-7e96c62288fd1f1a.jpg",
+      "preview_sha256": "7e96c62288fd1f1a87507c14f4f120c044561e4afb34a5056e6ddc5724b0e187",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 148788,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/X002.md",
+      "editable_source_public": false
+    },
+    {
+      "id": "X003",
+      "name": "箭头与步骤方向相反",
+      "family": "F04",
+      "kind": "counterexample",
+      "task": "反例",
+      "status_label": "反例 · 不参与选版",
+      "entry_version": "0.2",
+      "feature_summary": "流程连线方向与步骤推进相反。",
+      "eligible_for_candidate_search": false,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "S02",
+      "source_slide": 9,
+      "failure": "流程连线方向与步骤推进相反。",
+      "fix": "逐条核对起点、终点及反馈方向。",
+      "updated_at": "2026-10-16",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/X003-89b332b05c7f3af5.jpg",
+      "preview_path": "images/X003-89b332b05c7f3af5.jpg",
+      "preview_sha256": "89b332b05c7f3af5f3a38ae081b2150c94e4144cbc7e8f2e47f86112fc484e45",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 56925,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/X003.md",
+      "editable_source_public": false
+    },
+    {
+      "id": "L011",
+      "name": "左上平行句群与右下低照度主体",
+      "family": "F02",
+      "kind": "reference",
+      "task": "以若干平行短句说明产品愿景、品牌目标或价值主张，并以单一主体轮廓建立期待",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "左上小标签与四行左齐主张构成文字块，前三行少量暖色关键词保持同级；低照度横向主体压在右下，轮廓光与地面光带连接左右，顶部及右上留黑。",
+      "composition": "原截图1080×534，约2.02:1，非21:9。画面上部约15%为连续黑带；小标签约位于(0.05,0.23)，四行主张约占x=0.05–0.49、y=0.29–0.66；横向主体约占x=0.47–0.95、y=0.57–0.91。文字先读、视线下移至右下主体；主体上缘高光与尾部亮点界定轮廓，地面水平光带形成次级联系。比例来自截图目测，未读取可编辑对象。",
+      "fits": "产品发布的愿景陈述、少量同级承诺加一句综合结论、无需精读产品细节的悬念过渡。适合一张单主体且有足够暗部文字区的宽幅照片。",
+      "input_conditions": "一张横向单主体照片或经授权的独立主体素材；主体朝向、边缘和接地关系可辨；上左有连续暗色安全区；一个短标签、约四行短主张且每行可完整断句，强调词数量克制。这里只记录源页组织方式，不保证固定字数容量；来源PPT页码、字体、图层及授权范围未知。",
+      "avoid": "多段论证、密集参数、长表格、多主体竞争或必须观察精细形态的内容。不可用压黑隐藏证据缺失；不可仅因换车、换器物、改强调色或镜像就另算新骨架；不继承参考中的产品承诺作为事实。",
+      "adaptation": "先按当前内容确定并行句与综合句的语义，再分配左文右下主体。迁移到21:9时重新排版，保持图片等比并检查轮廓、车轮及接地完整；必要时缩放主体或补独立暗色阅读区，不能横向拉伸、机械裁切或虚构照片证据。若当前材料需要清晰展示细节，则改选清晰对象页。截图仅作参考，文字需要原生重建，尚无可编辑重建或适配验证。",
+      "sequence_note": "本页属于F02全幅图像家族，最接近L006的暗主体与左侧字组；横向主体低置和紧凑平行句群是可记录差异，不足以直接认定新家族。与L002共享全幅背景但不以场景纵深为主要任务。适配后还需审核邻页节奏。",
+      "pairing": {
+        "before": "可由L010的中轴短结论或L001的偏置概念页引出愿景，使图像承担首次揭示；应按内容关系选择，不固定编号顺序。",
+        "after": "可接L008的同口径对照或L007的有来源数据，分别证明主张；也可切为单一细节观察页。不要把参考文案中的承诺直接作为证据。",
+        "avoid": "避免与L006或同样左文右物、低照度全幅图连续堆叠；与L002相邻时检查是否确有从现场到产品的内容推进。"
+      },
+      "selection_prompt": "当页面目的是用少量平行短句陈述愿景，且当前素材具备右下横向主体、清晰轮廓和上左安全文字区时，可列为F02参考候选；必须看当前原图并与L006比较。需要参数精读、长文或细节证据时排除。截图约2.02:1，21:9适配未经验证。",
+      "production_prompt": "输入：{页面目的}、{当前标题/标签}、{当前主张及其依据}、{图片与来源/授权}、{目标画幅}、{前后页情况}。先审查主张真实性与素材条件，再在上左安排短标签和左齐的平行句群，少量同级关键词使用一种强调色；综合句沿同一左轴收束。把单一横向主体置于右下，保留可信轮廓高光、接地阴影及安全间距，光带只作现有画面联系，不伪造证据。根据实际字形、句长和图片确定字号、行距与占幅，长句需改写或换版，不能为套图缩成难读小字。目标为21:9时等比处理图片并重新分配留白，不能直接拉伸这张约2.02:1截图。PPT中的标签、主张及必要图形均为原生可编辑对象，不把整张截图当最终页，不复制参考中的品牌、文案或产品承诺。完成后渲染本页和邻页，检查字形与主体是否遮挡、暗部轮廓可见性、文字实际背景对比、边缘裁切、阅读顺序及与L006等近似骨架的连续重复；不满足则改选布局。状态仅为构图参考，提示词与21:9适配均待真实制作验证。",
+      "profile": {
+        "skeleton": "fullbleed",
+        "alignment": [
+          "top-left",
+          "bottom-right"
+        ],
+        "reading": [
+          "title-to-image",
+          "left-to-right",
+          "top-to-bottom"
+        ],
+        "whitespace": [
+          "photo-negative-space",
+          "peripheral-open"
+        ],
+        "relations": [
+          "text-in-photo",
+          "contour-space",
+          "type-hierarchy"
+        ],
+        "regions": [
+          {
+            "kind": "image",
+            "rect": [
+              0,
+              0.146,
+              0.998,
+              0.843
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.05,
+              0.225,
+              0.135,
+              0.043
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.05,
+              0.291,
+              0.437,
+              0.078
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.05,
+              0.387,
+              0.437,
+              0.078
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.05,
+              0.486,
+              0.437,
+              0.077
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.05,
+              0.582,
+              0.304,
+              0.077
+            ]
+          }
+        ],
+        "basis": "实际查看1080×534采集截图及L006、L002、L005预览后目测；分区和归一化框均为截图估计，非源PPT对象框或字形实测。照片中的主体位于右下；未取得原始可编辑页。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "来源网页：https://zhuanlan.zhihu.com/p/690546229\n页面标题：(13 封私信 / 32 条消息) 小米汽车发布会101页PPT（附下载） - 知乎\n采集方式：image\n图片地址：https://pica.zhimg.com/v2-ee19e43d400a0541475c71c629492b12_1440w.jpg\n采集时间：2026-10-16T03:10:35.112Z\n原图像素：1080×534\n来源仅按采集器元数据保存；未独立核验原作者、原PPT页码、字体与素材授权。\n查重备注：与另一待收录cap_ba26babe495826c0e6ccd2f403ac867c9f03e0813fb216cf1e31d9f944b132ef的SHA-256完全一致；两图已实际查看，未发现视觉或结构差异。对方任务另有有效租约，本任务只处理当前领取项，不合并、不覆盖对方记录。",
+      "related_id": "L006",
+      "created_at": "2026-10-16T04:03:24.645Z",
+      "updated_at": "2026-10-16T04:03:24.645Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L011-dd561ba9e62600e1.jpg",
+      "preview_path": "images/L011-dd561ba9e62600e1.jpg",
+      "preview_sha256": "dd561ba9e62600e15aa16fbaaf8a53e83250e8ffe77296ae64a8e2b006feac7a",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 48966,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L011.md",
+      "editable_source_public": false
+    },
+    {
+      "id": "L012",
+      "name": "全图型｜左下文字·左对齐（知乎27157505·01）",
+      "family": "F02",
+      "kind": "reference",
+      "task": "全幅图像的局部文字位置与对齐选择",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "全幅图像骨架；字组位于左下；标题与说明在局部文字区左对齐；上方和右侧保留主要图像空间。",
+      "composition": "原例为手机背面斜向近景，主体由右上延伸至右下；左下白色大标题与多行说明共享左轴。手机有意出血是局部特写，不能误称完整产品视图。 本条归一化文字框[[0.057, 0.64, 0.35, 0.09], [0.057, 0.76, 0.37, 0.15]]为看图估计，只比较主要语义图文；不含品牌角标、水印及示意辅助线，非源对象框或字形实测。",
+      "fits": "一张主图承担主要信息，左下具备安全文字区，需要一个短标题及简短说明的场景展示、功能说明或观点过渡。标题与说明长短不同时仍能沿稳定轴阅读。",
+      "input_conditions": "一张横幅真实图片或明确标注的示意图片；左下有足够连续阅读区，主体可向右上或右侧展开；标题/说明分别完整断句；文字组内部左对齐。示意块比例不构成固定字数容量承诺。",
+      "avoid": "左下恰好是人脸、手部、屏幕、标识、数据或其他必要证据；背景频繁明暗跳变；正文过长；为套版而翻转带字照片。",
+      "adaptation": "先标出当前图片必见部位与阅读区，再确定左下锚点及左对齐轴；按实际字形排短标题、说明。原图约16:9，转21:9必须重排：等比适配并保护证据，可调整字组和主体占幅、使用经授权更宽素材或单独阅读带，不能横向拉伸或机械裁切。原例的浅色/暖色不自动成为任务背景规则；需要黑色风格时重新选用有暗色阅读区的素材。",
+      "sequence_note": "同属F02全图型家族；原文方式1为位置和对齐变体，不登记为独立新家族。与L002/L006的图内文字结构比较任务与文字区，不能只因换图算新结构。",
+      "pairing": {
+        "before": "适合从纯文字判断或提问页进入，以图像给出直观场景；也可接在步骤概述后展示具体结果。",
+        "after": "按内容转入对象细节、可核验的数据或同尺度对照页，避免只轮换文字角落制造表面变化。",
+        "avoid": "避免与全图型近似邻页连续堆叠；镜像、换色、换照片仍属于同一骨架。"
+      },
+      "selection_prompt": "当一张主图承担核心信息、左下确有安全文字区且主标题和简短说明适合局部左对齐时，列为F02候选；先查看示例与当前图片。需要长段落、密集表格或此区有必要证据时排除。",
+      "production_prompt": "输入：{页面目的}、{当前标题}、{当前说明}、{当前图片及来源}、{必须保留的图像细节}、{目标画幅/视觉规范}、{前后页}。\n采用全图型左下字组变体：图像覆盖画布，标题与说明作为紧凑的独立文字组放在左下；二者在该局部区域严格左对齐。保留“全幅主图—局部字组”的主次关系，阅读路径为“先观察主体，再落到左下说明”。 根据当前文案调整字号、行距、组内间隔与区宽，不复制原图数值、人物信息或产品承诺；用内容真实性和素材证据决定图像，而非为套版牺牲信息。\n在目标PPT中使用原生可编辑文字，必要图形与蒙版也用原生对象；截图只用于看构图。示意图中的虚线、灰色占位块和来源水印不照搬为成品装饰。若背景对比不足，仅在不遮挡证据时添加克制的局部渐变或改选素材/布局，不能靠整图压黑掩盖问题。\n若目标为21:9黑色/近黑，按照当前任务规范重做画布和留白，图片等比，必要证据不裁掉；不可把16:9截图拉伸成21:9。完成后渲染本页和相邻页，检查实际字形、可读性、最差背景对比、文字与主体遮挡、像素质量及连续同骨架重复。参考条目不等于已验证模板；没有适用阅读区时换版。",
+      "profile": {
+        "skeleton": "fullbleed",
+        "alignment": [
+          "bottom-left",
+          "text-left"
+        ],
+        "reading": [
+          "title-to-image",
+          "top-to-bottom",
+          "left-to-right"
+        ],
+        "whitespace": [
+          "photo-negative-space",
+          "text-safe-bottom-left"
+        ],
+        "relations": [
+          "text-in-photo",
+          "type-hierarchy",
+          "shared-text-axis"
+        ],
+        "regions": [
+          {
+            "kind": "image",
+            "rect": [
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.057,
+              0.64,
+              0.35,
+              0.09
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.057,
+              0.76,
+              0.37,
+              0.15
+            ]
+          }
+        ],
+        "basis": "实际查看原文示意图及原文完整发布会案例后分析。原文方法1；主要语义文字框为归一化估计，不含品牌水印和示意辅助线。无可编辑PPT，不作字形/容量认证。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "来源：学有小成《看小米手机发布会，学全图型PPT排版！》，原页编辑时间2017-05-29 09:47；2026-10-16实际读取正文及全部内嵌图。https://zhuanlan.zhihu.com/p/27157505。文章按角落、左右居中、中轴三类组织；角落4×2、侧边2×3、中轴2，共16种位置/对齐组合。正文15种与16种并存，左中段写两种而示意图列三种；本批依据原图编号1–16核对，避免漏掉左中右齐。分组用于检索，不把镜像、换色或换图算成新骨架。 本条对应原文排版方式1，展示原文完整发布会案例；原始示意图为正文第2张内嵌图片，提取框(27, 197, 479, 451)。 原例为第3张内嵌图片。 原图约16:9，保留原比例、品牌标记与原有文字。来源图的字体、图层及可编辑源PPT未知；收录不等于素材再使用授权，不认证为模板。\n已保留的原始示意图：https://ppt-layout-atlas.woollywave.chatgpt.site/api/assets/uploads/37045eda-91a1-4669-8212-d7ad02eea2f0.jpg；原图SHA-256：78072cc9827f9abd44dfdfcbf63a31601cacd41276baa37911601aca8bae70b4。\n已保留的原始案例图：https://ppt-layout-atlas.woollywave.chatgpt.site/api/assets/uploads/e8108a45-4afc-436f-93e3-824c27fedb71.png；原图SHA-256：3963b46d1febda30b9685c442b96bf19ffd311a1c4237a9c3bc23a63944d3b33。",
+      "related_id": "L002",
+      "created_at": "2026-10-16T04:50:00.640Z",
+      "updated_at": "2026-10-16T04:50:00.640Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L012-7fa32cb386061b30.jpg",
+      "preview_path": "images/L012-7fa32cb386061b30.jpg",
+      "preview_sha256": "7fa32cb386061b30112a46b061930f5c5a12d539c23826dac06510860628f712",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 115136,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L012.md",
+      "editable_source_public": false
+    },
+    {
+      "id": "L014",
+      "name": "全图型｜左上文字·左对齐（知乎27157505·03）",
+      "family": "F02",
+      "kind": "reference",
+      "task": "全幅图像的局部文字位置与对齐选择",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "全幅图像骨架；字组位于左上；标题与说明在局部文字区左对齐；右侧和下方保留主要图像空间。",
+      "composition": "原例为手持平板的生活场景，右侧倾斜屏幕占主要面积；左上深色标题和较短副标题共享左轴。浅暖背景是原例特征，不代表应将主Skill改为浅底。 本条归一化文字框[[0.069, 0.119, 0.32, 0.1], [0.069, 0.245, 0.19, 0.064]]为看图估计，只比较主要语义图文；不含品牌角标、水印及示意辅助线，非源对象框或字形实测。",
+      "fits": "一张主图承担主要信息，左上具备安全文字区，需要一个短标题及简短说明的场景展示、功能说明或观点过渡。标题与说明长短不同时仍能沿稳定轴阅读。",
+      "input_conditions": "一张横幅真实图片或明确标注的示意图片；左上有足够连续阅读区，主体可向右下或右侧展开；标题/说明分别完整断句；文字组内部左对齐。示意块比例不构成固定字数容量承诺。",
+      "avoid": "左上恰好是人脸、手部、屏幕、标识、数据或其他必要证据；背景频繁明暗跳变；正文过长；为套版而翻转带字照片。",
+      "adaptation": "先标出当前图片必见部位与阅读区，再确定左上锚点及左对齐轴；按实际字形排短标题、说明。原图约16:9，转21:9必须重排：等比适配并保护证据，可调整字组和主体占幅、使用经授权更宽素材或单独阅读带，不能横向拉伸或机械裁切。原例的浅色/暖色不自动成为任务背景规则；需要黑色风格时重新选用有暗色阅读区的素材。",
+      "sequence_note": "同属F02全图型家族；原文方式3为位置和对齐变体，不登记为独立新家族。与L002/L006的图内文字结构比较任务与文字区，不能只因换图算新结构。",
+      "pairing": {
+        "before": "适合从纯文字判断或提问页进入，以图像给出直观场景；也可接在步骤概述后展示具体结果。",
+        "after": "按内容转入对象细节、可核验的数据或同尺度对照页，避免只轮换文字角落制造表面变化。",
+        "avoid": "避免与全图型近似邻页连续堆叠；镜像、换色、换照片仍属于同一骨架。"
+      },
+      "selection_prompt": "当一张主图承担核心信息、左上确有安全文字区且主标题和简短说明适合局部左对齐时，列为F02候选；先查看示例与当前图片。需要长段落、密集表格或此区有必要证据时排除。",
+      "production_prompt": "输入：{页面目的}、{当前标题}、{当前说明}、{当前图片及来源}、{必须保留的图像细节}、{目标画幅/视觉规范}、{前后页}。\n采用全图型左上字组变体：图像覆盖画布，标题与说明作为紧凑的独立文字组放在左上；二者在该局部区域严格左对齐。保留“全幅主图—局部字组”的主次关系，阅读路径为“从左上题组进入右侧主体”。 根据当前文案调整字号、行距、组内间隔与区宽，不复制原图数值、人物信息或产品承诺；用内容真实性和素材证据决定图像，而非为套版牺牲信息。\n在目标PPT中使用原生可编辑文字，必要图形与蒙版也用原生对象；截图只用于看构图。示意图中的虚线、灰色占位块和来源水印不照搬为成品装饰。若背景对比不足，仅在不遮挡证据时添加克制的局部渐变或改选素材/布局，不能靠整图压黑掩盖问题。\n若目标为21:9黑色/近黑，按照当前任务规范重做画布和留白，图片等比，必要证据不裁掉；不可把16:9截图拉伸成21:9。完成后渲染本页和相邻页，检查实际字形、可读性、最差背景对比、文字与主体遮挡、像素质量及连续同骨架重复。参考条目不等于已验证模板；没有适用阅读区时换版。",
+      "profile": {
+        "skeleton": "fullbleed",
+        "alignment": [
+          "top-left",
+          "text-left"
+        ],
+        "reading": [
+          "title-to-image",
+          "top-to-bottom",
+          "left-to-right"
+        ],
+        "whitespace": [
+          "photo-negative-space",
+          "text-safe-top-left"
+        ],
+        "relations": [
+          "text-in-photo",
+          "type-hierarchy",
+          "shared-text-axis"
+        ],
+        "regions": [
+          {
+            "kind": "image",
+            "rect": [
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.069,
+              0.119,
+              0.32,
+              0.1
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.069,
+              0.245,
+              0.19,
+              0.064
+            ]
+          }
+        ],
+        "basis": "实际查看原文示意图及原文完整发布会案例后分析。原文方法3；主要语义文字框为归一化估计，不含品牌水印和示意辅助线。无可编辑PPT，不作字形/容量认证。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "来源：学有小成《看小米手机发布会，学全图型PPT排版！》，原页编辑时间2017-05-29 09:47；2026-10-16实际读取正文及全部内嵌图。https://zhuanlan.zhihu.com/p/27157505。文章按角落、左右居中、中轴三类组织；角落4×2、侧边2×3、中轴2，共16种位置/对齐组合。正文15种与16种并存，左中段写两种而示意图列三种；本批依据原图编号1–16核对，避免漏掉左中右齐。分组用于检索，不把镜像、换色或换图算成新骨架。 本条对应原文排版方式3，展示原文完整发布会案例；原始示意图为正文第4张内嵌图片，提取框(27, 197, 479, 451)。 原例为第5张内嵌图片。 原图约16:9，保留原比例、品牌标记与原有文字。来源图的字体、图层及可编辑源PPT未知；收录不等于素材再使用授权，不认证为模板。\n已保留的原始示意图：https://ppt-layout-atlas.woollywave.chatgpt.site/api/assets/uploads/d31c3231-0370-4eef-8066-6d4614de347e.jpg；原图SHA-256：3178748b89f687dcc34499d5f963e523bf9b2293be7f21929eaa0eadab4c727b。\n已保留的原始案例图：https://ppt-layout-atlas.woollywave.chatgpt.site/api/assets/uploads/be7178a7-a006-4aea-9ca1-7e3ba424e20a.png；原图SHA-256：391d5293b53e126f59f69efb1032f4128fb9d2ebec63225c1b70c33698fc4f75。",
+      "related_id": "L002",
+      "created_at": "2026-10-16T04:51:07.615Z",
+      "updated_at": "2026-10-16T04:51:07.615Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L014-7aaa85fc6877aa3c.jpg",
+      "preview_path": "images/L014-7aaa85fc6877aa3c.jpg",
+      "preview_sha256": "7aaa85fc6877aa3c0783048b91d2fb39ca21040d4969a1976c636c2e54ec821c",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 234697,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L014.md",
+      "editable_source_public": false
+    },
+    {
+      "id": "L015",
+      "name": "全图型｜右上文字·右对齐（知乎27157505·05）",
+      "family": "F02",
+      "kind": "reference",
+      "task": "全幅图像的局部文字位置与对齐选择",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "全幅图像骨架；字组位于右上；标题与说明在局部文字区右对齐；左侧和下方保留主要图像空间。",
+      "composition": "原例为浅底团队合照，人物由左向中右横向展开；右上两行短说明共享右轴。原例字号层级较弱，标题/正文是功能划分，不把示意块大小当成原页真实字号。 本条归一化文字框[[0.885, 0.053, 0.089, 0.044], [0.804, 0.104, 0.171, 0.043]]为看图估计，只比较主要语义图文；不含品牌角标、水印及示意辅助线，非源对象框或字形实测。",
+      "fits": "一张主图承担主要信息，右上具备安全文字区，需要一个短标题及简短说明的场景展示、功能说明或观点过渡。标题与说明长短不同时仍能沿稳定轴阅读。",
+      "input_conditions": "一张横幅真实图片或明确标注的示意图片；右上有足够连续阅读区，主体可向左下或左侧展开；标题/说明分别完整断句；文字组内部右对齐。示意块比例不构成固定字数容量承诺。",
+      "avoid": "右上恰好是人脸、手部、屏幕、标识、数据或其他必要证据；背景频繁明暗跳变；正文过长；为套版而翻转带字照片。",
+      "adaptation": "先标出当前图片必见部位与阅读区，再确定右上锚点及右对齐轴；按实际字形排短标题、说明。原图约16:9，转21:9必须重排：等比适配并保护证据，可调整字组和主体占幅、使用经授权更宽素材或单独阅读带，不能横向拉伸或机械裁切。原例的浅色/暖色不自动成为任务背景规则；需要黑色风格时重新选用有暗色阅读区的素材。",
+      "sequence_note": "同属F02全图型家族；原文方式5为位置和对齐变体，不登记为独立新家族。与L002/L006的图内文字结构比较任务与文字区，不能只因换图算新结构。",
+      "pairing": {
+        "before": "适合从纯文字判断或提问页进入，以图像给出直观场景；也可接在步骤概述后展示具体结果。",
+        "after": "按内容转入对象细节、可核验的数据或同尺度对照页，避免只轮换文字角落制造表面变化。",
+        "avoid": "避免与全图型近似邻页连续堆叠；镜像、换色、换照片仍属于同一骨架。"
+      },
+      "selection_prompt": "当一张主图承担核心信息、右上确有安全文字区且主标题和简短说明适合局部右对齐时，列为F02候选；先查看示例与当前图片。需要长段落、密集表格或此区有必要证据时排除。",
+      "production_prompt": "输入：{页面目的}、{当前标题}、{当前说明}、{当前图片及来源}、{必须保留的图像细节}、{目标画幅/视觉规范}、{前后页}。\n采用全图型右上字组变体：图像覆盖画布，标题与说明作为紧凑的独立文字组放在右上；二者在该局部区域严格右对齐。保留“全幅主图—局部字组”的主次关系，阅读路径为“从画面主体回到右上说明”。 根据当前文案调整字号、行距、组内间隔与区宽，不复制原图数值、人物信息或产品承诺；用内容真实性和素材证据决定图像，而非为套版牺牲信息。\n在目标PPT中使用原生可编辑文字，必要图形与蒙版也用原生对象；截图只用于看构图。示意图中的虚线、灰色占位块和来源水印不照搬为成品装饰。若背景对比不足，仅在不遮挡证据时添加克制的局部渐变或改选素材/布局，不能靠整图压黑掩盖问题。\n若目标为21:9黑色/近黑，按照当前任务规范重做画布和留白，图片等比，必要证据不裁掉；不可把16:9截图拉伸成21:9。完成后渲染本页和相邻页，检查实际字形、可读性、最差背景对比、文字与主体遮挡、像素质量及连续同骨架重复。参考条目不等于已验证模板；没有适用阅读区时换版。",
+      "profile": {
+        "skeleton": "fullbleed",
+        "alignment": [
+          "top-right",
+          "text-right"
+        ],
+        "reading": [
+          "title-to-image",
+          "top-to-bottom"
+        ],
+        "whitespace": [
+          "photo-negative-space",
+          "text-safe-top-right"
+        ],
+        "relations": [
+          "text-in-photo",
+          "type-hierarchy",
+          "shared-text-axis"
+        ],
+        "regions": [
+          {
+            "kind": "image",
+            "rect": [
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.885,
+              0.053,
+              0.089,
+              0.044
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.804,
+              0.104,
+              0.171,
+              0.043
+            ]
+          }
+        ],
+        "basis": "实际查看原文示意图及原文完整发布会案例后分析。原文方法5；主要语义文字框为归一化估计，不含品牌水印和示意辅助线。无可编辑PPT，不作字形/容量认证。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "来源：学有小成《看小米手机发布会，学全图型PPT排版！》，原页编辑时间2017-05-29 09:47；2026-10-16实际读取正文及全部内嵌图。https://zhuanlan.zhihu.com/p/27157505。文章按角落、左右居中、中轴三类组织；角落4×2、侧边2×3、中轴2，共16种位置/对齐组合。正文15种与16种并存，左中段写两种而示意图列三种；本批依据原图编号1–16核对，避免漏掉左中右齐。分组用于检索，不把镜像、换色或换图算成新骨架。 本条对应原文排版方式5，展示原文完整发布会案例；原始示意图为正文第6张内嵌图片，提取框(27, 197, 479, 451)。 原例为第7张内嵌图片。 原图约16:9，保留原比例、品牌标记与原有文字。来源图的字体、图层及可编辑源PPT未知；收录不等于素材再使用授权，不认证为模板。\n已保留的原始示意图：https://ppt-layout-atlas.woollywave.chatgpt.site/api/assets/uploads/da5e69b3-a960-4c5f-b482-af97e956a1fb.jpg；原图SHA-256：d203136778a39f809d9c4c3d6b4f5c48b8c80c5e1025e6490e59115b61260b4d。\n已保留的原始案例图：https://ppt-layout-atlas.woollywave.chatgpt.site/api/assets/uploads/e52b4fb7-d263-47fa-8d69-0ee7837f2f34.png；原图SHA-256：cf47652eb464f8eabcb4f5784170ac26b1b34f36686dbaed60dbb0cd843d562a。",
+      "related_id": "L002",
+      "created_at": "2026-10-16T04:51:42.707Z",
+      "updated_at": "2026-10-16T04:51:42.707Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L015-2cae90b1a9fca373.jpg",
+      "preview_path": "images/L015-2cae90b1a9fca373.jpg",
+      "preview_sha256": "2cae90b1a9fca373b015e60328ee0c694673b5380b28d1fefdebdd1d50f398b0",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 141901,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L015.md",
+      "editable_source_public": false
+    },
+    {
+      "id": "L017",
+      "name": "全图型｜左中文字·左对齐（知乎27157505·09）",
+      "family": "F02",
+      "kind": "reference",
+      "task": "全幅图像的局部文字位置与对齐选择",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "全幅图像骨架；字组位于左侧中部；标题与说明在局部文字区左对齐；右侧保留主要图像空间。",
+      "composition": "原例为人物阅读平板的生活场景，设备在右侧，左中两行短文沿左轴排列。虚化背景提供阅读区，但明暗并不完全均匀。 本条归一化文字框[[0.135, 0.4, 0.232, 0.1], [0.135, 0.52, 0.303, 0.047]]为看图估计，只比较主要语义图文；不含品牌角标、水印及示意辅助线，非源对象框或字形实测。",
+      "fits": "一张主图承担主要信息，左侧中部具备安全文字区，需要一个短标题及简短说明的场景展示、功能说明或观点过渡。标题与说明长短不同时仍能沿稳定轴阅读。",
+      "input_conditions": "一张横幅真实图片或明确标注的示意图片；左侧中部有足够连续阅读区，主体可向右侧展开；标题/说明分别完整断句；文字组内部左对齐。示意块比例不构成固定字数容量承诺。",
+      "avoid": "左侧中部恰好是人脸、手部、屏幕、标识、数据或其他必要证据；背景频繁明暗跳变；正文过长；为套版而翻转带字照片。不能将文字区位于左侧/右侧与文字自身居中混为一谈。",
+      "adaptation": "先标出当前图片必见部位与阅读区，再确定左侧中部锚点及左对齐轴；按实际字形排短标题、说明。原图约16:9，转21:9必须重排：等比适配并保护证据，可调整字组和主体占幅、使用经授权更宽素材或单独阅读带，不能横向拉伸或机械裁切。原例的浅色/暖色不自动成为任务背景规则；需要黑色风格时重新选用有暗色阅读区的素材。",
+      "sequence_note": "同属F02全图型家族；原文方式9为位置和对齐变体，不登记为独立新家族。与L002/L006的图内文字结构比较任务与文字区，不能只因换图算新结构。",
+      "pairing": {
+        "before": "适合从纯文字判断或提问页进入，以图像给出直观场景；也可接在步骤概述后展示具体结果。",
+        "after": "按内容转入对象细节、可核验的数据或同尺度对照页，避免只轮换文字角落制造表面变化。",
+        "avoid": "避免与全图型近似邻页连续堆叠；镜像、换色、换照片仍属于同一骨架。"
+      },
+      "selection_prompt": "当一张主图承担核心信息、左侧中部确有安全文字区且主标题和简短说明适合局部左对齐时，列为F02候选；先查看示例与当前图片。需要长段落、密集表格或此区有必要证据时排除。",
+      "production_prompt": "输入：{页面目的}、{当前标题}、{当前说明}、{当前图片及来源}、{必须保留的图像细节}、{目标画幅/视觉规范}、{前后页}。\n采用全图型左侧中部字组变体：图像覆盖画布，标题与说明作为紧凑的独立文字组放在左侧中部；二者在该局部区域严格左对齐。保留“全幅主图—局部字组”的主次关系，阅读路径为“左侧文字与右侧主体形成横向联系”。 根据当前文案调整字号、行距、组内间隔与区宽，不复制原图数值、人物信息或产品承诺；用内容真实性和素材证据决定图像，而非为套版牺牲信息。\n在目标PPT中使用原生可编辑文字，必要图形与蒙版也用原生对象；截图只用于看构图。示意图中的虚线、灰色占位块和来源水印不照搬为成品装饰。若背景对比不足，仅在不遮挡证据时添加克制的局部渐变或改选素材/布局，不能靠整图压黑掩盖问题。\n若目标为21:9黑色/近黑，按照当前任务规范重做画布和留白，图片等比，必要证据不裁掉；不可把16:9截图拉伸成21:9。完成后渲染本页和相邻页，检查实际字形、可读性、最差背景对比、文字与主体遮挡、像素质量及连续同骨架重复。参考条目不等于已验证模板；没有适用阅读区时换版。",
+      "profile": {
+        "skeleton": "fullbleed",
+        "alignment": [
+          "middle-left",
+          "text-left"
+        ],
+        "reading": [
+          "title-to-image",
+          "top-to-bottom",
+          "left-to-right"
+        ],
+        "whitespace": [
+          "photo-negative-space",
+          "text-safe-middle-left"
+        ],
+        "relations": [
+          "text-in-photo",
+          "type-hierarchy",
+          "shared-text-axis"
+        ],
+        "regions": [
+          {
+            "kind": "image",
+            "rect": [
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.135,
+              0.4,
+              0.232,
+              0.1
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.135,
+              0.52,
+              0.303,
+              0.047
+            ]
+          }
+        ],
+        "basis": "实际查看原文示意图及原文完整发布会案例后分析。原文方法9；主要语义文字框为归一化估计，不含品牌水印和示意辅助线。无可编辑PPT，不作字形/容量认证。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "来源：学有小成《看小米手机发布会，学全图型PPT排版！》，原页编辑时间2017-05-29 09:47；2026-10-16实际读取正文及全部内嵌图。https://zhuanlan.zhihu.com/p/27157505。文章按角落、左右居中、中轴三类组织；角落4×2、侧边2×3、中轴2，共16种位置/对齐组合。正文15种与16种并存，左中段写两种而示意图列三种；本批依据原图编号1–16核对，避免漏掉左中右齐。分组用于检索，不把镜像、换色或换图算成新骨架。 本条对应原文排版方式9，展示原文完整发布会案例；原始示意图为正文第10张内嵌图片，提取框(75, 133, 431, 333)。 原例为第11张内嵌图片。 原图约16:9，保留原比例、品牌标记与原有文字。来源图的字体、图层及可编辑源PPT未知；收录不等于素材再使用授权，不认证为模板。\n已保留的原始示意图：https://ppt-layout-atlas.woollywave.chatgpt.site/api/assets/uploads/9a6a9dda-9ac2-4db6-b739-7ff3880d2128.jpg；原图SHA-256：f921a78c1cd367c10918918cbfbbcdb1aa8a8010c4a706f2d9e6cd75df9488d9。\n已保留的原始案例图：https://ppt-layout-atlas.woollywave.chatgpt.site/api/assets/uploads/0337870f-e2ce-41bf-9680-21a9e8a5c7e5.png；原图SHA-256：9bf0f01625c5bcc8cb7812b217eda5edcf8610f8efc11e0aedc95dd549d82987。",
+      "related_id": "L002",
+      "created_at": "2026-10-16T04:52:55.367Z",
+      "updated_at": "2026-10-16T04:52:55.367Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L017-b0f3cbd9afd01711.jpg",
+      "preview_path": "images/L017-b0f3cbd9afd01711.jpg",
+      "preview_sha256": "b0f3cbd9afd01711b64f27422e640df44cc6d3bb6445bfed9eb720ef4482b87f",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 180652,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L017.md",
+      "editable_source_public": false
+    },
+    {
+      "id": "L019",
+      "name": "全图型｜右中文字·左对齐（知乎27157505·14）",
+      "family": "F02",
+      "kind": "reference",
+      "task": "全幅图像的局部文字位置与对齐选择",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "全幅图像骨架；字组位于右侧中部；标题与说明在局部文字区左对齐；左侧保留主要图像空间。",
+      "composition": "原例为楼梯上的团队，人物在左侧；右侧两行文字左齐。右侧暗区是可见画面特征；渐变蒙版的制作方式由文章说明，截图无法反推出具体图层和参数。 本条归一化文字框[[0.486, 0.42, 0.31, 0.067], [0.486, 0.512, 0.436, 0.069]]为看图估计，只比较主要语义图文；不含品牌角标、水印及示意辅助线，非源对象框或字形实测。",
+      "fits": "一张主图承担主要信息，右侧中部具备安全文字区，需要一个短标题及简短说明的场景展示、功能说明或观点过渡。标题与说明长短不同时仍能沿稳定轴阅读。",
+      "input_conditions": "一张横幅真实图片或明确标注的示意图片；右侧中部有足够连续阅读区，主体可向左侧展开；标题/说明分别完整断句；文字组内部左对齐。示意块比例不构成固定字数容量承诺。",
+      "avoid": "右侧中部恰好是人脸、手部、屏幕、标识、数据或其他必要证据；背景频繁明暗跳变；正文过长；为套版而翻转带字照片。不能将文字区位于左侧/右侧与文字自身居中混为一谈。",
+      "adaptation": "先标出当前图片必见部位与阅读区，再确定右侧中部锚点及左对齐轴；按实际字形排短标题、说明。原图约16:9，转21:9必须重排：等比适配并保护证据，可调整字组和主体占幅、使用经授权更宽素材或单独阅读带，不能横向拉伸或机械裁切。原例的浅色/暖色不自动成为任务背景规则；需要黑色风格时重新选用有暗色阅读区的素材。",
+      "sequence_note": "同属F02全图型家族；原文方式14为位置和对齐变体，不登记为独立新家族。与L002/L006的图内文字结构比较任务与文字区，不能只因换图算新结构。",
+      "pairing": {
+        "before": "适合从纯文字判断或提问页进入，以图像给出直观场景；也可接在步骤概述后展示具体结果。",
+        "after": "按内容转入对象细节、可核验的数据或同尺度对照页，避免只轮换文字角落制造表面变化。",
+        "avoid": "避免与全图型近似邻页连续堆叠；镜像、换色、换照片仍属于同一骨架。"
+      },
+      "selection_prompt": "当一张主图承担核心信息、右侧中部确有安全文字区且主标题和简短说明适合局部左对齐时，列为F02候选；先查看示例与当前图片。需要长段落、密集表格或此区有必要证据时排除。",
+      "production_prompt": "输入：{页面目的}、{当前标题}、{当前说明}、{当前图片及来源}、{必须保留的图像细节}、{目标画幅/视觉规范}、{前后页}。\n采用全图型右侧中部字组变体：图像覆盖画布，标题与说明作为紧凑的独立文字组放在右侧中部；二者在该局部区域严格左对齐。保留“全幅主图—局部字组”的主次关系，阅读路径为“左侧主体与右侧文字形成横向联系”。 根据当前文案调整字号、行距、组内间隔与区宽，不复制原图数值、人物信息或产品承诺；用内容真实性和素材证据决定图像，而非为套版牺牲信息。\n在目标PPT中使用原生可编辑文字，必要图形与蒙版也用原生对象；截图只用于看构图。示意图中的虚线、灰色占位块和来源水印不照搬为成品装饰。若背景对比不足，仅在不遮挡证据时添加克制的局部渐变或改选素材/布局，不能靠整图压黑掩盖问题。\n若目标为21:9黑色/近黑，按照当前任务规范重做画布和留白，图片等比，必要证据不裁掉；不可把16:9截图拉伸成21:9。完成后渲染本页和相邻页，检查实际字形、可读性、最差背景对比、文字与主体遮挡、像素质量及连续同骨架重复。参考条目不等于已验证模板；没有适用阅读区时换版。",
+      "profile": {
+        "skeleton": "fullbleed",
+        "alignment": [
+          "middle-right",
+          "text-left"
+        ],
+        "reading": [
+          "title-to-image",
+          "top-to-bottom",
+          "left-to-right"
+        ],
+        "whitespace": [
+          "photo-negative-space",
+          "text-safe-middle-right"
+        ],
+        "relations": [
+          "text-in-photo",
+          "type-hierarchy",
+          "shared-text-axis"
+        ],
+        "regions": [
+          {
+            "kind": "image",
+            "rect": [
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.486,
+              0.42,
+              0.31,
+              0.067
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.486,
+              0.512,
+              0.436,
+              0.069
+            ]
+          }
+        ],
+        "basis": "实际查看原文示意图及原文完整发布会案例后分析。原文方法14；主要语义文字框为归一化估计，不含品牌水印和示意辅助线。无可编辑PPT，不作字形/容量认证。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "来源：学有小成《看小米手机发布会，学全图型PPT排版！》，原页编辑时间2017-05-29 09:47；2026-10-16实际读取正文及全部内嵌图。https://zhuanlan.zhihu.com/p/27157505。文章按角落、左右居中、中轴三类组织；角落4×2、侧边2×3、中轴2，共16种位置/对齐组合。正文15种与16种并存，左中段写两种而示意图列三种；本批依据原图编号1–16核对，避免漏掉左中右齐。分组用于检索，不把镜像、换色或换图算成新骨架。 本条对应原文排版方式14，展示原文完整发布会案例；原始示意图为正文第13张内嵌图片，提取框(75, 364, 436, 568)。 原例为第14张内嵌图片。 原图约16:9，保留原比例、品牌标记与原有文字。来源图的字体、图层及可编辑源PPT未知；收录不等于素材再使用授权，不认证为模板。\n已保留的原始示意图：https://ppt-layout-atlas.woollywave.chatgpt.site/api/assets/uploads/4118c8d8-64e3-4c86-9523-ed42321d67e9.jpg；原图SHA-256：8bb580283fc521b6f63fb9287ecaa7ac505839872e6c9aec1f0d601d722b3081。\n已保留的原始案例图：https://ppt-layout-atlas.woollywave.chatgpt.site/api/assets/uploads/b8f1c711-c829-471f-af3a-e0f61c595c03.jpg；原图SHA-256：00649235034a82b006cc65c219191b6dc9f814cbc419f6d07afa545029a8c7be。",
+      "related_id": "L002",
+      "created_at": "2026-10-16T04:54:11.535Z",
+      "updated_at": "2026-10-16T04:54:11.535Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L019-a5e7b76fc1b2f1b4.jpg",
+      "preview_path": "images/L019-a5e7b76fc1b2f1b4.jpg",
+      "preview_sha256": "a5e7b76fc1b2f1b4f129b94588fa33174baa846ed65ed4936f5d02c36395c33c",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 94617,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L019.md",
+      "editable_source_public": false
+    },
+    {
+      "id": "L020",
+      "name": "全图型｜中轴上部·居中对齐（知乎27157505·15）",
+      "family": "F02",
+      "kind": "reference",
+      "task": "全幅图像的局部文字位置与对齐选择",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "全幅图像骨架；字组位于上方中轴；标题与说明在局部文字区居中对齐；下方及两侧保留主要图像空间。",
+      "composition": "原例为暖色小提琴近景，主体主要在下方；标题与更长说明共用上部中轴。原图未取得可编辑源页。 本条归一化文字框[[0.403, 0.196, 0.203, 0.073], [0.23, 0.289, 0.538, 0.071]]为看图估计，只比较主要语义图文；不含品牌角标、水印及示意辅助线，非源对象框或字形实测。",
+      "fits": "一张主图承担主要信息，上方中轴具备安全文字区，需要一个短标题及简短说明的场景展示、功能说明或观点过渡。适合少量短行及语义完整的居中文字，不适合长段落。",
+      "input_conditions": "一张横幅真实图片或明确标注的示意图片；上方中轴有足够连续阅读区，主体可向下部展开；标题/说明分别完整断句；文字组内部居中对齐。示意块比例不构成固定字数容量承诺。",
+      "avoid": "上方中轴恰好是人脸、手部、屏幕、标识、数据或其他必要证据；背景频繁明暗跳变；正文过长；为套版而翻转带字照片。",
+      "adaptation": "先标出当前图片必见部位与阅读区，再确定上方中轴锚点及居中对齐轴；按实际字形排短标题、说明。原图约16:9，转21:9必须重排：等比适配并保护证据，可调整字组和主体占幅、使用经授权更宽素材或单独阅读带，不能横向拉伸或机械裁切。原例的浅色/暖色不自动成为任务背景规则；需要黑色风格时重新选用有暗色阅读区的素材。",
+      "sequence_note": "同属F02全图型家族；原文方式15为位置和对齐变体，不登记为独立新家族。与L002/L006的图内文字结构比较任务与文字区，不能只因换图算新结构。",
+      "pairing": {
+        "before": "适合从纯文字判断或提问页进入，以图像给出直观场景；也可接在步骤概述后展示具体结果。",
+        "after": "按内容转入对象细节、可核验的数据或同尺度对照页，避免只轮换文字角落制造表面变化。",
+        "avoid": "避免与全图型近似邻页连续堆叠；镜像、换色、换照片仍属于同一骨架。"
+      },
+      "selection_prompt": "当一张主图承担核心信息、上方中轴确有安全文字区且主标题和简短说明适合局部居中对齐时，列为F02候选；先查看示例与当前图片。需要长段落、密集表格或此区有必要证据时排除。",
+      "production_prompt": "输入：{页面目的}、{当前标题}、{当前说明}、{当前图片及来源}、{必须保留的图像细节}、{目标画幅/视觉规范}、{前后页}。\n采用全图型上方中轴字组变体：图像覆盖画布，标题与说明作为紧凑的独立文字组放在上方中轴；二者在该局部区域严格居中对齐。保留“全幅主图—局部字组”的主次关系，阅读路径为“先读中轴标题，再看下方场景或主体”。 根据当前文案调整字号、行距、组内间隔与区宽，不复制原图数值、人物信息或产品承诺；用内容真实性和素材证据决定图像，而非为套版牺牲信息。\n在目标PPT中使用原生可编辑文字，必要图形与蒙版也用原生对象；截图只用于看构图。示意图中的虚线、灰色占位块和来源水印不照搬为成品装饰。若背景对比不足，仅在不遮挡证据时添加克制的局部渐变或改选素材/布局，不能靠整图压黑掩盖问题。\n若目标为21:9黑色/近黑，按照当前任务规范重做画布和留白，图片等比，必要证据不裁掉；不可把16:9截图拉伸成21:9。完成后渲染本页和相邻页，检查实际字形、可读性、最差背景对比、文字与主体遮挡、像素质量及连续同骨架重复。参考条目不等于已验证模板；没有适用阅读区时换版。",
+      "profile": {
+        "skeleton": "fullbleed",
+        "alignment": [
+          "top-center",
+          "text-center"
+        ],
+        "reading": [
+          "title-to-image",
+          "top-to-bottom"
+        ],
+        "whitespace": [
+          "photo-negative-space",
+          "text-safe-top-center"
+        ],
+        "relations": [
+          "text-in-photo",
+          "type-hierarchy",
+          "shared-text-axis"
+        ],
+        "regions": [
+          {
+            "kind": "image",
+            "rect": [
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.403,
+              0.196,
+              0.203,
+              0.073
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.23,
+              0.289,
+              0.538,
+              0.071
+            ]
+          }
+        ],
+        "basis": "实际查看原文示意图及原文完整发布会案例后分析。原文方法15；主要语义文字框为归一化估计，不含品牌水印和示意辅助线。无可编辑PPT，不作字形/容量认证。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "来源：学有小成《看小米手机发布会，学全图型PPT排版！》，原页编辑时间2017-05-29 09:47；2026-10-16实际读取正文及全部内嵌图。https://zhuanlan.zhihu.com/p/27157505。文章按角落、左右居中、中轴三类组织；角落4×2、侧边2×3、中轴2，共16种位置/对齐组合。正文15种与16种并存，左中段写两种而示意图列三种；本批依据原图编号1–16核对，避免漏掉左中右齐。分组用于检索，不把镜像、换色或换图算成新骨架。 本条对应原文排版方式15，展示原文完整发布会案例；原始示意图为正文第15张内嵌图片，提取框(27, 197, 479, 451)。 原例为第16张内嵌图片。 原图约16:9，保留原比例、品牌标记与原有文字。来源图的字体、图层及可编辑源PPT未知；收录不等于素材再使用授权，不认证为模板。\n已保留的原始示意图：https://ppt-layout-atlas.woollywave.chatgpt.site/api/assets/uploads/bdbc4e25-ab2a-4ae4-8ff6-fbd567335fbd.jpg；原图SHA-256：538517a61b5b8aba4e4c1a052ab480febec2fec7b4b74172faa6687cf6e76cc2。\n已保留的原始案例图：https://ppt-layout-atlas.woollywave.chatgpt.site/api/assets/uploads/8616e294-f871-4b15-acbd-0522b2c8a1ab.png；原图SHA-256：2cf4054fb9d5d530fc2ccb0657d15154f4dfebe9e3584f077d43f0f7fc81ea4d。",
+      "related_id": "L015",
+      "created_at": "2026-10-16T04:54:31.946Z",
+      "updated_at": "2026-10-16T04:54:31.946Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L020-339b0c8c89f7b9d1.jpg",
+      "preview_path": "images/L020-339b0c8c89f7b9d1.jpg",
+      "preview_sha256": "339b0c8c89f7b9d186bd36068951216afb0e6c57d451847b2a38e63fe8ab44cb",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 123046,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L020.md",
+      "editable_source_public": false
+    },
+    {
+      "id": "L022",
+      "name": "深底中央主卡与暗色功能网格（搜狐807753859·图19）",
+      "family": "候选·主从卡片矩阵",
+      "kind": "reference",
+      "task": "多项功能介绍后的暗色总览",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "中央深色产品大卡周围排列不等宽功能卡，绿色读数与小面积彩色图标形成次级焦点；卡间深灰沟槽分区。",
+      "composition": "中央深色产品大卡周围排列不等宽功能卡，绿色读数与小面积彩色图标形成次级焦点；卡间深灰沟槽分区。 对象框按截图估计；用于结构检索，不是原PPT图层或精确测量。",
+      "fits": "多项功能介绍后的暗色总览；主对象亮度和轮廓足够清楚；外围信息均可独立概括，且能在目标显示尺寸下阅读。",
+      "input_conditions": "主对象亮度和轮廓足够清楚；外围信息均可独立概括，且能在目标显示尺寸下阅读。 当前截图无可编辑源对象，字体、字号和固定字数容量未知；归一化框仅为看图估计。",
+      "avoid": "暗卡与黑底融为一体、照搬过暗源例、以浅深配色变化伪称新结构、同时堆积彩色重点。",
+      "adaptation": "原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。",
+      "sequence_note": "与现有库按结构、轴线、阅读路径和图文关系比较，不因产品或配色不同免查重。 本批18/19/20共享中央主卡和外围不等分网格；卡片数量、局部跨度与素材差异单列。",
+      "pairing": {
+        "before": "先用问题、单项细节或证据建立本页的内容前提；各功能已逐项解释后再进入汇总。",
+        "after": "按内容进入关键功能细节或简洁结论，避免另一页密集网格。",
+        "avoid": "避免连续采用相同骨架；镜像、换色、换产品、静态改动画均须说明实际差异，不能当完全不同构图。"
+      },
+      "selection_prompt": "页面任务为“多项功能介绍后的暗色总览”且满足“主对象亮度和轮廓足够清楚；外围信息均可独立概括，且能在目标显示尺寸下阅读。”时查看本条预览；暗卡与黑底融为一体、照搬过暗源例、以浅深配色变化伪称新结构、同时堆积彩色重点。 条件不足时换版。",
+      "production_prompt": "输入：{页面目的}、{当前标题/文字/数据及来源}、{图片及使用条件}、{目标画幅与风格}、{必须保留的证据}、{前后页}。\n构图核心：沿主从卡片网格保持最大主对象和外围分组，以可见分隔和局部明暗分清边界；对过暗文字和图片主动重排/换素材。\n适配：原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。\n边界：暗卡与黑底融为一体、照搬过暗源例、以浅深配色变化伪称新结构、同时堆积彩色重点。 条件不满足则重排或改选，不勉强套图。\n可编辑要求：标题、说明、标注、必要图表和结构图在PPT中使用原生可编辑对象，图片独立放置；整张截图仅作参考，不作为最终整页。装饰光影可用独立透明图像或效果，不能压平必要文字。\n审核：渲染本页与邻页，检查文字实际对比、溢出、主体与证据裁切、阅读路径、同尺度/同口径关系及连续骨架重复；未经真实重建与适配审核，不升级为模板。",
+      "profile": {
+        "skeleton": "hero-card-grid",
+        "alignment": [
+          "grid",
+          "shared-gutters"
+        ],
+        "reading": [
+          "hero-to-periphery",
+          "group-scan"
+        ],
+        "whitespace": [
+          "gutter-network"
+        ],
+        "relations": [
+          "hero-card",
+          "unequal-modules",
+          "consistent-gutters"
+        ],
+        "regions": [
+          {
+            "kind": "image",
+            "rect": [
+              0.25,
+              0.26,
+              0.5,
+              0.49
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.01,
+              0.01,
+              0.24,
+              0.4
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.25,
+              0.01,
+              0.2,
+              0.23
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.45,
+              0.01,
+              0.1,
+              0.23
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.55,
+              0.01,
+              0.1,
+              0.23
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.65,
+              0.01,
+              0.1,
+              0.23
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.75,
+              0.01,
+              0.24,
+              0.32
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.75,
+              0.34,
+              0.24,
+              0.38
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.01,
+              0.76,
+              0.98,
+              0.23
+            ]
+          }
+        ],
+        "basis": "实际查看原文图19，归一化分区为目测估计，不含水印/字幕；主体区域不是重复计算的第二张照片。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "搜狐《苹果又开发布会，这PPT绝了！【PPT附下载】》，页面标注2024-09-10 13:21，账号“站在巨人的肩膀上”，正文自署“利兄”。2026-10-16完整读取正文并下载24个内嵌媒体；不把转载账号当原发布会制作署名。 本条为正文第19个内嵌媒体，分类：卡片汇总；原始地址：https://q6.itc.cn/q_70/images03/20240910/81611a9b0c12449aab4f17c677217a70.png；原图1080×602，SHA-256：55c1c6bcfc06b03885645d4958cc75f3e5e1aeb3a88728e4643b7f5e767bb069。 原PNG将随待收录记录保存，未经换图、改字、裁切或重绘。 仅作为构图/表现参考，不认证模板；品牌、产品数值及医学相关证言均为原例内容，不作为当前任务的事实依据。",
+      "related_id": null,
+      "created_at": "2026-10-16T08:55:42.163Z",
+      "updated_at": "2026-10-16T08:55:42.163Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L022-55c1c6bcfc06b038.png",
+      "preview_path": "images/L022-55c1c6bcfc06b038.png",
+      "preview_sha256": "55c1c6bcfc06b03885645d4958cc75f3e5e1aeb3a88728e4643b7f5e767bb069",
+      "preview_mime": "image/png",
+      "preview_bytes": 169643,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L022.md",
+      "source_file": "https://q6.itc.cn/q_70/images03/20240910/81611a9b0c12449aab4f17c677217a70.png",
+      "editable_source_public": false
+    },
+    {
+      "id": "L023",
+      "name": "浅底中央主卡与不等分功能网格（搜狐807753859·图18）",
+      "family": "候选·主从卡片矩阵",
+      "kind": "reference",
+      "task": "已逐项解释后的多功能回顾或产品总览",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "中央横向产品大卡占约半页宽，外围按不同宽高组合功能卡；统一圆角、沟槽和浅底分隔维持秩序。",
+      "composition": "中央横向产品大卡占约半页宽，外围按不同宽高组合功能卡；统一圆角、沟槽和浅底分隔维持秩序。 对象框按截图估计；用于结构检索，不是原PPT图层或精确测量。",
+      "fits": "已逐项解释后的多功能回顾或产品总览；一个明确主对象，若干可压缩成短标签的功能；素材和图标来源可靠，信息优先级已确定。",
+      "input_conditions": "一个明确主对象，若干可压缩成短标签的功能；素材和图标来源可靠，信息优先级已确定。 当前截图无可编辑源对象，字体、字号和固定字数容量未知；归一化框仅为看图估计。",
+      "avoid": "把整章正文塞成卡片、每卡同样强烈、投影中小字不可读，或在教学讲解前堆满未解释术语。",
+      "adaptation": "原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。",
+      "sequence_note": "与现有库按结构、轴线、阅读路径和图文关系比较，不因产品或配色不同免查重。 本批18/19/20共享中央主卡和外围不等分网格；卡片数量、局部跨度与素材差异单列。",
+      "pairing": {
+        "before": "先用问题、单项细节或证据建立本页的内容前提；各功能已逐项解释后再进入汇总。",
+        "after": "按内容进入关键功能细节或简洁结论，避免另一页密集网格。",
+        "avoid": "避免连续采用相同骨架；镜像、换色、换产品、静态改动画均须说明实际差异，不能当完全不同构图。"
+      },
+      "selection_prompt": "页面任务为“已逐项解释后的多功能回顾或产品总览”且满足“一个明确主对象，若干可压缩成短标签的功能；素材和图标来源可靠，信息优先级已确定。”时查看本条预览；把整章正文塞成卡片、每卡同样强烈、投影中小字不可读，或在教学讲解前堆满未解释术语。 条件不足时换版。",
+      "production_prompt": "输入：{页面目的}、{当前标题/文字/数据及来源}、{图片及使用条件}、{目标画幅与风格}、{必须保留的证据}、{前后页}。\n构图核心：先给主对象最大面积，外围卡片按内容长宽分配网格；用统一间距连接，图文各有主次，不为塞入原例同样数量而压小文字。\n适配：原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。\n边界：把整章正文塞成卡片、每卡同样强烈、投影中小字不可读，或在教学讲解前堆满未解释术语。 条件不满足则重排或改选，不勉强套图。\n可编辑要求：标题、说明、标注、必要图表和结构图在PPT中使用原生可编辑对象，图片独立放置；整张截图仅作参考，不作为最终整页。装饰光影可用独立透明图像或效果，不能压平必要文字。\n审核：渲染本页与邻页，检查文字实际对比、溢出、主体与证据裁切、阅读路径、同尺度/同口径关系及连续骨架重复；未经真实重建与适配审核，不升级为模板。",
+      "profile": {
+        "skeleton": "hero-card-grid",
+        "alignment": [
+          "grid",
+          "shared-gutters"
+        ],
+        "reading": [
+          "hero-to-periphery",
+          "group-scan"
+        ],
+        "whitespace": [
+          "gutter-network"
+        ],
+        "relations": [
+          "hero-card",
+          "unequal-modules",
+          "consistent-gutters"
+        ],
+        "regions": [
+          {
+            "kind": "image",
+            "rect": [
+              0.25,
+              0.26,
+              0.5,
+              0.49
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.01,
+              0.01,
+              0.24,
+              0.4
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.25,
+              0.01,
+              0.25,
+              0.23
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.5,
+              0.01,
+              0.1,
+              0.23
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.6,
+              0.01,
+              0.39,
+              0.23
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.75,
+              0.26,
+              0.24,
+              0.49
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.01,
+              0.76,
+              0.98,
+              0.23
+            ]
+          }
+        ],
+        "basis": "实际查看原文图18，归一化分区为目测估计，不含水印/字幕；主体区域不是重复计算的第二张照片。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "搜狐《苹果又开发布会，这PPT绝了！【PPT附下载】》，页面标注2024-09-10 13:21，账号“站在巨人的肩膀上”，正文自署“利兄”。2026-10-16完整读取正文并下载24个内嵌媒体；不把转载账号当原发布会制作署名。 本条为正文第18个内嵌媒体，分类：卡片汇总；原始地址：https://q7.itc.cn/q_70/images03/20240910/3bda17f462c6471299841c4b6a4ab29d.png；原图1080×602，SHA-256：cd7c593e4886dd2147794dc0dbc6165811a830ce245e57f71c56edfbff17d3e6。 原PNG将随待收录记录保存，未经换图、改字、裁切或重绘。 仅作为构图/表现参考，不认证模板；品牌、产品数值及医学相关证言均为原例内容，不作为当前任务的事实依据。",
+      "related_id": "L022",
+      "created_at": "2026-10-16T08:55:46.030Z",
+      "updated_at": "2026-10-16T08:55:46.030Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L023-cd7c593e4886dd21.png",
+      "preview_path": "images/L023-cd7c593e4886dd21.png",
+      "preview_sha256": "cd7c593e4886dd2147794dc0dbc6165811a830ce245e57f71c56edfbff17d3e6",
+      "preview_mime": "image/png",
+      "preview_bytes": 166008,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L023.md",
+      "source_file": "https://q7.itc.cn/q_70/images03/20240910/3bda17f462c6471299841c4b6a4ab29d.png",
+      "editable_source_public": false
+    },
+    {
+      "id": "L024",
+      "name": "分散证言与镜头移动聚焦（搜狐807753859·图17）",
+      "family": "候选·多点文字聚焦",
+      "kind": "reference",
+      "task": "一组经过核验、可公开展示的原话或反馈",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "多个证言字组分散排列，以大小与深浅分主次；镜头平移放大，将焦点从左上证言移向右下证言。",
+      "composition": "多个证言字组分散排列，以大小与深浅分主次；镜头平移放大，将焦点从左上证言移向右下证言。 动态观察：镜头向分散字组推进和平移，先突出左上反馈，随后聚焦右下反馈；片段部分文字被画面边缘裁切。 对象框按截图估计；用于结构检索，不是原PPT图层或精确测量。",
+      "fits": "一组经过核验、可公开展示的原话或反馈；各证言独立完整、有来源与适用的公开授权；一次聚焦一段而不是让观众同时读完。",
+      "input_conditions": "各证言独立完整、有来源与适用的公开授权；一次聚焦一段而不是让观众同时读完。 当前截图无可编辑源对象，字体、字号和固定字数容量未知；归一化框仅为看图估计。",
+      "avoid": "虚构用户口碑、将个体经验当普遍疗效证据、任意裁切句子改变原意、过度缩放造成眩晕。",
+      "adaptation": "原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。动画另做终态与减少动画版本，源GIF仅供行为观察。",
+      "sequence_note": "与现有库按结构、轴线、阅读路径和图文关系比较，不因产品或配色不同免查重。",
+      "pairing": {
+        "before": "先用问题、单项细节或证据建立本页的内容前提；根据真实内容衔接，不固定轮换编号。",
+        "after": "按内容进入可核验的解释、对照或简洁结论；视觉揭示之后补足信息。",
+        "avoid": "避免连续采用相同骨架；镜像、换色、换产品、静态改动画均须说明实际差异，不能当完全不同构图。"
+      },
+      "selection_prompt": "页面任务为“一组经过核验、可公开展示的原话或反馈”且满足“各证言独立完整、有来源与适用的公开授权；一次聚焦一段而不是让观众同时读完。”时查看本条预览；虚构用户口碑、将个体经验当普遍疗效证据、任意裁切句子改变原意、过度缩放造成眩晕。 条件不足时换版。",
+      "production_prompt": "输入：{页面目的}、{当前标题/文字/数据及来源}、{图片及使用条件}、{目标画幅与风格}、{必须保留的证据}、{前后页}。\n构图核心：先分配各证言的阅读岛和主次，再用连续镜头移动切换焦点；每次停留都保留完整语义和来源，提供静态列表版本。\n适配：原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。动画另做终态与减少动画版本，源GIF仅供行为观察。\n边界：虚构用户口碑、将个体经验当普遍疗效证据、任意裁切句子改变原意、过度缩放造成眩晕。 条件不满足则重排或改选，不勉强套图。\n可编辑要求：标题、说明、标注、必要图表和结构图在PPT中使用原生可编辑对象，图片独立放置；整张截图仅作参考，不作为最终整页。装饰光影可用独立透明图像或效果，不能压平必要文字。\n审核：渲染本页与邻页，检查文字实际对比、溢出、主体与证据裁切、阅读路径、同尺度/同口径关系及连续骨架重复；未经真实重建与适配审核，不升级为模板。\n动态观察：镜头向分散字组推进和平移，先突出左上反馈，随后聚焦右下反馈；片段部分文字被画面边缘裁切。 该记录不是源PPT参数。制作时按当前内容设定轨迹与时长，终态须可读，支持关闭动画；导出后播放核验。",
+      "profile": {
+        "skeleton": "distributed-type-focus",
+        "alignment": [
+          "distributed",
+          "text-left"
+        ],
+        "reading": [
+          "primary-to-secondary",
+          "diagonal"
+        ],
+        "whitespace": [
+          "between-type-groups"
+        ],
+        "relations": [
+          "independent-type-groups",
+          "motion-focus"
+        ],
+        "regions": [
+          {
+            "kind": "text",
+            "rect": [
+              0.08,
+              0.18,
+              0.31,
+              0.1
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.03,
+              0.32,
+              0.49,
+              0.17
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.55,
+              0.28,
+              0.45,
+              0.12
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.3,
+              0.57,
+              0.59,
+              0.13
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.02,
+              0.78,
+              0.4,
+              0.11
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.68,
+              0.76,
+              0.3,
+              0.09
+            ]
+          }
+        ],
+        "basis": "实际查看原文图17及5个时点的GIF帧，归一化分区为目测估计，不含水印/字幕；主体区域不是重复计算的第二张照片。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "搜狐《苹果又开发布会，这PPT绝了！【PPT附下载】》，页面标注2024-09-10 13:21，账号“站在巨人的肩膀上”，正文自署“利兄”。2026-10-16完整读取正文并下载24个内嵌媒体；不把转载账号当原发布会制作署名。 本条为正文第17个内嵌媒体，分类：动画；原始地址：https://q1.itc.cn/q_70/images03/20240910/bf7997a842154a9093330a9da628a832.gif；原图841×451，SHA-256：97d77c0171f8923c09333ffcf873627fa65d75751b85421583d845b74b7d426b。 GIF共64帧，时长4.46秒；已实际抽看0%、25%、50%、75%、99%时间点。预览为单帧，不能据此声称已验证PPT动画。原GIF持久副本：https://chatgpt.com/api/library/files/libfile_d48ba43174cc8191924544ca62c97ca4/download。观察到：镜头向分散字组推进和平移，先突出左上反馈，随后聚焦右下反馈；片段部分文字被画面边缘裁切。。原生动画参数、轨迹、缓动曲线和源PPT未知；截取片段不代表完整动画或可用阅读时长。 仅作为构图/表现参考，不认证模板；品牌、产品数值及医学相关证言均为原例内容，不作为当前任务的事实依据。",
+      "related_id": null,
+      "created_at": "2026-10-16T08:55:51.509Z",
+      "updated_at": "2026-10-16T08:55:51.509Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L024-b6107086401087a0.jpg",
+      "preview_path": "images/L024-b6107086401087a0.jpg",
+      "preview_sha256": "b6107086401087a0aa85fd4908910c8073037aae7c301ca7496b404230729313",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 61598,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L024.md",
+      "source_file": "https://chatgpt.com/api/library/files/libfile_d48ba43174cc8191924544ca62c97ca4/download",
+      "editable_source_public": false
+    },
+    {
+      "id": "L025",
+      "name": "共同起点条形的顺序生长（搜狐807753859·图16）",
+      "family": "候选·横向条形比较",
+      "kind": "reference",
+      "task": "同一指标下多对象的量化比较",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "动态参考；静态骨架与本文图片11相同。标题位于左上，五行共享左端起点，首行用彩色长条突出，其余灰条配右端提升标注。",
+      "composition": "动态参考；静态骨架与本文图片11相同。标题位于左上，五行共享左端起点，首行用彩色长条突出，其余灰条配右端提升标注。 动态观察：标签先出现，强调条先从共同起点生长，灰色对比条及提升标注随后依序显现。 对象框按截图估计；用于结构检索，不是原PPT图层或精确测量。",
+      "fits": "同一指标下多对象的量化比较；可核验且同口径的数据、共同零点和比例尺、明确相对提升的基准与计算方向。",
+      "input_conditions": "可核验且同口径的数据、共同零点和比例尺、明确相对提升的基准与计算方向。 当前截图无可编辑源对象，字体、字号和固定字数容量未知；归一化框仅为看图估计。",
+      "avoid": "把营销截图的条长当原始数据，缺乏单位/基准，或将相对提升误算成条长直接加减。",
+      "adaptation": "原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。动画另做终态与减少动画版本，源GIF仅供行为观察。",
+      "sequence_note": "与现有库按结构、轴线、阅读路径和图文关系比较，不因产品或配色不同免查重。 本批11/16为同一条形比较的静态与动态表现。",
+      "pairing": {
+        "before": "先用问题、单项细节或证据建立本页的内容前提；根据真实内容衔接，不固定轮换编号。",
+        "after": "按内容进入可核验的解释、对照或简洁结论；视觉揭示之后补足信息。",
+        "avoid": "避免连续采用相同骨架；镜像、换色、换产品、静态改动画均须说明实际差异，不能当完全不同构图。"
+      },
+      "selection_prompt": "页面任务为“同一指标下多对象的量化比较”且满足“可核验且同口径的数据、共同零点和比例尺、明确相对提升的基准与计算方向。”时查看本条预览；把营销截图的条长当原始数据，缺乏单位/基准，或将相对提升误算成条长直接加减。 条件不足时换版。",
+      "production_prompt": "输入：{页面目的}、{当前标题/文字/数据及来源}、{图片及使用条件}、{目标画幅与风格}、{必须保留的证据}、{前后页}。\n构图核心：所有条形沿共同零点按数据比例生长，先重点后基准，最终显示完整标签和比较口径；不能把时间长短当量值。\n适配：原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。动画另做终态与减少动画版本，源GIF仅供行为观察。\n边界：把营销截图的条长当原始数据，缺乏单位/基准，或将相对提升误算成条长直接加减。 条件不满足则重排或改选，不勉强套图。\n可编辑要求：标题、说明、标注、必要图表和结构图在PPT中使用原生可编辑对象，图片独立放置；整张截图仅作参考，不作为最终整页。装饰光影可用独立透明图像或效果，不能压平必要文字。\n审核：渲染本页与邻页，检查文字实际对比、溢出、主体与证据裁切、阅读路径、同尺度/同口径关系及连续骨架重复；未经真实重建与适配审核，不升级为模板。\n动态观察：标签先出现，强调条先从共同起点生长，灰色对比条及提升标注随后依序显现。 该记录不是源PPT参数。制作时按当前内容设定轨迹与时长，终态须可读，支持关闭动画；导出后播放核验。",
+      "profile": {
+        "skeleton": "horizontal-bar-chart",
+        "alignment": [
+          "left",
+          "shared-origin",
+          "horizontal"
+        ],
+        "reading": [
+          "top-to-bottom",
+          "left-to-right"
+        ],
+        "whitespace": [
+          "between-rows"
+        ],
+        "relations": [
+          "quantitative-comparison",
+          "consistent-scale",
+          "staged-reveal"
+        ],
+        "regions": [
+          {
+            "kind": "text",
+            "rect": [
+              0.1,
+              0.1,
+              0.5,
+              0.1
+            ]
+          },
+          {
+            "kind": "chart",
+            "rect": [
+              0.1,
+              0.26,
+              0.8,
+              0.65
+            ]
+          }
+        ],
+        "basis": "实际查看原文图16及5个时点的GIF帧，归一化分区为目测估计，不含水印/字幕；主体区域不是重复计算的第二张照片。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "搜狐《苹果又开发布会，这PPT绝了！【PPT附下载】》，页面标注2024-09-10 13:21，账号“站在巨人的肩膀上”，正文自署“利兄”。2026-10-16完整读取正文并下载24个内嵌媒体；不把转载账号当原发布会制作署名。 本条为正文第16个内嵌媒体，分类：动画；原始地址：https://q1.itc.cn/q_70/images03/20240910/bf91c657205a45adad46e163f3cc198d.gif；原图1079×598，SHA-256：9da5d2c2f566411e96eb3474b4127846a808cf0dadcd63acacd0c943dae90fd2。 GIF共34帧，时长2.38秒；已实际抽看0%、25%、50%、75%、99%时间点。预览为单帧，不能据此声称已验证PPT动画。原GIF持久副本：https://chatgpt.com/api/library/files/libfile_132310193ab4819199597984c741687d/download。观察到：标签先出现，强调条先从共同起点生长，灰色对比条及提升标注随后依序显现。。原生动画参数、轨迹、缓动曲线和源PPT未知；截取片段不代表完整动画或可用阅读时长。 仅作为构图/表现参考，不认证模板；品牌、产品数值及医学相关证言均为原例内容，不作为当前任务的事实依据。",
+      "related_id": null,
+      "created_at": "2026-10-16T08:55:58.219Z",
+      "updated_at": "2026-10-16T08:55:58.219Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L025-2f94ebaf04731d7b.jpg",
+      "preview_path": "images/L025-2f94ebaf04731d7b.jpg",
+      "preview_sha256": "2f94ebaf04731d7b9e6a73b0913e06fa4e57e2a1e54b5d0975ca19919e36b438",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 69110,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L025.md",
+      "source_file": "https://chatgpt.com/api/library/files/libfile_132310193ab4819199597984c741687d/download",
+      "editable_source_public": false
+    },
+    {
+      "id": "L026",
+      "name": "超大数字收缩与说明显现（搜狐807753859·图15）",
+      "family": "F09",
+      "kind": "reference",
+      "task": "一个有来源的关键数量及其统计对象",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "动态参考；静态骨架与本文图片03相同。单一大数字占据画面中部，冷色渐变沿字形横向延展；下方居中短说明负责解释数字口径，四周留白。",
+      "composition": "动态参考；静态骨架与本文图片03相同。单一大数字占据画面中部，冷色渐变沿字形横向延展；下方居中短说明负责解释数字口径，四周留白。 动态观察：起始为超出画面的淡色巨型数字，迅速缩回中部，渐变数字清晰后说明显现；终态与静态大数字页相近。 对象框按截图估计；用于结构检索，不是原PPT图层或精确测量。",
+      "fits": "一个有来源的关键数量及其统计对象；仅一个主数字，单位/时间/样本口径可明确交代；数字不能代替完整证据。",
+      "input_conditions": "仅一个主数字，单位/时间/样本口径可明确交代；数字不能代替完整证据。 当前截图无可编辑源对象，字体、字号和固定字数容量未知；归一化框仅为看图估计。",
+      "avoid": "多个同级指标、长段说明、无来源的大数字或把色彩渐变误当大小编码。",
+      "adaptation": "原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。动画另做终态与减少动画版本，源GIF仅供行为观察。",
+      "sequence_note": "与现有库按结构、轴线、阅读路径和图文关系比较，不因产品或配色不同免查重。 本批03/15为同一数字终态的静态与动态表现。",
+      "pairing": {
+        "before": "先用问题、单项细节或证据建立本页的内容前提；根据真实内容衔接，不固定轮换编号。",
+        "after": "按内容进入可核验的解释、对照或简洁结论；视觉揭示之后补足信息。",
+        "avoid": "避免连续采用相同骨架；镜像、换色、换产品、静态改动画均须说明实际差异，不能当完全不同构图。"
+      },
+      "selection_prompt": "页面任务为“一个有来源的关键数量及其统计对象”且满足“仅一个主数字，单位/时间/样本口径可明确交代；数字不能代替完整证据。”时查看本条预览；多个同级指标、长段说明、无来源的大数字或把色彩渐变误当大小编码。 条件不足时换版。",
+      "production_prompt": "输入：{页面目的}、{当前标题/文字/数据及来源}、{图片及使用条件}、{目标画幅与风格}、{必须保留的证据}、{前后页}。\n构图核心：让巨型字组收缩到中轴终态，说明随后显现；保持最终数字可读，减少动画模式直接显示终态。\n适配：原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。动画另做终态与减少动画版本，源GIF仅供行为观察。\n边界：多个同级指标、长段说明、无来源的大数字或把色彩渐变误当大小编码。 条件不满足则重排或改选，不勉强套图。\n可编辑要求：标题、说明、标注、必要图表和结构图在PPT中使用原生可编辑对象，图片独立放置；整张截图仅作参考，不作为最终整页。装饰光影可用独立透明图像或效果，不能压平必要文字。\n审核：渲染本页与邻页，检查文字实际对比、溢出、主体与证据裁切、阅读路径、同尺度/同口径关系及连续骨架重复；未经真实重建与适配审核，不升级为模板。\n动态观察：起始为超出画面的淡色巨型数字，迅速缩回中部，渐变数字清晰后说明显现；终态与静态大数字页相近。 该记录不是源PPT参数。制作时按当前内容设定轨迹与时长，终态须可读，支持关闭动画；导出后播放核验。",
+      "profile": {
+        "skeleton": "centered-type",
+        "alignment": [
+          "center",
+          "text-center"
+        ],
+        "reading": [
+          "center-focus",
+          "top-to-bottom"
+        ],
+        "whitespace": [
+          "peripheral-open"
+        ],
+        "relations": [
+          "type-hierarchy",
+          "centered-stack",
+          "staged-reveal"
+        ],
+        "regions": [
+          {
+            "kind": "text",
+            "rect": [
+              0.12,
+              0.34,
+              0.77,
+              0.3
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.25,
+              0.77,
+              0.5,
+              0.06
+            ]
+          }
+        ],
+        "basis": "实际查看原文图15及5个时点的GIF帧，归一化分区为目测估计，不含水印/字幕；主体区域不是重复计算的第二张照片。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "搜狐《苹果又开发布会，这PPT绝了！【PPT附下载】》，页面标注2024-09-10 13:21，账号“站在巨人的肩膀上”，正文自署“利兄”。2026-10-16完整读取正文并下载24个内嵌媒体；不把转载账号当原发布会制作署名。 本条为正文第15个内嵌媒体，分类：动画；原始地址：https://q9.itc.cn/q_70/images03/20240910/8a01748ad6f54c8895188ad4cd8c27bb.gif；原图1079×598，SHA-256：2fc1dba66cba55d7b88a707afe75d81d54686e7ca9d86f41f8f99ca32979c0dd。 GIF共20帧，时长1.38秒；已实际抽看0%、25%、50%、75%、99%时间点。预览为单帧，不能据此声称已验证PPT动画。原GIF持久副本：https://chatgpt.com/api/library/files/libfile_ad2904a3fa188191a0a75e7eea79b05a/download。观察到：起始为超出画面的淡色巨型数字，迅速缩回中部，渐变数字清晰后说明显现；终态与静态大数字页相近。。原生动画参数、轨迹、缓动曲线和源PPT未知；截取片段不代表完整动画或可用阅读时长。 仅作为构图/表现参考，不认证模板；品牌、产品数值及医学相关证言均为原例内容，不作为当前任务的事实依据。",
+      "related_id": null,
+      "created_at": "2026-10-16T08:56:03.485Z",
+      "updated_at": "2026-10-16T08:56:03.485Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L026-4d9289f88455aeda.jpg",
+      "preview_path": "images/L026-4d9289f88455aeda.jpg",
+      "preview_sha256": "4d9289f88455aedab7948e406027b036699d652c1ded2f7095747e446857d4a8",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 68454,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L026.md",
+      "source_file": "https://chatgpt.com/api/library/files/libfile_ad2904a3fa188191a0a75e7eea79b05a/download",
+      "editable_source_public": false
+    },
+    {
+      "id": "L027",
+      "name": "时间曲线与当前节点动态聚焦（搜狐807753859·图14）",
+      "family": "候选·时间曲线聚焦",
+      "kind": "reference",
+      "task": "随时间变化的测量读数或过程状态",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "横向曲线穿过中部，时间和当前节点沿曲线推进，下方浮动读数卡与选中节点同步；背景昼夜变化。",
+      "composition": "横向曲线穿过中部，时间和当前节点沿曲线推进，下方浮动读数卡与选中节点同步；背景昼夜变化。 动态观察：曲线随时间横向移动，选中点与下方读数同步变化；背景由白昼转为夜间再变亮。 对象框按截图估计；用于结构检索，不是原PPT图层或精确测量。",
+      "fits": "随时间变化的测量读数或过程状态；有顺序的时间序列、明确单位和选中点；动画变化由数据/状态驱动。",
+      "input_conditions": "有顺序的时间序列、明确单位和选中点；动画变化由数据/状态驱动。 当前截图无可编辑源对象，字体、字号和固定字数容量未知；归一化框仅为看图估计。",
+      "avoid": "把截图曲线当可精确复用数据，随机装饰线冒充测量结果，卡片与节点不同步。",
+      "adaptation": "原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。动画另做终态与减少动画版本，源GIF仅供行为观察。",
+      "sequence_note": "与现有库按结构、轴线、阅读路径和图文关系比较，不因产品或配色不同免查重。",
+      "pairing": {
+        "before": "先用问题、单项细节或证据建立本页的内容前提；根据真实内容衔接，不固定轮换编号。",
+        "after": "按内容进入可核验的解释、对照或简洁结论；视觉揭示之后补足信息。",
+        "avoid": "避免连续采用相同骨架；镜像、换色、换产品、静态改动画均须说明实际差异，不能当完全不同构图。"
+      },
+      "selection_prompt": "页面任务为“随时间变化的测量读数或过程状态”且满足“有顺序的时间序列、明确单位和选中点；动画变化由数据/状态驱动。”时查看本条预览；把截图曲线当可精确复用数据，随机装饰线冒充测量结果，卡片与节点不同步。 条件不足时换版。",
+      "production_prompt": "输入：{页面目的}、{当前标题/文字/数据及来源}、{图片及使用条件}、{目标画幅与风格}、{必须保留的证据}、{前后页}。\n构图核心：将曲线、选中点、时间和读数一一绑定；移动焦点时同步改变读数，用静态终态保留可读信息，提供无动画替代。\n适配：原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。动画另做终态与减少动画版本，源GIF仅供行为观察。\n边界：把截图曲线当可精确复用数据，随机装饰线冒充测量结果，卡片与节点不同步。 条件不满足则重排或改选，不勉强套图。\n可编辑要求：标题、说明、标注、必要图表和结构图在PPT中使用原生可编辑对象，图片独立放置；整张截图仅作参考，不作为最终整页。装饰光影可用独立透明图像或效果，不能压平必要文字。\n审核：渲染本页与邻页，检查文字实际对比、溢出、主体与证据裁切、阅读路径、同尺度/同口径关系及连续骨架重复；未经真实重建与适配审核，不升级为模板。\n动态观察：曲线随时间横向移动，选中点与下方读数同步变化；背景由白昼转为夜间再变亮。 该记录不是源PPT参数。制作时按当前内容设定轨迹与时长，终态须可读，支持关闭动画；导出后播放核验。",
+      "profile": {
+        "skeleton": "timeline-focus",
+        "alignment": [
+          "horizontal",
+          "center"
+        ],
+        "reading": [
+          "left-to-right",
+          "point-to-detail"
+        ],
+        "whitespace": [
+          "around-curve"
+        ],
+        "relations": [
+          "time-series",
+          "synchronized-detail"
+        ],
+        "regions": [
+          {
+            "kind": "chart",
+            "rect": [
+              0,
+              0.25,
+              1,
+              0.35
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.46,
+              0.08,
+              0.25,
+              0.09
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.27,
+              0.57,
+              0.46,
+              0.38
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.3,
+              0.6,
+              0.38,
+              0.28
+            ]
+          }
+        ],
+        "basis": "实际查看原文图14及5个时点的GIF帧，归一化分区为目测估计，不含水印/字幕；主体区域不是重复计算的第二张照片。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "搜狐《苹果又开发布会，这PPT绝了！【PPT附下载】》，页面标注2024-09-10 13:21，账号“站在巨人的肩膀上”，正文自署“利兄”。2026-10-16完整读取正文并下载24个内嵌媒体；不把转载账号当原发布会制作署名。 本条为正文第14个内嵌媒体，分类：动画；原始地址：https://q9.itc.cn/q_70/images03/20240910/f4f5d8dd7df44d3481ce68be7bcf9921.gif；原图640×355，SHA-256：70868e20efa090ce119b0cc455a6c4f563e8bbefd6c823e5fb8d8c9211541f27。 GIF共55帧，时长3.84秒；已实际抽看0%、25%、50%、75%、99%时间点。预览为单帧，不能据此声称已验证PPT动画。原GIF持久副本：https://chatgpt.com/api/library/files/libfile_3d7cb02cb72081918f595584f4a12195/download。观察到：曲线随时间横向移动，选中点与下方读数同步变化；背景由白昼转为夜间再变亮。。原生动画参数、轨迹、缓动曲线和源PPT未知；截取片段不代表完整动画或可用阅读时长。 仅作为构图/表现参考，不认证模板；品牌、产品数值及医学相关证言均为原例内容，不作为当前任务的事实依据。",
+      "related_id": null,
+      "created_at": "2026-10-16T08:56:08.151Z",
+      "updated_at": "2026-10-16T08:56:08.151Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L027-95cb0c8d4be7a0ee.jpg",
+      "preview_path": "images/L027-95cb0c8d4be7a0ee.jpg",
+      "preview_sha256": "95cb0c8d4be7a0ee02602e8d390bbeece1b8624589628e2cd4e8c8c6aa2f1b8b",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 46198,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L027.md",
+      "source_file": "https://chatgpt.com/api/library/files/libfile_3d7cb02cb72081918f595584f4a12195/download",
+      "editable_source_public": false
+    },
+    {
+      "id": "L028",
+      "name": "中央剖分叠合的动态揭示（搜狐807753859·图13）",
+      "family": "F07",
+      "kind": "reference",
+      "task": "外形、边缘或显示面积的对齐对照",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "动态参考；静态骨架与本文图片09相同。两个对象共用中轴、基准和相同屏幕内容，用竖向分界各露一半；左右空区分别放型号标签。",
+      "composition": "动态参考；静态骨架与本文图片09相同。两个对象共用中轴、基准和相同屏幕内容，用竖向分界各露一半；左右空区分别放型号标签。 动态观察：从单一表体开始，叠加配准的另一外框，并露出中央分界；对比标签随后出现。 对象框按截图估计；用于结构检索，不是原PPT图层或精确测量。",
+      "fits": "外形、边缘或显示面积的对齐对照；两个对象可按同一测量依据配准；清楚说明比较的是机身、屏幕还是其他局部。",
+      "input_conditions": "两个对象可按同一测量依据配准；清楚说明比较的是机身、屏幕还是其他局部。 当前截图无可编辑源对象，字体、字号和固定字数容量未知；归一化框仅为看图估计。",
+      "avoid": "仅按截图视觉大小推断物理面积、不同透视或缩放倍率，隐藏尺寸差异来源。",
+      "adaptation": "原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。动画另做终态与减少动画版本，源GIF仅供行为观察。",
+      "sequence_note": "与现有库按结构、轴线、阅读路径和图文关系比较，不因产品或配色不同免查重。 本批09/13为同一叠合对比的静态与动态表现。",
+      "pairing": {
+        "before": "先用问题、单项细节或证据建立本页的内容前提；根据真实内容衔接，不固定轮换编号。",
+        "after": "按内容进入可核验的解释、对照或简洁结论；视觉揭示之后补足信息。",
+        "avoid": "避免连续采用相同骨架；镜像、换色、换产品、静态改动画均须说明实际差异，不能当完全不同构图。"
+      },
+      "selection_prompt": "页面任务为“外形、边缘或显示面积的对齐对照”且满足“两个对象可按同一测量依据配准；清楚说明比较的是机身、屏幕还是其他局部。”时查看本条预览；仅按截图视觉大小推断物理面积、不同透视或缩放倍率，隐藏尺寸差异来源。 条件不足时换版。",
+      "production_prompt": "输入：{页面目的}、{当前标题/文字/数据及来源}、{图片及使用条件}、{目标画幅与风格}、{必须保留的证据}、{前后页}。\n构图核心：先建立一个基准对象，再对齐揭示第二对象和分界，避免通过任意缩放制造尺寸结论。\n适配：原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。动画另做终态与减少动画版本，源GIF仅供行为观察。\n边界：仅按截图视觉大小推断物理面积、不同透视或缩放倍率，隐藏尺寸差异来源。 条件不满足则重排或改选，不勉强套图。\n可编辑要求：标题、说明、标注、必要图表和结构图在PPT中使用原生可编辑对象，图片独立放置；整张截图仅作参考，不作为最终整页。装饰光影可用独立透明图像或效果，不能压平必要文字。\n审核：渲染本页与邻页，检查文字实际对比、溢出、主体与证据裁切、阅读路径、同尺度/同口径关系及连续骨架重复；未经真实重建与适配审核，不升级为模板。\n动态观察：从单一表体开始，叠加配准的另一外框，并露出中央分界；对比标签随后出现。 该记录不是源PPT参数。制作时按当前内容设定轨迹与时长，终态须可读，支持关闭动画；导出后播放核验。",
+      "profile": {
+        "skeleton": "split-overlay-comparison",
+        "alignment": [
+          "center",
+          "horizontal",
+          "shared-baseline"
+        ],
+        "reading": [
+          "left-to-right",
+          "parallel"
+        ],
+        "whitespace": [
+          "side-negative-space"
+        ],
+        "relations": [
+          "registered-overlay",
+          "controlled-comparison",
+          "staged-reveal"
+        ],
+        "regions": [
+          {
+            "kind": "image",
+            "rect": [
+              0.28,
+              0.06,
+              0.43,
+              0.9
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.1,
+              0.48,
+              0.11,
+              0.07
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.76,
+              0.48,
+              0.16,
+              0.07
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.499,
+              0,
+              0.002,
+              1
+            ]
+          }
+        ],
+        "basis": "实际查看原文图13及5个时点的GIF帧，归一化分区为目测估计，不含水印/字幕；主体区域不是重复计算的第二张照片。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "搜狐《苹果又开发布会，这PPT绝了！【PPT附下载】》，页面标注2024-09-10 13:21，账号“站在巨人的肩膀上”，正文自署“利兄”。2026-10-16完整读取正文并下载24个内嵌媒体；不把转载账号当原发布会制作署名。 本条为正文第13个内嵌媒体，分类：动画；原始地址：https://q8.itc.cn/q_70/images03/20240910/08a3ec41fc46498d9e79fd132cc3cd7c.gif；原图1079×579，SHA-256：edad39c27a40958de8b32f2b068670c9903c4a2031290339d90f176efb6c8994。 GIF共35帧，时长2.44秒；已实际抽看0%、25%、50%、75%、99%时间点。预览为单帧，不能据此声称已验证PPT动画。原GIF持久副本：https://chatgpt.com/api/library/files/libfile_7d523bf6a85c819188abf2a076177593/download。观察到：从单一表体开始，叠加配准的另一外框，并露出中央分界；对比标签随后出现。。原生动画参数、轨迹、缓动曲线和源PPT未知；截取片段不代表完整动画或可用阅读时长。 仅作为构图/表现参考，不认证模板；品牌、产品数值及医学相关证言均为原例内容，不作为当前任务的事实依据。",
+      "related_id": null,
+      "created_at": "2026-10-16T08:56:13.489Z",
+      "updated_at": "2026-10-16T08:56:13.489Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L028-c99d9f6ffaa34cdd.jpg",
+      "preview_path": "images/L028-c99d9f6ffaa34cdd.jpg",
+      "preview_sha256": "c99d9f6ffaa34cdd5cb4edc02f5e357c2439070fe4d0b2346e08057120489de1",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 117009,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L028.md",
+      "source_file": "https://chatgpt.com/api/library/files/libfile_7d523bf6a85c819188abf2a076177593/download",
+      "editable_source_public": false
+    },
+    {
+      "id": "L029",
+      "name": "黑底双主体尺寸对照（搜狐807753859·图12）",
+      "family": "F07",
+      "kind": "reference",
+      "task": "两种尺寸产品的规格对照",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "黑底中两件竖幅产品按相近底线错开，左右外侧白色尺寸标签；温暖轮廓与暗背景分离。",
+      "composition": "黑底中两件竖幅产品按相近底线错开，左右外侧白色尺寸标签；温暖轮廓与暗背景分离。 对象框按截图估计；用于结构检索，不是原PPT图层或精确测量。",
+      "fits": "两种尺寸产品的规格对照；两图有统一尺度/透视依据；标注的对角线或其他尺寸有可靠来源。",
+      "input_conditions": "两图有统一尺度/透视依据；标注的对角线或其他尺寸有可靠来源。 当前截图无可编辑源对象，字体、字号和固定字数容量未知；归一化框仅为看图估计。",
+      "avoid": "只改背景色就认定新骨架、暗部边缘消失、以画面面积误代屏幕规格。",
+      "adaptation": "原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。",
+      "sequence_note": "与现有库按结构、轴线、阅读路径和图文关系比较，不因产品或配色不同免查重。 本批10/12共享双主体并列和外侧尺寸标签，浅深背景与机型不构成新骨架。",
+      "pairing": {
+        "before": "先用问题、单项细节或证据建立本页的内容前提；根据真实内容衔接，不固定轮换编号。",
+        "after": "按内容进入可核验的解释、对照或简洁结论；视觉揭示之后补足信息。",
+        "avoid": "避免连续采用相同骨架；镜像、换色、换产品、静态改动画均须说明实际差异，不能当完全不同构图。"
+      },
+      "selection_prompt": "页面任务为“两种尺寸产品的规格对照”且满足“两图有统一尺度/透视依据；标注的对角线或其他尺寸有可靠来源。”时查看本条预览；只改背景色就认定新骨架、暗部边缘消失、以画面面积误代屏幕规格。 条件不足时换版。",
+      "production_prompt": "输入：{页面目的}、{当前标题/文字/数据及来源}、{图片及使用条件}、{目标画幅与风格}、{必须保留的证据}、{前后页}。\n构图核心：继承双主体并列的同尺度关系，黑底只改变明暗处理；保证主体轮廓、尺寸标签和对应关系清楚。\n适配：原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。\n边界：只改背景色就认定新骨架、暗部边缘消失、以画面面积误代屏幕规格。 条件不满足则重排或改选，不勉强套图。\n可编辑要求：标题、说明、标注、必要图表和结构图在PPT中使用原生可编辑对象，图片独立放置；整张截图仅作参考，不作为最终整页。装饰光影可用独立透明图像或效果，不能压平必要文字。\n审核：渲染本页与邻页，检查文字实际对比、溢出、主体与证据裁切、阅读路径、同尺度/同口径关系及连续骨架重复；未经真实重建与适配审核，不升级为模板。",
+      "profile": {
+        "skeleton": "equal-comparison",
+        "alignment": [
+          "horizontal",
+          "baseline"
+        ],
+        "reading": [
+          "left-to-right",
+          "parallel"
+        ],
+        "whitespace": [
+          "peripheral-open",
+          "open-black"
+        ],
+        "relations": [
+          "equal-scale-pair",
+          "adjacent-labels"
+        ],
+        "regions": [
+          {
+            "kind": "image",
+            "rect": [
+              0.31,
+              0.12,
+              0.23,
+              0.79
+            ]
+          },
+          {
+            "kind": "image",
+            "rect": [
+              0.54,
+              0.05,
+              0.26,
+              0.86
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.23,
+              0.45,
+              0.1,
+              0.08
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.8,
+              0.45,
+              0.1,
+              0.08
+            ]
+          }
+        ],
+        "basis": "实际查看原文图12，归一化分区为目测估计，不含水印/字幕；主体区域不是重复计算的第二张照片。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "搜狐《苹果又开发布会，这PPT绝了！【PPT附下载】》，页面标注2024-09-10 13:21，账号“站在巨人的肩膀上”，正文自署“利兄”。2026-10-16完整读取正文并下载24个内嵌媒体；不把转载账号当原发布会制作署名。 本条为正文第12个内嵌媒体，分类：数据与尺度对比；原始地址：https://q6.itc.cn/q_70/images03/20240910/6eb3c35ee5f7423893fefa6181daeb9d.png；原图1080×602，SHA-256：70248652b6e547086f8af829c9501e1acf57070ba817cfe8f6fbf48d42bc9b7e。 原PNG将随待收录记录保存，未经换图、改字、裁切或重绘。 仅作为构图/表现参考，不认证模板；品牌、产品数值及医学相关证言均为原例内容，不作为当前任务的事实依据。",
+      "related_id": null,
+      "created_at": "2026-10-16T08:56:21.381Z",
+      "updated_at": "2026-10-16T08:56:21.381Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L029-70248652b6e54708.png",
+      "preview_path": "images/L029-70248652b6e54708.png",
+      "preview_sha256": "70248652b6e547086f8af829c9501e1acf57070ba817cfe8f6fbf48d42bc9b7e",
+      "preview_mime": "image/png",
+      "preview_bytes": 76539,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L029.md",
+      "source_file": "https://q6.itc.cn/q_70/images03/20240910/6eb3c35ee5f7423893fefa6181daeb9d.png",
+      "editable_source_public": false
+    },
+    {
+      "id": "L030",
+      "name": "中轴日期字组与下方出血主体（搜狐807753859·图08）",
+      "family": "F02",
+      "kind": "reference",
+      "task": "发布、日程或里程碑的一次性公布",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "上方小标签和日期上下叠放居中，下方低置产品近景出血；黑场隔开文字与物体。",
+      "composition": "上方小标签和日期上下叠放居中，下方低置产品近景出血；黑场隔开文字与物体。 对象框按截图估计；用于结构检索，不是原PPT图层或精确测量。",
+      "fits": "发布、日程或里程碑的一次性公布；一个日期/节点及一个主体图；日期来源和时区/适用地区明确。",
+      "input_conditions": "一个日期/节点及一个主体图；日期来源和时区/适用地区明确。 当前截图无可编辑源对象，字体、字号和固定字数容量未知；归一化框仅为看图估计。",
+      "avoid": "多段时间表，当前产品顶部正好占据文字区，或直接继承原例的上市日期。",
+      "adaptation": "原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。",
+      "sequence_note": "与现有库按结构、轴线、阅读路径和图文关系比较，不因产品或配色不同免查重。",
+      "pairing": {
+        "before": "先用问题、单项细节或证据建立本页的内容前提；根据真实内容衔接，不固定轮换编号。",
+        "after": "按内容进入可核验的解释、对照或简洁结论；视觉揭示之后补足信息。",
+        "avoid": "避免连续采用相同骨架；镜像、换色、换产品、静态改动画均须说明实际差异，不能当完全不同构图。"
+      },
+      "selection_prompt": "页面任务为“发布、日程或里程碑的一次性公布”且满足“一个日期/节点及一个主体图；日期来源和时区/适用地区明确。”时查看本条预览；多段时间表，当前产品顶部正好占据文字区，或直接继承原例的上市日期。 条件不足时换版。",
+      "production_prompt": "输入：{页面目的}、{当前标题/文字/数据及来源}、{图片及使用条件}、{目标画幅与风格}、{必须保留的证据}、{前后页}。\n构图核心：先放小标签再放日期，字组共用中轴；下方大图承担揭示，保护文字与主体之间的留黑。\n适配：原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。\n边界：多段时间表，当前产品顶部正好占据文字区，或直接继承原例的上市日期。 条件不满足则重排或改选，不勉强套图。\n可编辑要求：标题、说明、标注、必要图表和结构图在PPT中使用原生可编辑对象，图片独立放置；整张截图仅作参考，不作为最终整页。装饰光影可用独立透明图像或效果，不能压平必要文字。\n审核：渲染本页与邻页，检查文字实际对比、溢出、主体与证据裁切、阅读路径、同尺度/同口径关系及连续骨架重复；未经真实重建与适配审核，不升级为模板。",
+      "profile": {
+        "skeleton": "fullbleed",
+        "alignment": [
+          "top-center",
+          "text-center"
+        ],
+        "reading": [
+          "top-to-bottom",
+          "title-to-image"
+        ],
+        "whitespace": [
+          "text-safe-top-center",
+          "photo-negative-space"
+        ],
+        "relations": [
+          "text-in-photo",
+          "centered-stack"
+        ],
+        "regions": [
+          {
+            "kind": "image",
+            "rect": [
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.45,
+              0.12,
+              0.11,
+              0.04
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.35,
+              0.19,
+              0.3,
+              0.09
+            ]
+          }
+        ],
+        "basis": "实际查看原文图08，归一化分区为目测估计，不含水印/字幕；主体区域不是重复计算的第二张照片。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "搜狐《苹果又开发布会，这PPT绝了！【PPT附下载】》，页面标注2024-09-10 13:21，账号“站在巨人的肩膀上”，正文自署“利兄”。2026-10-16完整读取正文并下载24个内嵌媒体；不把转载账号当原发布会制作署名。 本条为正文第8个内嵌媒体，分类：产品细节放大；原始地址：https://q2.itc.cn/q_70/images03/20240910/169e336660144ffab6e9080b75ae0403.png；原图1080×602，SHA-256：8fb08626f57d9163e79416fab3d4b5aea7dd1780b74d6b762e7ed715e993f630。 原PNG将随待收录记录保存，未经换图、改字、裁切或重绘。 仅作为构图/表现参考，不认证模板；品牌、产品数值及医学相关证言均为原例内容，不作为当前任务的事实依据。",
+      "related_id": "L020",
+      "created_at": "2026-10-16T08:56:51.134Z",
+      "updated_at": "2026-10-16T08:56:51.134Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L030-8fb08626f57d9163.png",
+      "preview_path": "images/L030-8fb08626f57d9163.png",
+      "preview_sha256": "8fb08626f57d9163e79416fab3d4b5aea7dd1780b74d6b762e7ed715e993f630",
+      "preview_mime": "image/png",
+      "preview_bytes": 90160,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L030.md",
+      "source_file": "https://q2.itc.cn/q_70/images03/20240910/169e336660144ffab6e9080b75ae0403.png",
+      "editable_source_public": false
+    },
+    {
+      "id": "L031",
+      "name": "正视居中与两侧侧视并列（搜狐807753859·图07）",
+      "family": "候选·多视角并列",
+      "kind": "reference",
+      "task": "同一对象的多个角度或结构关系",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "正视主体居中，两侧侧面视图展开，三个角度处于相近垂直轴；黑底让高光与彩色细节突出。",
+      "composition": "正视主体居中，两侧侧面视图展开，三个角度处于相近垂直轴；黑底让高光与彩色细节突出。 对象框按截图估计；用于结构检索，不是原PPT图层或精确测量。",
+      "fits": "同一对象的多个角度或结构关系；来自同一对象的匹配视图；尺度、视角和标记关系可核对。",
+      "input_conditions": "来自同一对象的匹配视图；尺度、视角和标记关系可核对。 当前截图无可编辑源对象，字体、字号和固定字数容量未知；归一化框仅为看图估计。",
+      "avoid": "把不同型号拼成同一物体、按不同倍率暗示尺寸关系，或在多个视图中重复堆长说明。",
+      "adaptation": "原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。",
+      "sequence_note": "与现有库按结构、轴线、阅读路径和图文关系比较，不因产品或配色不同免查重。",
+      "pairing": {
+        "before": "先用问题、单项细节或证据建立本页的内容前提；根据真实内容衔接，不固定轮换编号。",
+        "after": "按内容进入可核验的解释、对照或简洁结论；视觉揭示之后补足信息。",
+        "avoid": "避免连续采用相同骨架；镜像、换色、换产品、静态改动画均须说明实际差异，不能当完全不同构图。"
+      },
+      "selection_prompt": "页面任务为“同一对象的多个角度或结构关系”且满足“来自同一对象的匹配视图；尺度、视角和标记关系可核对。”时查看本条预览；把不同型号拼成同一物体、按不同倍率暗示尺寸关系，或在多个视图中重复堆长说明。 条件不足时换版。",
+      "production_prompt": "输入：{页面目的}、{当前标题/文字/数据及来源}、{图片及使用条件}、{目标画幅与风格}、{必须保留的证据}、{前后页}。\n构图核心：中央主视图承担识别，两侧视图补充结构；用一致的缩放依据和垂直对齐关系维持可信度。\n适配：原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。\n边界：把不同型号拼成同一物体、按不同倍率暗示尺寸关系，或在多个视图中重复堆长说明。 条件不满足则重排或改选，不勉强套图。\n可编辑要求：标题、说明、标注、必要图表和结构图在PPT中使用原生可编辑对象，图片独立放置；整张截图仅作参考，不作为最终整页。装饰光影可用独立透明图像或效果，不能压平必要文字。\n审核：渲染本页与邻页，检查文字实际对比、溢出、主体与证据裁切、阅读路径、同尺度/同口径关系及连续骨架重复；未经真实重建与适配审核，不升级为模板。",
+      "profile": {
+        "skeleton": "multi-view-row",
+        "alignment": [
+          "center",
+          "horizontal"
+        ],
+        "reading": [
+          "center-to-sides"
+        ],
+        "whitespace": [
+          "between-objects"
+        ],
+        "relations": [
+          "same-object-multiple-views",
+          "hero-flanked"
+        ],
+        "regions": [
+          {
+            "kind": "image",
+            "rect": [
+              0,
+              0.04,
+              0.34,
+              0.92
+            ]
+          },
+          {
+            "kind": "image",
+            "rect": [
+              0.37,
+              0.07,
+              0.26,
+              0.87
+            ]
+          },
+          {
+            "kind": "image",
+            "rect": [
+              0.69,
+              0.05,
+              0.31,
+              0.91
+            ]
+          }
+        ],
+        "basis": "实际查看原文图07，归一化分区为目测估计，不含水印/字幕；主体区域不是重复计算的第二张照片。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "搜狐《苹果又开发布会，这PPT绝了！【PPT附下载】》，页面标注2024-09-10 13:21，账号“站在巨人的肩膀上”，正文自署“利兄”。2026-10-16完整读取正文并下载24个内嵌媒体；不把转载账号当原发布会制作署名。 本条为正文第7个内嵌媒体，分类：产品细节放大；原始地址：https://q9.itc.cn/q_70/images03/20240910/cc4e217ee32542a49e424a9df70df4f3.png；原图1080×602，SHA-256：10d287d9002552d18836f9521d6d95e20a162fe16fc5741af98da633346d982d。 原PNG将随待收录记录保存，未经换图、改字、裁切或重绘。 仅作为构图/表现参考，不认证模板；品牌、产品数值及医学相关证言均为原例内容，不作为当前任务的事实依据。",
+      "related_id": null,
+      "created_at": "2026-10-16T08:56:59.633Z",
+      "updated_at": "2026-10-16T08:56:59.633Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L031-10d287d9002552d1.png",
+      "preview_path": "images/L031-10d287d9002552d1.png",
+      "preview_sha256": "10d287d9002552d18836f9521d6d95e20a162fe16fc5741af98da633346d982d",
+      "preview_mime": "image/png",
+      "preview_bytes": 122941,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L031.md",
+      "source_file": "https://q9.itc.cn/q_70/images03/20240910/cc4e217ee32542a49e424a9df70df4f3.png",
+      "editable_source_public": false
+    },
+    {
+      "id": "L032",
+      "name": "浅底大主体与屏幕功能特写（搜狐807753859·图06）",
+      "family": "F02",
+      "kind": "reference",
+      "task": "单个产品的屏幕或功能细节展示",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "大尺寸斜向产品位于画面中下部，表带在下边缘出血，屏幕功能清晰；浅背景分离深色主体。",
+      "composition": "大尺寸斜向产品位于画面中下部，表带在下边缘出血，屏幕功能清晰；浅背景分离深色主体。 对象框按截图估计；用于结构检索，不是原PPT图层或精确测量。",
+      "fits": "单个产品的屏幕或功能细节展示；可辨的高清功能截图与产品图；允许局部出血，当前任务不要求全文说明。",
+      "input_conditions": "可辨的高清功能截图与产品图；允许局部出血，当前任务不要求全文说明。 当前截图无可编辑源对象，字体、字号和固定字数容量未知；归一化框仅为看图估计。",
+      "avoid": "以未经核验的界面或生成图充当真实产品证据；简单压黑浅底导致产品轮廓消失。",
+      "adaptation": "原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。",
+      "sequence_note": "与现有库按结构、轴线、阅读路径和图文关系比较，不因产品或配色不同免查重。",
+      "pairing": {
+        "before": "先用问题、单项细节或证据建立本页的内容前提；根据真实内容衔接，不固定轮换编号。",
+        "after": "按内容进入可核验的解释、对照或简洁结论；视觉揭示之后补足信息。",
+        "avoid": "避免连续采用相同骨架；镜像、换色、换产品、静态改动画均须说明实际差异，不能当完全不同构图。"
+      },
+      "selection_prompt": "页面任务为“单个产品的屏幕或功能细节展示”且满足“可辨的高清功能截图与产品图；允许局部出血，当前任务不要求全文说明。”时查看本条预览；以未经核验的界面或生成图充当真实产品证据；简单压黑浅底导致产品轮廓消失。 条件不足时换版。",
+      "production_prompt": "输入：{页面目的}、{当前标题/文字/数据及来源}、{图片及使用条件}、{目标画幅与风格}、{必须保留的证据}、{前后页}。\n构图核心：先保护屏幕和主要边缘，再确定放大程度；将细节作为唯一视觉中心，文字另页解释或仅在安全区补少量标签。\n适配：原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。\n边界：以未经核验的界面或生成图充当真实产品证据；简单压黑浅底导致产品轮廓消失。 条件不满足则重排或改选，不勉强套图。\n可编辑要求：标题、说明、标注、必要图表和结构图在PPT中使用原生可编辑对象，图片独立放置；整张截图仅作参考，不作为最终整页。装饰光影可用独立透明图像或效果，不能压平必要文字。\n审核：渲染本页与邻页，检查文字实际对比、溢出、主体与证据裁切、阅读路径、同尺度/同口径关系及连续骨架重复；未经真实重建与适配审核，不升级为模板。",
+      "profile": {
+        "skeleton": "fullbleed",
+        "alignment": [
+          "center",
+          "bottom"
+        ],
+        "reading": [
+          "center-focus"
+        ],
+        "whitespace": [
+          "upper-open",
+          "side-negative-space"
+        ],
+        "relations": [
+          "detail-crop",
+          "object-background-contrast"
+        ],
+        "regions": [
+          {
+            "kind": "image",
+            "rect": [
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.18,
+              0.13,
+              0.65,
+              0.87
+            ]
+          }
+        ],
+        "basis": "实际查看原文图06，归一化分区为目测估计，不含水印/字幕；主体区域不是重复计算的第二张照片。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "搜狐《苹果又开发布会，这PPT绝了！【PPT附下载】》，页面标注2024-09-10 13:21，账号“站在巨人的肩膀上”，正文自署“利兄”。2026-10-16完整读取正文并下载24个内嵌媒体；不把转载账号当原发布会制作署名。 本条为正文第6个内嵌媒体，分类：产品细节放大；原始地址：https://q5.itc.cn/q_70/images03/20240910/5591c319693041ba8177140ce3d002eb.png；原图1080×602，SHA-256：eedeb3b927a8e2d3952973bc5d7c25cd4ececa02e6438ed50fbf8b6d3ad334f5。 原PNG将随待收录记录保存，未经换图、改字、裁切或重绘。 仅作为构图/表现参考，不认证模板；品牌、产品数值及医学相关证言均为原例内容，不作为当前任务的事实依据。",
+      "related_id": null,
+      "created_at": "2026-10-16T08:57:04.259Z",
+      "updated_at": "2026-10-16T08:57:04.259Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L032-eedeb3b927a8e2d3.png",
+      "preview_path": "images/L032-eedeb3b927a8e2d3.png",
+      "preview_sha256": "eedeb3b927a8e2d3952973bc5d7c25cd4ececa02e6438ed50fbf8b6d3ad334f5",
+      "preview_mime": "image/png",
+      "preview_bytes": 85720,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L032.md",
+      "source_file": "https://q5.itc.cn/q_70/images03/20240910/5591c319693041ba8177140ce3d002eb.png",
+      "editable_source_public": false
+    },
+    {
+      "id": "L033",
+      "name": "低机位放大主体与上方留黑（搜狐807753859·图05）",
+      "family": "F02",
+      "kind": "reference",
+      "task": "展示一个物体的表面、厚度或材质细节",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "低机位产品近景从下缘出血，表面放射细节与侧缘高光成为中心；上部大片黑场，无正文。",
+      "composition": "低机位产品近景从下缘出血，表面放射细节与侧缘高光成为中心；上部大片黑场，无正文。 对象框按截图估计；用于结构检索，不是原PPT图层或精确测量。",
+      "fits": "展示一个物体的表面、厚度或材质细节；高清近景或可控产品渲染；局部裁切仍能解释观察对象，必要轮廓可见。",
+      "input_conditions": "高清近景或可控产品渲染；局部裁切仍能解释观察对象，必要轮廓可见。 当前截图无可编辑源对象，字体、字号和固定字数容量未知；归一化框仅为看图估计。",
+      "avoid": "必须完整识别的文物、必须精读的屏幕、以过暗画面隐藏结构，或把局部特写误标为完整视图。",
+      "adaptation": "原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。",
+      "sequence_note": "与现有库按结构、轴线、阅读路径和图文关系比较，不因产品或配色不同免查重。",
+      "pairing": {
+        "before": "先用问题、单项细节或证据建立本页的内容前提；根据真实内容衔接，不固定轮换编号。",
+        "after": "按内容进入可核验的解释、对照或简洁结论；视觉揭示之后补足信息。",
+        "avoid": "避免连续采用相同骨架；镜像、换色、换产品、静态改动画均须说明实际差异，不能当完全不同构图。"
+      },
+      "selection_prompt": "页面任务为“展示一个物体的表面、厚度或材质细节”且满足“高清近景或可控产品渲染；局部裁切仍能解释观察对象，必要轮廓可见。”时查看本条预览；必须完整识别的文物、必须精读的屏幕、以过暗画面隐藏结构，或把局部特写误标为完整视图。 条件不足时换版。",
+      "production_prompt": "输入：{页面目的}、{当前标题/文字/数据及来源}、{图片及使用条件}、{目标画幅与风格}、{必须保留的证据}、{前后页}。\n构图核心：让主体从下方进入，保留上方静区，沿表面细节和轮廓光组织视线；不为放大而拉伸或丢失必要证据。\n适配：原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。\n边界：必须完整识别的文物、必须精读的屏幕、以过暗画面隐藏结构，或把局部特写误标为完整视图。 条件不满足则重排或改选，不勉强套图。\n可编辑要求：标题、说明、标注、必要图表和结构图在PPT中使用原生可编辑对象，图片独立放置；整张截图仅作参考，不作为最终整页。装饰光影可用独立透明图像或效果，不能压平必要文字。\n审核：渲染本页与邻页，检查文字实际对比、溢出、主体与证据裁切、阅读路径、同尺度/同口径关系及连续骨架重复；未经真实重建与适配审核，不升级为模板。",
+      "profile": {
+        "skeleton": "fullbleed",
+        "alignment": [
+          "center",
+          "bottom"
+        ],
+        "reading": [
+          "center-focus",
+          "top-to-bottom"
+        ],
+        "whitespace": [
+          "upper-open",
+          "photo-negative-space"
+        ],
+        "relations": [
+          "contour-space",
+          "detail-crop"
+        ],
+        "regions": [
+          {
+            "kind": "image",
+            "rect": [
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.06,
+              0.29,
+              0.88,
+              0.7
+            ]
+          }
+        ],
+        "basis": "实际查看原文图05，归一化分区为目测估计，不含水印/字幕；主体区域不是重复计算的第二张照片。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "搜狐《苹果又开发布会，这PPT绝了！【PPT附下载】》，页面标注2024-09-10 13:21，账号“站在巨人的肩膀上”，正文自署“利兄”。2026-10-16完整读取正文并下载24个内嵌媒体；不把转载账号当原发布会制作署名。 本条为正文第5个内嵌媒体，分类：产品细节放大；原始地址：https://q5.itc.cn/q_70/images03/20240910/0c8a68365c2546a088b22e0d35605ffe.png；原图1080×602，SHA-256：ee1e085baa3f1f88b70e6b08a40679240850301866cf2750264caa34e29e680b。 原PNG将随待收录记录保存，未经换图、改字、裁切或重绘。 仅作为构图/表现参考，不认证模板；品牌、产品数值及医学相关证言均为原例内容，不作为当前任务的事实依据。",
+      "related_id": null,
+      "created_at": "2026-10-16T08:57:09.545Z",
+      "updated_at": "2026-10-16T08:57:09.545Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L033-ee1e085baa3f1f88.png",
+      "preview_path": "images/L033-ee1e085baa3f1f88.png",
+      "preview_sha256": "ee1e085baa3f1f88b70e6b08a40679240850301866cf2750264caa34e29e680b",
+      "preview_mime": "image/png",
+      "preview_bytes": 176020,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L033.md",
+      "source_file": "https://q5.itc.cn/q_70/images03/20240910/0c8a68365c2546a088b22e0d35605ffe.png",
+      "editable_source_public": false
+    },
+    {
+      "id": "L034",
+      "name": "黑底横向渐变短句（搜狐807753859·图04）",
+      "family": "F09",
+      "kind": "reference",
+      "task": "一句核心判断、短承诺或章节过渡",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "纯黑背景中仅一行居中短句，字色从浅暖到深暖过渡，画面外围大幅留黑；无图片争夺注意。",
+      "composition": "纯黑背景中仅一行居中短句，字色从浅暖到深暖过渡，画面外围大幅留黑；无图片争夺注意。 对象框按截图估计；用于结构检索，不是原PPT图层或精确测量。",
+      "fits": "一句核心判断、短承诺或章节过渡；一句可完整读出的短句；有明确语义重点而无需多项证据同时呈现。",
+      "input_conditions": "一句可完整读出的短句；有明确语义重点而无需多项证据同时呈现。 当前截图无可编辑源对象，字体、字号和固定字数容量未知；归一化框仅为看图估计。",
+      "avoid": "长句硬挤一行、渐变末端与黑底失去对比，或连续多页只替换文字。",
+      "adaptation": "原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。",
+      "sequence_note": "与现有库按结构、轴线、阅读路径和图文关系比较，不因产品或配色不同免查重。",
+      "pairing": {
+        "before": "先用问题、单项细节或证据建立本页的内容前提；根据真实内容衔接，不固定轮换编号。",
+        "after": "按内容进入可核验的解释、对照或简洁结论；视觉揭示之后补足信息。",
+        "avoid": "避免连续采用相同骨架；镜像、换色、换产品、静态改动画均须说明实际差异，不能当完全不同构图。"
+      },
+      "selection_prompt": "页面任务为“一句核心判断、短承诺或章节过渡”且满足“一句可完整读出的短句；有明确语义重点而无需多项证据同时呈现。”时查看本条预览；长句硬挤一行、渐变末端与黑底失去对比，或连续多页只替换文字。 条件不足时换版。",
+      "production_prompt": "输入：{页面目的}、{当前标题/文字/数据及来源}、{图片及使用条件}、{目标画幅与风格}、{必须保留的证据}、{前后页}。\n构图核心：用单行短句建立唯一焦点，按实际背景逐段检查渐变文字对比，必要时缩短色域；不要机械复制英文行宽。\n适配：原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。\n边界：长句硬挤一行、渐变末端与黑底失去对比，或连续多页只替换文字。 条件不满足则重排或改选，不勉强套图。\n可编辑要求：标题、说明、标注、必要图表和结构图在PPT中使用原生可编辑对象，图片独立放置；整张截图仅作参考，不作为最终整页。装饰光影可用独立透明图像或效果，不能压平必要文字。\n审核：渲染本页与邻页，检查文字实际对比、溢出、主体与证据裁切、阅读路径、同尺度/同口径关系及连续骨架重复；未经真实重建与适配审核，不升级为模板。",
+      "profile": {
+        "skeleton": "centered-type",
+        "alignment": [
+          "center",
+          "text-center"
+        ],
+        "reading": [
+          "center-focus"
+        ],
+        "whitespace": [
+          "peripheral-open",
+          "open-black"
+        ],
+        "relations": [
+          "single-type-group",
+          "gradient-emphasis"
+        ],
+        "regions": [
+          {
+            "kind": "text",
+            "rect": [
+              0.07,
+              0.46,
+              0.87,
+              0.1
+            ]
+          }
+        ],
+        "basis": "实际查看原文图04，归一化分区为目测估计，不含水印/字幕；主体区域不是重复计算的第二张照片。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "搜狐《苹果又开发布会，这PPT绝了！【PPT附下载】》，页面标注2024-09-10 13:21，账号“站在巨人的肩膀上”，正文自署“利兄”。2026-10-16完整读取正文并下载24个内嵌媒体；不把转载账号当原发布会制作署名。 本条为正文第4个内嵌媒体，分类：渐变关键词；原始地址：https://q8.itc.cn/q_70/images03/20240910/7ee62d36ebd342fb945713ed64d35256.png；原图1080×602，SHA-256：a828dde4703fae5c4a729344e8f6632ae3c613bf2f2540e7a115a2681f4b272f。 原PNG将随待收录记录保存，未经换图、改字、裁切或重绘。 仅作为构图/表现参考，不认证模板；品牌、产品数值及医学相关证言均为原例内容，不作为当前任务的事实依据。",
+      "related_id": null,
+      "created_at": "2026-10-16T08:57:13.872Z",
+      "updated_at": "2026-10-16T08:57:13.872Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L034-a828dde4703fae5c.png",
+      "preview_path": "images/L034-a828dde4703fae5c.png",
+      "preview_sha256": "a828dde4703fae5c4a729344e8f6632ae3c613bf2f2540e7a115a2681f4b272f",
+      "preview_mime": "image/png",
+      "preview_bytes": 21381,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L034.md",
+      "source_file": "https://q8.itc.cn/q_70/images03/20240910/7ee62d36ebd342fb945713ed64d35256.png",
+      "editable_source_public": false
+    },
+    {
+      "id": "L035",
+      "name": "全图型｜左中文字·居中对齐（知乎27157505·10）",
+      "family": "F02",
+      "kind": "reference",
+      "task": "全幅图像的局部文字位置与对齐选择",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "全幅图像骨架；字组位于左侧中部；标题与说明在局部文字区居中对齐；右侧保留主要图像空间。局部居中与全页中轴分开记录。",
+      "composition": "原例为浅灰环境中的手持手机，屏幕和手部在右侧；左中标题与两行说明在局部文字区居中，各行中心约在画宽23%处，而非整张幻灯片中心。 本条归一化文字框[[0.089, 0.36, 0.277, 0.127], [0.12, 0.516, 0.217, 0.123]]为看图估计，只比较主要语义图文；不含品牌角标、水印及示意辅助线，非源对象框或字形实测。",
+      "fits": "一张主图承担主要信息，左侧中部具备安全文字区，需要一个短标题及简短说明的场景展示、功能说明或观点过渡。适合少量短行及语义完整的居中文字，不适合长段落。",
+      "input_conditions": "一张横幅真实图片或明确标注的示意图片；左侧中部有足够连续阅读区，主体可向右侧展开；标题/说明分别完整断句；文字组内部居中对齐。示意块比例不构成固定字数容量承诺。",
+      "avoid": "左侧中部恰好是人脸、手部、屏幕、标识、数据或其他必要证据；背景频繁明暗跳变；正文过长；为套版而翻转带字照片。不能将文字区位于左侧/右侧与文字自身居中混为一谈。",
+      "adaptation": "先标出当前图片必见部位与阅读区，再确定左侧中部锚点及居中对齐轴；按实际字形排短标题、说明。原图约16:9，转21:9必须重排：等比适配并保护证据，可调整字组和主体占幅、使用经授权更宽素材或单独阅读带，不能横向拉伸或机械裁切。原例的浅色/暖色不自动成为任务背景规则；需要黑色风格时重新选用有暗色阅读区的素材。",
+      "sequence_note": "同属F02全图型家族；原文方式10为位置和对齐变体，不登记为独立新家族。与L002/L006的图内文字结构比较任务与文字区，不能只因换图算新结构。",
+      "pairing": {
+        "before": "适合从纯文字判断或提问页进入，以图像给出直观场景；也可接在步骤概述后展示具体结果。",
+        "after": "按内容转入对象细节、可核验的数据或同尺度对照页，避免只轮换文字角落制造表面变化。",
+        "avoid": "避免与全图型近似邻页连续堆叠；镜像、换色、换照片仍属于同一骨架。"
+      },
+      "selection_prompt": "当一张主图承担核心信息、左侧中部确有安全文字区且主标题和简短说明适合局部居中对齐时，列为F02候选；先查看示例与当前图片。需要长段落、密集表格或此区有必要证据时排除。",
+      "production_prompt": "输入：{页面目的}、{当前标题}、{当前说明}、{当前图片及来源}、{必须保留的图像细节}、{目标画幅/视觉规范}、{前后页}。\n采用全图型左侧中部字组变体：图像覆盖画布，标题与说明作为紧凑的独立文字组放在左侧中部；二者在该局部区域严格居中对齐。保留“全幅主图—局部字组”的主次关系，阅读路径为“左侧文字与右侧主体形成横向联系”。居中只相对当前文字区，勿移到全页中轴。 根据当前文案调整字号、行距、组内间隔与区宽，不复制原图数值、人物信息或产品承诺；用内容真实性和素材证据决定图像，而非为套版牺牲信息。\n在目标PPT中使用原生可编辑文字，必要图形与蒙版也用原生对象；截图只用于看构图。示意图中的虚线、灰色占位块和来源水印不照搬为成品装饰。若背景对比不足，仅在不遮挡证据时添加克制的局部渐变或改选素材/布局，不能靠整图压黑掩盖问题。\n若目标为21:9黑色/近黑，按照当前任务规范重做画布和留白，图片等比，必要证据不裁掉；不可把16:9截图拉伸成21:9。完成后渲染本页和相邻页，检查实际字形、可读性、最差背景对比、文字与主体遮挡、像素质量及连续同骨架重复。参考条目不等于已验证模板；没有适用阅读区时换版。",
+      "profile": {
+        "skeleton": "fullbleed",
+        "alignment": [
+          "middle-left",
+          "text-center"
+        ],
+        "reading": [
+          "title-to-image",
+          "top-to-bottom",
+          "left-to-right"
+        ],
+        "whitespace": [
+          "photo-negative-space",
+          "text-safe-middle-left"
+        ],
+        "relations": [
+          "text-in-photo",
+          "type-hierarchy",
+          "shared-text-axis"
+        ],
+        "regions": [
+          {
+            "kind": "image",
+            "rect": [
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.089,
+              0.36,
+              0.277,
+              0.127
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.12,
+              0.516,
+              0.217,
+              0.123
+            ]
+          }
+        ],
+        "basis": "实际查看原文示意图及原文完整发布会案例后分析。原文方法10；主要语义文字框为归一化估计，不含品牌水印和示意辅助线。无可编辑PPT，不作字形/容量认证。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "来源：学有小成《看小米手机发布会，学全图型PPT排版！》，原页编辑时间2017-05-29 09:47；2026-10-16实际读取正文及全部内嵌图。https://zhuanlan.zhihu.com/p/27157505。文章按角落、左右居中、中轴三类组织；角落4×2、侧边2×3、中轴2，共16种位置/对齐组合。正文15种与16种并存，左中段写两种而示意图列三种；本批依据原图编号1–16核对，避免漏掉左中右齐。分组用于检索，不把镜像、换色或换图算成新骨架。 本条对应原文排版方式10，展示原文完整发布会案例；原始示意图为正文第10张内嵌图片，提取框(579, 135, 931, 333)。 原例为第12张内嵌图片。 原图约16:9，保留原比例、品牌标记与原有文字。来源图的字体、图层及可编辑源PPT未知；收录不等于素材再使用授权，不认证为模板。\n已保留的原始示意图：https://ppt-layout-atlas.woollywave.chatgpt.site/api/assets/uploads/9a6a9dda-9ac2-4db6-b739-7ff3880d2128.jpg；原图SHA-256：f921a78c1cd367c10918918cbfbbcdb1aa8a8010c4a706f2d9e6cd75df9488d9。\n已保留的原始案例图：https://ppt-layout-atlas.woollywave.chatgpt.site/api/assets/uploads/70d869ed-51dc-4fa1-99ce-64205e90899e.jpg；原图SHA-256：812022b5082406096526e5d4cf90f6bd4a5b0be4f4ccc5f85ef982e58a2e9aa4。",
+      "related_id": "L017",
+      "created_at": "2026-10-16T08:57:30.957Z",
+      "updated_at": "2026-10-16T08:57:30.957Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L035-b1bcd5d314fa23db.jpg",
+      "preview_path": "images/L035-b1bcd5d314fa23db.jpg",
+      "preview_sha256": "b1bcd5d314fa23db5e19a85b5be7e05e1de8c7d1c342c7c152d9f89cfb5b31fa",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 78093,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L035.md",
+      "editable_source_public": false
+    },
+    {
+      "id": "L036",
+      "name": "全图型｜右下文字·右对齐（知乎27157505·07）",
+      "family": "F02",
+      "kind": "reference",
+      "task": "全幅图像的局部文字位置与对齐选择",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "全幅图像骨架；字组位于右下；标题与说明在局部文字区右对齐；左侧和上方保留主要图像空间。",
+      "composition": "原例为游戏操作的过肩视角，设备偏左；右下标题和更长的单行说明共享右轴。人头和手部贴近文字区，实际适配要检查主体轮廓及最差背景对比。 本条归一化文字框[[0.592, 0.789, 0.351, 0.08], [0.438, 0.889, 0.508, 0.037]]为看图估计，只比较主要语义图文；不含品牌角标、水印及示意辅助线，非源对象框或字形实测。",
+      "fits": "一张主图承担主要信息，右下具备安全文字区，需要一个短标题及简短说明的场景展示、功能说明或观点过渡。标题与说明长短不同时仍能沿稳定轴阅读。",
+      "input_conditions": "一张横幅真实图片或明确标注的示意图片；右下有足够连续阅读区，主体可向左上或左侧展开；标题/说明分别完整断句；文字组内部右对齐。示意块比例不构成固定字数容量承诺。",
+      "avoid": "右下恰好是人脸、手部、屏幕、标识、数据或其他必要证据；背景频繁明暗跳变；正文过长；为套版而翻转带字照片。",
+      "adaptation": "先标出当前图片必见部位与阅读区，再确定右下锚点及右对齐轴；按实际字形排短标题、说明。原图约16:9，转21:9必须重排：等比适配并保护证据，可调整字组和主体占幅、使用经授权更宽素材或单独阅读带，不能横向拉伸或机械裁切。原例的浅色/暖色不自动成为任务背景规则；需要黑色风格时重新选用有暗色阅读区的素材。",
+      "sequence_note": "同属F02全图型家族；原文方式7为位置和对齐变体，不登记为独立新家族。与L002/L006的图内文字结构比较任务与文字区，不能只因换图算新结构。",
+      "pairing": {
+        "before": "适合从纯文字判断或提问页进入，以图像给出直观场景；也可接在步骤概述后展示具体结果。",
+        "after": "按内容转入对象细节、可核验的数据或同尺度对照页，避免只轮换文字角落制造表面变化。",
+        "avoid": "避免与全图型近似邻页连续堆叠；镜像、换色、换照片仍属于同一骨架。"
+      },
+      "selection_prompt": "当一张主图承担核心信息、右下确有安全文字区且主标题和简短说明适合局部右对齐时，列为F02候选；先查看示例与当前图片。需要长段落、密集表格或此区有必要证据时排除。",
+      "production_prompt": "输入：{页面目的}、{当前标题}、{当前说明}、{当前图片及来源}、{必须保留的图像细节}、{目标画幅/视觉规范}、{前后页}。\n采用全图型右下字组变体：图像覆盖画布，标题与说明作为紧凑的独立文字组放在右下；二者在该局部区域严格右对齐。保留“全幅主图—局部字组”的主次关系，阅读路径为“先读图像，向右下落点收束”。 根据当前文案调整字号、行距、组内间隔与区宽，不复制原图数值、人物信息或产品承诺；用内容真实性和素材证据决定图像，而非为套版牺牲信息。\n在目标PPT中使用原生可编辑文字，必要图形与蒙版也用原生对象；截图只用于看构图。示意图中的虚线、灰色占位块和来源水印不照搬为成品装饰。若背景对比不足，仅在不遮挡证据时添加克制的局部渐变或改选素材/布局，不能靠整图压黑掩盖问题。\n若目标为21:9黑色/近黑，按照当前任务规范重做画布和留白，图片等比，必要证据不裁掉；不可把16:9截图拉伸成21:9。完成后渲染本页和相邻页，检查实际字形、可读性、最差背景对比、文字与主体遮挡、像素质量及连续同骨架重复。参考条目不等于已验证模板；没有适用阅读区时换版。",
+      "profile": {
+        "skeleton": "fullbleed",
+        "alignment": [
+          "bottom-right",
+          "text-right"
+        ],
+        "reading": [
+          "title-to-image",
+          "top-to-bottom"
+        ],
+        "whitespace": [
+          "photo-negative-space",
+          "text-safe-bottom-right"
+        ],
+        "relations": [
+          "text-in-photo",
+          "type-hierarchy",
+          "shared-text-axis"
+        ],
+        "regions": [
+          {
+            "kind": "image",
+            "rect": [
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.592,
+              0.789,
+              0.351,
+              0.08
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.438,
+              0.889,
+              0.508,
+              0.037
+            ]
+          }
+        ],
+        "basis": "实际查看原文示意图及原文完整发布会案例后分析。原文方法7；主要语义文字框为归一化估计，不含品牌水印和示意辅助线。无可编辑PPT，不作字形/容量认证。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "来源：学有小成《看小米手机发布会，学全图型PPT排版！》，原页编辑时间2017-05-29 09:47；2026-10-16实际读取正文及全部内嵌图。https://zhuanlan.zhihu.com/p/27157505。文章按角落、左右居中、中轴三类组织；角落4×2、侧边2×3、中轴2，共16种位置/对齐组合。正文15种与16种并存，左中段写两种而示意图列三种；本批依据原图编号1–16核对，避免漏掉左中右齐。分组用于检索，不把镜像、换色或换图算成新骨架。 本条对应原文排版方式7，展示原文完整发布会案例；原始示意图为正文第8张内嵌图片，提取框(27, 197, 479, 451)。 原例为第9张内嵌图片。 原图约16:9，保留原比例、品牌标记与原有文字。来源图的字体、图层及可编辑源PPT未知；收录不等于素材再使用授权，不认证为模板。\n已保留的原始示意图：https://ppt-layout-atlas.woollywave.chatgpt.site/api/assets/uploads/6018d8b3-448f-4715-9565-f2784c3f0617.jpg；原图SHA-256：79391a6cfc63b7edd4adac274e3bcc77878d3840e61139e40e614887b200a099。\n已保留的原始案例图：https://ppt-layout-atlas.woollywave.chatgpt.site/api/assets/uploads/df00b435-3bff-455d-882e-00cda83fe8b5.png；原图SHA-256：579e047a332f7b2b22762a462ba0b17114c397d8229b518ddf1bf71fc5407f59。",
+      "related_id": "L012",
+      "created_at": "2026-10-16T08:57:39.509Z",
+      "updated_at": "2026-10-16T08:57:39.509Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L036-4aee261736b11864.jpg",
+      "preview_path": "images/L036-4aee261736b11864.jpg",
+      "preview_sha256": "4aee261736b118641b4113b015ecb43db991c9e745f77a2addb7e39724ad89f3",
+      "preview_mime": "image/jpeg",
+      "preview_bytes": 193253,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L036.md",
+      "editable_source_public": false
+    },
+    {
+      "id": "L037",
+      "name": "横向物体遮挡巨型发光字（搜狐807753859·图22）",
+      "family": "候选·文字与物体前后层次",
+      "kind": "reference",
+      "task": "一个短主题词与横向物体的共同揭示",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "巨型短字组位于后层并发暖色光，横向产品侧面穿过中部前层；两者遮挡建立纵深，周围留暗。",
+      "composition": "巨型短字组位于后层并发暖色光，横向产品侧面穿过中部前层；两者遮挡建立纵深，周围留暗。 对象框按截图估计；用于结构检索，不是原PPT图层或精确测量。",
+      "fits": "一个短主题词与横向物体的共同揭示；极短标题和轮廓清楚的横向主体；遮挡后标题仍可辨，产品必要细节可见。",
+      "input_conditions": "极短标题和轮廓清楚的横向主体；遮挡后标题仍可辨，产品必要细节可见。 当前截图无可编辑源对象，字体、字号和固定字数容量未知；归一化框仅为看图估计。",
+      "avoid": "遮挡导致文字不完整不可辨、发光吞掉产品边缘、把字与物体粘成扁平色块。",
+      "adaptation": "原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。",
+      "sequence_note": "与现有库按结构、轴线、阅读路径和图文关系比较，不因产品或配色不同免查重。",
+      "pairing": {
+        "before": "先用问题、单项细节或证据建立本页的内容前提；根据真实内容衔接，不固定轮换编号。",
+        "after": "按内容进入可核验的解释、对照或简洁结论；视觉揭示之后补足信息。",
+        "avoid": "避免连续采用相同骨架；镜像、换色、换产品、静态改动画均须说明实际差异，不能当完全不同构图。"
+      },
+      "selection_prompt": "页面任务为“一个短主题词与横向物体的共同揭示”且满足“极短标题和轮廓清楚的横向主体；遮挡后标题仍可辨，产品必要细节可见。”时查看本条预览；遮挡导致文字不完整不可辨、发光吞掉产品边缘、把字与物体粘成扁平色块。 条件不足时换版。",
+      "production_prompt": "输入：{页面目的}、{当前标题/文字/数据及来源}、{图片及使用条件}、{目标画幅与风格}、{必须保留的证据}、{前后页}。\n构图核心：将短字置后、物体置前，局部遮挡保留可识别字形；用真实边缘光和接触关系分层，不能牺牲证据换效果。\n适配：原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。\n边界：遮挡导致文字不完整不可辨、发光吞掉产品边缘、把字与物体粘成扁平色块。 条件不满足则重排或改选，不勉强套图。\n可编辑要求：标题、说明、标注、必要图表和结构图在PPT中使用原生可编辑对象，图片独立放置；整张截图仅作参考，不作为最终整页。装饰光影可用独立透明图像或效果，不能压平必要文字。\n审核：渲染本页与邻页，检查文字实际对比、溢出、主体与证据裁切、阅读路径、同尺度/同口径关系及连续骨架重复；未经真实重建与适配审核，不升级为模板。",
+      "profile": {
+        "skeleton": "type-object-overlap",
+        "alignment": [
+          "center",
+          "horizontal"
+        ],
+        "reading": [
+          "type-to-object",
+          "center-focus"
+        ],
+        "whitespace": [
+          "peripheral-open",
+          "open-black"
+        ],
+        "relations": [
+          "foreground-occlusion",
+          "type-image-overlap",
+          "glow-separation"
+        ],
+        "regions": [
+          {
+            "kind": "text",
+            "rect": [
+              0.23,
+              0.28,
+              0.56,
+              0.51
+            ]
+          },
+          {
+            "kind": "image",
+            "rect": [
+              0.06,
+              0.37,
+              0.88,
+              0.28
+            ]
+          }
+        ],
+        "basis": "实际查看原文图22，归一化分区为目测估计，不含水印/字幕；主体区域不是重复计算的第二张照片。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "搜狐《苹果又开发布会，这PPT绝了！【PPT附下载】》，页面标注2024-09-10 13:21，账号“站在巨人的肩膀上”，正文自署“利兄”。2026-10-16完整读取正文并下载24个内嵌媒体；不把转载账号当原发布会制作署名。 本条为正文第22个内嵌媒体，分类：炫彩光影；原始地址：https://q1.itc.cn/q_70/images03/20240910/bec13fcb808f469e8163488e9c57a3b6.png；原图1080×602，SHA-256：b9bea22b6271739cad2554cff7408d3b2066469b786016c1172b9e9475dfd538。 原PNG将随待收录记录保存，未经换图、改字、裁切或重绘。 仅作为构图/表现参考，不认证模板；品牌、产品数值及医学相关证言均为原例内容，不作为当前任务的事实依据。",
+      "related_id": null,
+      "created_at": "2026-10-16T09:03:30.819Z",
+      "updated_at": "2026-10-16T09:03:30.819Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L037-b9bea22b6271739c.png",
+      "preview_path": "images/L037-b9bea22b6271739c.png",
+      "preview_sha256": "b9bea22b6271739cad2554cff7408d3b2066469b786016c1172b9e9475dfd538",
+      "preview_mime": "image/png",
+      "preview_bytes": 167143,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L037.md",
+      "source_file": "https://q1.itc.cn/q_70/images03/20240910/bec13fcb808f469e8163488e9c57a3b6.png",
+      "editable_source_public": false
+    },
+    {
+      "id": "L038",
+      "name": "中央方形对象与外缘柔光（搜狐807753859·图21）",
+      "family": "候选·中心对象光场",
+      "kind": "reference",
+      "task": "单一技术、模块或抽象主题的象征揭示",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "方形对象居中，边缘彩色光晕扩散到浅底；对象内部短标识集中，外围无正文。",
+      "composition": "方形对象居中，边缘彩色光晕扩散到浅底；对象内部短标识集中，外围无正文。 对象框按截图估计；用于结构检索，不是原PPT图层或精确测量。",
+      "fits": "单一技术、模块或抽象主题的象征揭示；可清楚识别的中心图形/对象；光效只辅助视觉层级，具体能力另有证据说明。",
+      "input_conditions": "可清楚识别的中心图形/对象；光效只辅助视觉层级，具体能力另有证据说明。 当前截图无可编辑源对象，字体、字号和固定字数容量未知；归一化框仅为看图估计。",
+      "avoid": "以光晕冒充实际能量场或技术工作机制、过曝吞边、复制原例品牌标识与性能承诺。",
+      "adaptation": "原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。",
+      "sequence_note": "与现有库按结构、轴线、阅读路径和图文关系比较，不因产品或配色不同免查重。",
+      "pairing": {
+        "before": "先用问题、单项细节或证据建立本页的内容前提；根据真实内容衔接，不固定轮换编号。",
+        "after": "按内容进入可核验的解释、对照或简洁结论；视觉揭示之后补足信息。",
+        "avoid": "避免连续采用相同骨架；镜像、换色、换产品、静态改动画均须说明实际差异，不能当完全不同构图。"
+      },
+      "selection_prompt": "页面任务为“单一技术、模块或抽象主题的象征揭示”且满足“可清楚识别的中心图形/对象；光效只辅助视觉层级，具体能力另有证据说明。”时查看本条预览；以光晕冒充实际能量场或技术工作机制、过曝吞边、复制原例品牌标识与性能承诺。 条件不足时换版。",
+      "production_prompt": "输入：{页面目的}、{当前标题/文字/数据及来源}、{图片及使用条件}、{目标画幅与风格}、{必须保留的证据}、{前后页}。\n构图核心：保留中心方形的硬边与外围柔光反差，标识保持清楚；光效颜色和强度服务当前主题，不作为科学图示。\n适配：原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。\n边界：以光晕冒充实际能量场或技术工作机制、过曝吞边、复制原例品牌标识与性能承诺。 条件不满足则重排或改选，不勉强套图。\n可编辑要求：标题、说明、标注、必要图表和结构图在PPT中使用原生可编辑对象，图片独立放置；整张截图仅作参考，不作为最终整页。装饰光影可用独立透明图像或效果，不能压平必要文字。\n审核：渲染本页与邻页，检查文字实际对比、溢出、主体与证据裁切、阅读路径、同尺度/同口径关系及连续骨架重复；未经真实重建与适配审核，不升级为模板。",
+      "profile": {
+        "skeleton": "centered-object-glow",
+        "alignment": [
+          "center"
+        ],
+        "reading": [
+          "center-focus"
+        ],
+        "whitespace": [
+          "peripheral-open"
+        ],
+        "relations": [
+          "hard-soft-contrast",
+          "glow-surround"
+        ],
+        "regions": [
+          {
+            "kind": "image",
+            "rect": [
+              0.32,
+              0.13,
+              0.37,
+              0.74
+            ]
+          },
+          {
+            "kind": "text",
+            "rect": [
+              0.37,
+              0.44,
+              0.27,
+              0.14
+            ]
+          }
+        ],
+        "basis": "实际查看原文图21，归一化分区为目测估计，不含水印/字幕；主体区域不是重复计算的第二张照片。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "搜狐《苹果又开发布会，这PPT绝了！【PPT附下载】》，页面标注2024-09-10 13:21，账号“站在巨人的肩膀上”，正文自署“利兄”。2026-10-16完整读取正文并下载24个内嵌媒体；不把转载账号当原发布会制作署名。 本条为正文第21个内嵌媒体，分类：炫彩光影；原始地址：https://q2.itc.cn/q_70/images03/20240910/cc2c24592a2c487785d73c6086619995.png；原图1080×602，SHA-256：302245f1bccbeee45b0cd05956850007185be4a5cc0b11ebdea5736beccb1e8e。 原PNG将随待收录记录保存，未经换图、改字、裁切或重绘。 仅作为构图/表现参考，不认证模板；品牌、产品数值及医学相关证言均为原例内容，不作为当前任务的事实依据。",
+      "related_id": null,
+      "created_at": "2026-10-16T09:03:35.859Z",
+      "updated_at": "2026-10-16T09:03:35.859Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L038-302245f1bccbeee4.png",
+      "preview_path": "images/L038-302245f1bccbeee4.png",
+      "preview_sha256": "302245f1bccbeee45b0cd05956850007185be4a5cc0b11ebdea5736beccb1e8e",
+      "preview_mime": "image/png",
+      "preview_bytes": 119593,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L038.md",
+      "source_file": "https://q2.itc.cn/q_70/images03/20240910/cc2c24592a2c487785d73c6086619995.png",
+      "editable_source_public": false
+    },
+    {
+      "id": "L039",
+      "name": "中央信任对象与两侧网状围合（搜狐807753859·图23）",
+      "family": "候选·中心保护圈",
+      "kind": "reference",
+      "task": "保护、边界、连接或隐私主题的概念表达",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "中央竖幅对象被柔和光圈包围，两侧灰黑节点网络向中心弯曲但留出净空；中心符号形成主题焦点。",
+      "composition": "中央竖幅对象被柔和光圈包围，两侧灰黑节点网络向中心弯曲但留出净空；中心符号形成主题焦点。 对象框按截图估计；用于结构检索，不是原PPT图层或精确测量。",
+      "fits": "保护、边界、连接或隐私主题的概念表达；主题与围合/边界隐喻吻合；能明确区分示意视觉和真实系统拓扑。",
+      "input_conditions": "主题与围合/边界隐喻吻合；能明确区分示意视觉和真实系统拓扑。 当前截图无可编辑源对象，字体、字号和固定字数容量未知；归一化框仅为看图估计。",
+      "avoid": "将装饰节点图当技术架构证据、随机节点暗示真实机制、外围纹理侵入中心识别区。",
+      "adaptation": "原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。",
+      "sequence_note": "与现有库按结构、轴线、阅读路径和图文关系比较，不因产品或配色不同免查重。",
+      "pairing": {
+        "before": "先用问题、单项细节或证据建立本页的内容前提；根据真实内容衔接，不固定轮换编号。",
+        "after": "按内容进入可核验的解释、对照或简洁结论；视觉揭示之后补足信息。",
+        "avoid": "避免连续采用相同骨架；镜像、换色、换产品、静态改动画均须说明实际差异，不能当完全不同构图。"
+      },
+      "selection_prompt": "页面任务为“保护、边界、连接或隐私主题的概念表达”且满足“主题与围合/边界隐喻吻合；能明确区分示意视觉和真实系统拓扑。”时查看本条预览；将装饰节点图当技术架构证据、随机节点暗示真实机制、外围纹理侵入中心识别区。 条件不足时换版。",
+      "production_prompt": "输入：{页面目的}、{当前标题/文字/数据及来源}、{图片及使用条件}、{目标画幅与风格}、{必须保留的证据}、{前后页}。\n构图核心：中央对象、保护圈、外围纹理分三层；留清晰净空并降低外围对比，若讲机制需另做准确的原生流程或结构图。\n适配：原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。\n边界：将装饰节点图当技术架构证据、随机节点暗示真实机制、外围纹理侵入中心识别区。 条件不满足则重排或改选，不勉强套图。\n可编辑要求：标题、说明、标注、必要图表和结构图在PPT中使用原生可编辑对象，图片独立放置；整张截图仅作参考，不作为最终整页。装饰光影可用独立透明图像或效果，不能压平必要文字。\n审核：渲染本页与邻页，检查文字实际对比、溢出、主体与证据裁切、阅读路径、同尺度/同口径关系及连续骨架重复；未经真实重建与适配审核，不升级为模板。",
+      "profile": {
+        "skeleton": "center-object-surround",
+        "alignment": [
+          "center",
+          "bilateral"
+        ],
+        "reading": [
+          "center-to-periphery"
+        ],
+        "whitespace": [
+          "central-clear-zone"
+        ],
+        "relations": [
+          "protected-center",
+          "surrounding-network"
+        ],
+        "regions": [
+          {
+            "kind": "image",
+            "rect": [
+              0.38,
+              0.18,
+              0.24,
+              0.64
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.25,
+              0.05,
+              0.5,
+              0.9
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0,
+              0,
+              0.25,
+              1
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.75,
+              0,
+              0.25,
+              1
+            ]
+          }
+        ],
+        "basis": "实际查看原文图23，归一化分区为目测估计，不含水印/字幕；主体区域不是重复计算的第二张照片。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "搜狐《苹果又开发布会，这PPT绝了！【PPT附下载】》，页面标注2024-09-10 13:21，账号“站在巨人的肩膀上”，正文自署“利兄”。2026-10-16完整读取正文并下载24个内嵌媒体；不把转载账号当原发布会制作署名。 本条为正文第23个内嵌媒体，分类：炫彩光影；原始地址：https://q0.itc.cn/q_70/images03/20240910/6b159be68e0b4779aaccaf95e899e169.png；原图1080×602，SHA-256：0980cfc137af28e53f456b92d18374020d054a3b3e311380a15b4d50d9abd500。 原PNG将随待收录记录保存，未经换图、改字、裁切或重绘。 仅作为构图/表现参考，不认证模板；品牌、产品数值及医学相关证言均为原例内容，不作为当前任务的事实依据。",
+      "related_id": null,
+      "created_at": "2026-10-16T09:03:41.298Z",
+      "updated_at": "2026-10-16T09:03:41.298Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L039-0980cfc137af28e5.png",
+      "preview_path": "images/L039-0980cfc137af28e5.png",
+      "preview_sha256": "0980cfc137af28e53f456b92d18374020d054a3b3e311380a15b4d50d9abd500",
+      "preview_mime": "image/png",
+      "preview_bytes": 154116,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L039.md",
+      "source_file": "https://q0.itc.cn/q_70/images03/20240910/6b159be68e0b4779aaccaf95e899e169.png",
+      "editable_source_public": false
+    },
+    {
+      "id": "L040",
+      "name": "彩色中央主卡与多尺度功能矩阵（搜狐807753859·图20）",
+      "family": "候选·主从卡片矩阵",
+      "kind": "reference",
+      "task": "一组已讲解功能的概览和章节回顾",
+      "status": "reference",
+      "status_label": "原样预览已看，适配待验证",
+      "entry_version": "1",
+      "feature_summary": "中央横向产品主卡被摄像、功能、系统与图标小卡包围；上部长横卡与下部中等卡形成不同节拍，浅沟槽统一边界。",
+      "composition": "中央横向产品主卡被摄像、功能、系统与图标小卡包围；上部长横卡与下部中等卡形成不同节拍，浅沟槽统一边界。 对象框按截图估计；用于结构检索，不是原PPT图层或精确测量。",
+      "fits": "一组已讲解功能的概览和章节回顾；图文都可压缩为短标签；一项主对象、明确的次级功能类别，图像风格可协调。",
+      "input_conditions": "图文都可压缩为短标签；一项主对象、明确的次级功能类别，图像风格可协调。 当前截图无可编辑源对象，字体、字号和固定字数容量未知；归一化框仅为看图估计。",
+      "avoid": "卡片颜色全部抢主角、过多小字号、主题无关素材硬凑网格。",
+      "adaptation": "原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。",
+      "sequence_note": "与现有库按结构、轴线、阅读路径和图文关系比较，不因产品或配色不同免查重。 本批18/19/20共享中央主卡和外围不等分网格；卡片数量、局部跨度与素材差异单列。",
+      "pairing": {
+        "before": "先用问题、单项细节或证据建立本页的内容前提；各功能已逐项解释后再进入汇总。",
+        "after": "按内容进入关键功能细节或简洁结论，避免另一页密集网格。",
+        "avoid": "避免连续采用相同骨架；镜像、换色、换产品、静态改动画均须说明实际差异，不能当完全不同构图。"
+      },
+      "selection_prompt": "页面任务为“一组已讲解功能的概览和章节回顾”且满足“图文都可压缩为短标签；一项主对象、明确的次级功能类别，图像风格可协调。”时查看本条预览；卡片颜色全部抢主角、过多小字号、主题无关素材硬凑网格。 条件不足时换版。",
+      "production_prompt": "输入：{页面目的}、{当前标题/文字/数据及来源}、{图片及使用条件}、{目标画幅与风格}、{必须保留的证据}、{前后页}。\n构图核心：以主对象大卡建立中心，围绕内容关系安排长卡、竖卡和小卡；用统一间距和有限强调色控制密度，必要时拆页。\n适配：原图约16:9（以记录像素为准），迁移到21:9必须按当前素材重新分配空间，图片等比，不拉伸或机械裁掉证据；浅底参考保留原貌，黑色/近黑成品需另行验证字色、主体轮廓和背景对比。\n边界：卡片颜色全部抢主角、过多小字号、主题无关素材硬凑网格。 条件不满足则重排或改选，不勉强套图。\n可编辑要求：标题、说明、标注、必要图表和结构图在PPT中使用原生可编辑对象，图片独立放置；整张截图仅作参考，不作为最终整页。装饰光影可用独立透明图像或效果，不能压平必要文字。\n审核：渲染本页与邻页，检查文字实际对比、溢出、主体与证据裁切、阅读路径、同尺度/同口径关系及连续骨架重复；未经真实重建与适配审核，不升级为模板。",
+      "profile": {
+        "skeleton": "hero-card-grid",
+        "alignment": [
+          "grid",
+          "shared-gutters"
+        ],
+        "reading": [
+          "hero-to-periphery",
+          "group-scan"
+        ],
+        "whitespace": [
+          "gutter-network"
+        ],
+        "relations": [
+          "hero-card",
+          "unequal-modules",
+          "consistent-gutters"
+        ],
+        "regions": [
+          {
+            "kind": "image",
+            "rect": [
+              0.25,
+              0.26,
+              0.5,
+              0.49
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.01,
+              0.01,
+              0.24,
+              0.23
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.25,
+              0.01,
+              0.15,
+              0.23
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.4,
+              0.01,
+              0.35,
+              0.23
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.75,
+              0.01,
+              0.15,
+              0.23
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.9,
+              0.01,
+              0.09,
+              0.23
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.75,
+              0.26,
+              0.24,
+              0.32
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.01,
+              0.59,
+              0.24,
+              0.4
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.25,
+              0.76,
+              0.5,
+              0.23
+            ]
+          },
+          {
+            "kind": "shape",
+            "rect": [
+              0.75,
+              0.76,
+              0.24,
+              0.23
+            ]
+          }
+        ],
+        "basis": "实际查看原文图20，归一化分区为目测估计，不含水印/字幕；主体区域不是重复计算的第二张照片。"
+      },
+      "prompt_status": "结构指令已编写，尚未用新内容试排验证",
+      "eligible_for_candidate_search": true,
+      "approved_template": false,
+      "formal_usage_count": null,
+      "recorded_usage_count": 0,
+      "source_id": "upload",
+      "source_note": "搜狐《苹果又开发布会，这PPT绝了！【PPT附下载】》，页面标注2024-09-10 13:21，账号“站在巨人的肩膀上”，正文自署“利兄”。2026-10-16完整读取正文并下载24个内嵌媒体；不把转载账号当原发布会制作署名。 本条为正文第20个内嵌媒体，分类：卡片汇总；原始地址：https://q4.itc.cn/q_70/images03/20240910/6631ddc98995433a882c981a20c10270.png；原图1080×602，SHA-256：458c84e5027523e110784f150526cd2d84fa8af0962e6f8ce4c2727d539f8b5e。 原PNG将随待收录记录保存，未经换图、改字、裁切或重绘。 仅作为构图/表现参考，不认证模板；品牌、产品数值及医学相关证言均为原例内容，不作为当前任务的事实依据。",
+      "related_id": "L022",
+      "created_at": "2026-10-16T09:03:47.221Z",
+      "updated_at": "2026-10-16T09:03:47.221Z",
+      "preview": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/images/L040-458c84e5027523e1.png",
+      "preview_path": "images/L040-458c84e5027523e1.png",
+      "preview_sha256": "458c84e5027523e110784f150526cd2d84fa8af0962e6f8ce4c2727d539f8b5e",
+      "preview_mime": "image/png",
+      "preview_bytes": 181711,
+      "card": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/main/cards/L040.md",
+      "source_file": "https://q4.itc.cn/q_70/images03/20240910/6631ddc98995433a882c981a20c10270.png",
+      "editable_source_public": false
+    }
+  ]
+}
