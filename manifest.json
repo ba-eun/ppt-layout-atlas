@@ -1,0 +1,555 @@
+{
+  "schema_version": "1.1",
+  "source_revision": 45,
+  "published_at": "2026-10-17T05:04:13.792Z",
+  "source_of_truth": "https://ppt-layout-atlas.woollywave.chatgpt.site",
+  "repository": "ba-eun/ppt-layout-atlas",
+  "branch": "main",
+  "consistency": "git-commit-pinned",
+  "catalogue_commit": "3f1059d61920136e969b59b7de1bc4cb94d14f41",
+  "asset_commit": "bd60367f416d96476f149e918837eaedc4153c98",
+  "latest": "https://ppt-layout-atlas.woollywave.chatgpt.site/api/public-manifest",
+  "index": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/index.json",
+  "catalog": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/catalog.json",
+  "directory": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/README.md",
+  "entry_count": 40,
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/README.md",
+      "sha256": "f302e15158d3ee278c3e5670abef9e31db788c43da4afc50699fc14c0bcc2c92"
+    },
+    {
+      "path": "index.json",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/index.json",
+      "sha256": "ecc97e7b33be90c13093bc2f34a0449017fa8f3df6f0412379996ee789ccd04c"
+    },
+    {
+      "path": "catalog.json",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/catalog.json",
+      "sha256": "229777d8ba93a12f885aa4830163dd82e904fcb1a05fcf159a0642fe95d3e49a"
+    },
+    {
+      "path": "cards/L001.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L001.md",
+      "sha256": "b841123e63439547eecd7000be2f2d86a483bfbfd1ddfabd5f663ce49573302e"
+    },
+    {
+      "path": "cards/L002.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L002.md",
+      "sha256": "66c2dca3a16e7d534bca54e206fbf4c9768c2324fb6acfb57420c9c6f5587d79"
+    },
+    {
+      "path": "cards/L003.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L003.md",
+      "sha256": "f719b0c4a472fa126f3b5bd993be92693287fe35dc5104e3ec025072202f34b0"
+    },
+    {
+      "path": "cards/L004.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L004.md",
+      "sha256": "f6e865194cb8b548e0c19635340dda8c02403c2cb714af200f8eb00b0a29446a"
+    },
+    {
+      "path": "cards/L005.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L005.md",
+      "sha256": "afbef8fd0f3fa1e555f20e94cc5a56f6028c05e5df0b59833c30092040282e97"
+    },
+    {
+      "path": "cards/L006.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L006.md",
+      "sha256": "66e7f6012cde13821463428ea8cc0600af6f784e274b1a1e7a679fc7d853c042"
+    },
+    {
+      "path": "cards/L007.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L007.md",
+      "sha256": "5b62c2f75d2c93b8eae356acd8c07d756b5d5474bd162df325e4157d39b7efe3"
+    },
+    {
+      "path": "cards/L008.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L008.md",
+      "sha256": "46b3184cdcfe03e15f8d7354be6e935dbf513bfef89e6b6ecb6248c214fd5f15"
+    },
+    {
+      "path": "cards/L009.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L009.md",
+      "sha256": "33163ae0c54ca84670a7d99b6aeae891e72d3e7885c0c787270fcc2af23decaf"
+    },
+    {
+      "path": "cards/L010.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L010.md",
+      "sha256": "e2046a41f5ca5038890d78489b1b26c3bc47bbb676dd833e047d1d7eaa27d5de"
+    },
+    {
+      "path": "cards/X001.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/X001.md",
+      "sha256": "b9c1340e4a3fb8b2f7b3952edf48553f6895b39b32e3e45bce65de371761cbf5"
+    },
+    {
+      "path": "cards/X002.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/X002.md",
+      "sha256": "0556b7126777bd87d6471981f0ce4e141c9988331c819f3acd3bd65a78a8faca"
+    },
+    {
+      "path": "cards/X003.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/X003.md",
+      "sha256": "ca74c921078d77dba61cc3b3715b04218eb3eb7c275f1fed460d0bc9284bb866"
+    },
+    {
+      "path": "cards/L011.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L011.md",
+      "sha256": "5e266a17b2dc2848c77a52a4f656f90c934a550c3b8d64c08bbb1337fb38bdbc"
+    },
+    {
+      "path": "cards/L012.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L012.md",
+      "sha256": "03f5bff8c29e9648b5be446b6067c247b022266e2d2fc8aecf1a42be3167275b"
+    },
+    {
+      "path": "cards/L014.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L014.md",
+      "sha256": "8c748ded11ab2203731793f5ccdce08dc5d89b67930503e4a96bef3af75403b4"
+    },
+    {
+      "path": "cards/L015.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L015.md",
+      "sha256": "dd89429f985cc0c1dd4e247ed750ef11a51bc8463d1b24c4565f093a63d185b4"
+    },
+    {
+      "path": "cards/L017.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L017.md",
+      "sha256": "424c5b68c0c49dc041f5410642096a4d5d9e7d1b65d3779ad75111282a266c56"
+    },
+    {
+      "path": "cards/L019.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L019.md",
+      "sha256": "a7fd5b31a7ae2fc9f1d478dcb6fafd5d1320f721a152167987df8ef28ad4ec2d"
+    },
+    {
+      "path": "cards/L020.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L020.md",
+      "sha256": "377890c1676381436e1cbd7c8f74d735473ae574f5ed98a85c999b431269fab1"
+    },
+    {
+      "path": "cards/L022.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L022.md",
+      "sha256": "e7f77dd0d14f75b59267980020b95eb0bb811d8f28a6caec639d587b6cfcf736"
+    },
+    {
+      "path": "cards/L023.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L023.md",
+      "sha256": "34bfb187fc675249b717a318895a1b83be1282ec17b9621ab257bbb0a9e3cae9"
+    },
+    {
+      "path": "cards/L024.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L024.md",
+      "sha256": "f24145b23e47f62a4981508a38ccf72b3d3254406059ebf3b1f59932fd7e3076"
+    },
+    {
+      "path": "cards/L025.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L025.md",
+      "sha256": "2e06c208f9578266913d65f7fa144ae4b5459386edbd9b8959d1e0141a769323"
+    },
+    {
+      "path": "cards/L026.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L026.md",
+      "sha256": "35e478b921e05b66562f5f63bb1787c5a23665cc84baf876cad0dd6a983c83ef"
+    },
+    {
+      "path": "cards/L027.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L027.md",
+      "sha256": "efd584b9650d0ef71637f65efb2ff5d6fa79550a46184149a14c3ab981b71124"
+    },
+    {
+      "path": "cards/L028.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L028.md",
+      "sha256": "3395be1d049fb7cfd47668cc80efefc8cfe9f382a457eff8d6e783f11c20c543"
+    },
+    {
+      "path": "cards/L029.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L029.md",
+      "sha256": "007558622fe2522d252af0c390d7bdc95969f684288d0f507cb1552c4275a3ac"
+    },
+    {
+      "path": "cards/L030.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L030.md",
+      "sha256": "8d211979b42b1eda094e1b45add2c694005d6859df49bb5378877e18202e796c"
+    },
+    {
+      "path": "cards/L031.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L031.md",
+      "sha256": "16b4ae03f547c9a0e939fe4f0a74ff4ff5b289f408a33af3903a9f02aff3763e"
+    },
+    {
+      "path": "cards/L032.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L032.md",
+      "sha256": "617fef5fd831edf507dcccb41aead3066d5367d91432fcc779e3275c4ac85d66"
+    },
+    {
+      "path": "cards/L033.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L033.md",
+      "sha256": "0b6527a0ecddf5927c6283a8ece2a5a8869259748614aa1c6a37107ca474ed40"
+    },
+    {
+      "path": "cards/L034.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L034.md",
+      "sha256": "d1eda1ac931e240fbad978eeb3a3f3dd6654e718dbd9b320a0cef8aef4364a45"
+    },
+    {
+      "path": "cards/L035.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L035.md",
+      "sha256": "779d71bfe076e6e55e2d334a9e83651bcd93fcdad416357829a2ac022c77a316"
+    },
+    {
+      "path": "cards/L036.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L036.md",
+      "sha256": "d590279613b74a794f4455d4d0b7fcaf46571c6b67d6b9c2ee9e5b22e334b260"
+    },
+    {
+      "path": "cards/L037.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L037.md",
+      "sha256": "6d55d733018a5fb4c251dea18f1419f69a3af1390a5c3d7fd5e6a535565a476e"
+    },
+    {
+      "path": "cards/L038.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L038.md",
+      "sha256": "84fdf616e125b2735fed6feb81d0a50bd19869784666f93981b87f847e44d5a1"
+    },
+    {
+      "path": "cards/L039.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L039.md",
+      "sha256": "5fa1879ee6abf61041209dc2acad74f0dbc887fc6471cdb988f9e5ac9b7cc20e"
+    },
+    {
+      "path": "cards/L040.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L040.md",
+      "sha256": "09573cf3a069f0671dcca933c81a87a2d155f0ce1d6482e942e5ec71ebc00936"
+    },
+    {
+      "path": "cards/L041.md",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/3f1059d61920136e969b59b7de1bc4cb94d14f41/cards/L041.md",
+      "sha256": "24eba8bef417cc5f3c56691539ace7968568141aff6b577cfecd3053c98b411f"
+    }
+  ],
+  "images": [
+    {
+      "id": "L001",
+      "path": "images/L001-cfeffc7b3ecd2e7b.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L001-cfeffc7b3ecd2e7b.jpg",
+      "sha256": "cfeffc7b3ecd2e7b754019924899d04748f8dc2ab8b52b6478176bb8c47dfebc",
+      "mime": "image/jpeg",
+      "bytes": 44193
+    },
+    {
+      "id": "L002",
+      "path": "images/L002-3cf60b7e9c3ce68a.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L002-3cf60b7e9c3ce68a.jpg",
+      "sha256": "3cf60b7e9c3ce68a7fa23e218aa5d635ce697356a6f6888c18d1734204373a57",
+      "mime": "image/jpeg",
+      "bytes": 160354
+    },
+    {
+      "id": "L003",
+      "path": "images/L003-e136bd095e7d0239.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L003-e136bd095e7d0239.jpg",
+      "sha256": "e136bd095e7d02397468ac81020fd9261d14811f525f2fcf73080382fba3a18e",
+      "mime": "image/jpeg",
+      "bytes": 112132
+    },
+    {
+      "id": "L004",
+      "path": "images/L004-9a847d05c2597398.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L004-9a847d05c2597398.jpg",
+      "sha256": "9a847d05c2597398db32407b173d3ad98f4664c4b72f8827bb43d37d5795fe43",
+      "mime": "image/jpeg",
+      "bytes": 60776
+    },
+    {
+      "id": "L005",
+      "path": "images/L005-9fe816ebd821198f.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L005-9fe816ebd821198f.jpg",
+      "sha256": "9fe816ebd821198fb2ed03f1d39194c5b0074539f16dd0386797a60e9b0e4a64",
+      "mime": "image/jpeg",
+      "bytes": 91885
+    },
+    {
+      "id": "L006",
+      "path": "images/L006-63e2367c5200ab2a.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L006-63e2367c5200ab2a.jpg",
+      "sha256": "63e2367c5200ab2a4a00dc772f7c82983c2d20dfa7c8d215e2704893ac553a1b",
+      "mime": "image/jpeg",
+      "bytes": 88711
+    },
+    {
+      "id": "L007",
+      "path": "images/L007-02368ea7a4614018.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L007-02368ea7a4614018.jpg",
+      "sha256": "02368ea7a461401847d9b77ce85f976abc6dc499bb144ed024e1d46d2d393ca9",
+      "mime": "image/jpeg",
+      "bytes": 47276
+    },
+    {
+      "id": "L008",
+      "path": "images/L008-90b7dcfae2adcc75.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L008-90b7dcfae2adcc75.jpg",
+      "sha256": "90b7dcfae2adcc75411639d87912a7618a8aa0b1a9413a9ddee0d608ef95548e",
+      "mime": "image/jpeg",
+      "bytes": 59553
+    },
+    {
+      "id": "L009",
+      "path": "images/L009-80e8eca3d57c30a8.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L009-80e8eca3d57c30a8.jpg",
+      "sha256": "80e8eca3d57c30a80ae141acb883bde4bbe4a7a1c8ab648a7295f580c11d1dae",
+      "mime": "image/jpeg",
+      "bytes": 57941
+    },
+    {
+      "id": "L010",
+      "path": "images/L010-7633825760bd326e.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L010-7633825760bd326e.jpg",
+      "sha256": "7633825760bd326e446f32a038bf995e790b5c2b91206cc592e0d08030666d16",
+      "mime": "image/jpeg",
+      "bytes": 36839
+    },
+    {
+      "id": "X001",
+      "path": "images/X001-f624b21160ca1cb1.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/X001-f624b21160ca1cb1.jpg",
+      "sha256": "f624b21160ca1cb1ee46b29a9f495557199edc8e58e96b847bc75eda14960836",
+      "mime": "image/jpeg",
+      "bytes": 42419
+    },
+    {
+      "id": "X002",
+      "path": "images/X002-7e96c62288fd1f1a.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/X002-7e96c62288fd1f1a.jpg",
+      "sha256": "7e96c62288fd1f1a87507c14f4f120c044561e4afb34a5056e6ddc5724b0e187",
+      "mime": "image/jpeg",
+      "bytes": 148788
+    },
+    {
+      "id": "X003",
+      "path": "images/X003-89b332b05c7f3af5.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/X003-89b332b05c7f3af5.jpg",
+      "sha256": "89b332b05c7f3af5f3a38ae081b2150c94e4144cbc7e8f2e47f86112fc484e45",
+      "mime": "image/jpeg",
+      "bytes": 56925
+    },
+    {
+      "id": "L011",
+      "path": "images/L011-dd561ba9e62600e1.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L011-dd561ba9e62600e1.jpg",
+      "sha256": "dd561ba9e62600e15aa16fbaaf8a53e83250e8ffe77296ae64a8e2b006feac7a",
+      "mime": "image/jpeg",
+      "bytes": 48966
+    },
+    {
+      "id": "L012",
+      "path": "images/L012-7fa32cb386061b30.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L012-7fa32cb386061b30.jpg",
+      "sha256": "7fa32cb386061b30112a46b061930f5c5a12d539c23826dac06510860628f712",
+      "mime": "image/jpeg",
+      "bytes": 115136
+    },
+    {
+      "id": "L014",
+      "path": "images/L014-7aaa85fc6877aa3c.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L014-7aaa85fc6877aa3c.jpg",
+      "sha256": "7aaa85fc6877aa3c0783048b91d2fb39ca21040d4969a1976c636c2e54ec821c",
+      "mime": "image/jpeg",
+      "bytes": 234697
+    },
+    {
+      "id": "L015",
+      "path": "images/L015-2cae90b1a9fca373.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L015-2cae90b1a9fca373.jpg",
+      "sha256": "2cae90b1a9fca373b015e60328ee0c694673b5380b28d1fefdebdd1d50f398b0",
+      "mime": "image/jpeg",
+      "bytes": 141901
+    },
+    {
+      "id": "L017",
+      "path": "images/L017-b0f3cbd9afd01711.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L017-b0f3cbd9afd01711.jpg",
+      "sha256": "b0f3cbd9afd01711b64f27422e640df44cc6d3bb6445bfed9eb720ef4482b87f",
+      "mime": "image/jpeg",
+      "bytes": 180652
+    },
+    {
+      "id": "L019",
+      "path": "images/L019-a5e7b76fc1b2f1b4.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L019-a5e7b76fc1b2f1b4.jpg",
+      "sha256": "a5e7b76fc1b2f1b4f129b94588fa33174baa846ed65ed4936f5d02c36395c33c",
+      "mime": "image/jpeg",
+      "bytes": 94617
+    },
+    {
+      "id": "L020",
+      "path": "images/L020-339b0c8c89f7b9d1.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L020-339b0c8c89f7b9d1.jpg",
+      "sha256": "339b0c8c89f7b9d186bd36068951216afb0e6c57d451847b2a38e63fe8ab44cb",
+      "mime": "image/jpeg",
+      "bytes": 123046
+    },
+    {
+      "id": "L022",
+      "path": "images/L022-55c1c6bcfc06b038.png",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L022-55c1c6bcfc06b038.png",
+      "sha256": "55c1c6bcfc06b03885645d4958cc75f3e5e1aeb3a88728e4643b7f5e767bb069",
+      "mime": "image/png",
+      "bytes": 169643
+    },
+    {
+      "id": "L023",
+      "path": "images/L023-cd7c593e4886dd21.png",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L023-cd7c593e4886dd21.png",
+      "sha256": "cd7c593e4886dd2147794dc0dbc6165811a830ce245e57f71c56edfbff17d3e6",
+      "mime": "image/png",
+      "bytes": 166008
+    },
+    {
+      "id": "L024",
+      "path": "images/L024-b6107086401087a0.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L024-b6107086401087a0.jpg",
+      "sha256": "b6107086401087a0aa85fd4908910c8073037aae7c301ca7496b404230729313",
+      "mime": "image/jpeg",
+      "bytes": 61598
+    },
+    {
+      "id": "L025",
+      "path": "images/L025-2f94ebaf04731d7b.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L025-2f94ebaf04731d7b.jpg",
+      "sha256": "2f94ebaf04731d7b9e6a73b0913e06fa4e57e2a1e54b5d0975ca19919e36b438",
+      "mime": "image/jpeg",
+      "bytes": 69110
+    },
+    {
+      "id": "L026",
+      "path": "images/L026-4d9289f88455aeda.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L026-4d9289f88455aeda.jpg",
+      "sha256": "4d9289f88455aedab7948e406027b036699d652c1ded2f7095747e446857d4a8",
+      "mime": "image/jpeg",
+      "bytes": 68454
+    },
+    {
+      "id": "L027",
+      "path": "images/L027-95cb0c8d4be7a0ee.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L027-95cb0c8d4be7a0ee.jpg",
+      "sha256": "95cb0c8d4be7a0ee02602e8d390bbeece1b8624589628e2cd4e8c8c6aa2f1b8b",
+      "mime": "image/jpeg",
+      "bytes": 46198
+    },
+    {
+      "id": "L028",
+      "path": "images/L028-c99d9f6ffaa34cdd.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L028-c99d9f6ffaa34cdd.jpg",
+      "sha256": "c99d9f6ffaa34cdd5cb4edc02f5e357c2439070fe4d0b2346e08057120489de1",
+      "mime": "image/jpeg",
+      "bytes": 117009
+    },
+    {
+      "id": "L029",
+      "path": "images/L029-70248652b6e54708.png",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L029-70248652b6e54708.png",
+      "sha256": "70248652b6e547086f8af829c9501e1acf57070ba817cfe8f6fbf48d42bc9b7e",
+      "mime": "image/png",
+      "bytes": 76539
+    },
+    {
+      "id": "L030",
+      "path": "images/L030-8fb08626f57d9163.png",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L030-8fb08626f57d9163.png",
+      "sha256": "8fb08626f57d9163e79416fab3d4b5aea7dd1780b74d6b762e7ed715e993f630",
+      "mime": "image/png",
+      "bytes": 90160
+    },
+    {
+      "id": "L031",
+      "path": "images/L031-10d287d9002552d1.png",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L031-10d287d9002552d1.png",
+      "sha256": "10d287d9002552d18836f9521d6d95e20a162fe16fc5741af98da633346d982d",
+      "mime": "image/png",
+      "bytes": 122941
+    },
+    {
+      "id": "L032",
+      "path": "images/L032-eedeb3b927a8e2d3.png",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L032-eedeb3b927a8e2d3.png",
+      "sha256": "eedeb3b927a8e2d3952973bc5d7c25cd4ececa02e6438ed50fbf8b6d3ad334f5",
+      "mime": "image/png",
+      "bytes": 85720
+    },
+    {
+      "id": "L033",
+      "path": "images/L033-ee1e085baa3f1f88.png",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L033-ee1e085baa3f1f88.png",
+      "sha256": "ee1e085baa3f1f88b70e6b08a40679240850301866cf2750264caa34e29e680b",
+      "mime": "image/png",
+      "bytes": 176020
+    },
+    {
+      "id": "L034",
+      "path": "images/L034-a828dde4703fae5c.png",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L034-a828dde4703fae5c.png",
+      "sha256": "a828dde4703fae5c4a729344e8f6632ae3c613bf2f2540e7a115a2681f4b272f",
+      "mime": "image/png",
+      "bytes": 21381
+    },
+    {
+      "id": "L035",
+      "path": "images/L035-b1bcd5d314fa23db.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L035-b1bcd5d314fa23db.jpg",
+      "sha256": "b1bcd5d314fa23db5e19a85b5be7e05e1de8c7d1c342c7c152d9f89cfb5b31fa",
+      "mime": "image/jpeg",
+      "bytes": 78093
+    },
+    {
+      "id": "L036",
+      "path": "images/L036-4aee261736b11864.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L036-4aee261736b11864.jpg",
+      "sha256": "4aee261736b118641b4113b015ecb43db991c9e745f77a2addb7e39724ad89f3",
+      "mime": "image/jpeg",
+      "bytes": 193253
+    },
+    {
+      "id": "L037",
+      "path": "images/L037-b9bea22b6271739c.png",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L037-b9bea22b6271739c.png",
+      "sha256": "b9bea22b6271739cad2554cff7408d3b2066469b786016c1172b9e9475dfd538",
+      "mime": "image/png",
+      "bytes": 167143
+    },
+    {
+      "id": "L038",
+      "path": "images/L038-302245f1bccbeee4.png",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L038-302245f1bccbeee4.png",
+      "sha256": "302245f1bccbeee45b0cd05956850007185be4a5cc0b11ebdea5736beccb1e8e",
+      "mime": "image/png",
+      "bytes": 119593
+    },
+    {
+      "id": "L039",
+      "path": "images/L039-0980cfc137af28e5.png",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L039-0980cfc137af28e5.png",
+      "sha256": "0980cfc137af28e53f456b92d18374020d054a3b3e311380a15b4d50d9abd500",
+      "mime": "image/png",
+      "bytes": 154116
+    },
+    {
+      "id": "L040",
+      "path": "images/L040-458c84e5027523e1.png",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L040-458c84e5027523e1.png",
+      "sha256": "458c84e5027523e110784f150526cd2d84fa8af0962e6f8ce4c2727d539f8b5e",
+      "mime": "image/png",
+      "bytes": 181711
+    },
+    {
+      "id": "L041",
+      "path": "images/L041-cfeffc7b3ecd2e7b.jpg",
+      "url": "https://raw.githubusercontent.com/ba-eun/ppt-layout-atlas/bd60367f416d96476f149e918837eaedc4153c98/images/L041-cfeffc7b3ecd2e7b.jpg",
+      "sha256": "cfeffc7b3ecd2e7b754019924899d04748f8dc2ab8b52b6478176bb8c47dfebc",
+      "mime": "image/jpeg",
+      "bytes": 44193
+    }
+  ]
+}
